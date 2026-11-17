@@ -14,6 +14,7 @@ scripts/bin/*.exe
 
 # Archives & Temporary files
 *.zip
+!mobile/ios/third_party/*.zip
 *.tar.gz
 *.log
 *.txt

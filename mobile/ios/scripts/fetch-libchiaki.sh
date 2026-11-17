@@ -14,6 +14,28 @@ DEST="$REPO/work/libchiaki-ios"
 BRANCH="${GT_CHIAKI_BRANCH:-ios-port}"
 WORKFLOW="ios-native.yml"
 
+# Hazır paket varsa (indirilmiş artifact) yeniden derlemeden kullan.
+ZIP="${GT_CHIAKI_ZIP:-$REPO/mobile/ios/third_party/libchiaki-ios-arm64.zip}"
+if [[ -f "$ZIP" ]]; then
+	TMP="$(mktemp -d)"
+	trap 'rm -rf "$TMP"' EXIT
+	unzip -q "$ZIP" -d "$TMP"
+	SRC="$TMP"
+	if [[ ! -d "$TMP/lib" && ! -d "$TMP/include" ]]; then
+		INNER="$(find "$TMP" -maxdepth 3 -type d -name include | head -1)"
+		[[ -n "$INNER" ]] && SRC="$(dirname "$INNER")"
+	fi
+	[[ -f "$SRC/lib/libgtchiaki_ios.a" && -d "$SRC/include/chiaki" ]] || {
+		echo "Pakette lib/libgtchiaki_ios.a ya da include/chiaki yok: $ZIP" >&2
+		exit 1
+	}
+	rm -rf "$DEST"
+	mkdir -p "$DEST"
+	cp -R "$SRC"/. "$DEST"/
+	echo "Hazır (paket): $DEST"
+	exit 0
+fi
+
 RUN="${GT_CHIAKI_RUN:-}"
 if [[ -z "$RUN" ]]; then
 	RUN="$(gh run list --workflow "$WORKFLOW" --branch "$BRANCH" --status success --limit 1 --json databaseId --jq '.[0].databaseId')"

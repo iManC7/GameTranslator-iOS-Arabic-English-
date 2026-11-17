@@ -35,6 +35,138 @@ class AppLocalizationsAr extends AppLocalizations {
       'لغة الواجهة فقط؛ لا تغيّر لغة اللعبة أو الترجمة.';
 
   @override
+  String get commonOk => 'حسنًا';
+
+  @override
+  String get setupTitle => 'الإعداد';
+
+  @override
+  String get setupSubtitleAccount => 'اربط حساب PlayStation أولًا.';
+
+  @override
+  String get setupSubtitlePs5 => 'أكمل الاتصال بـ PS5.';
+
+  @override
+  String get setupSignInTitle => 'سجّل الدخول عبر PSN';
+
+  @override
+  String get setupSignInSubtitle => 'اربط حساب PlayStation Network.';
+
+  @override
+  String get setupSignedIn => 'تم ربط حساب PSN.';
+
+  @override
+  String get setupChange => 'تغيير';
+
+  @override
+  String get setupSignInBody =>
+      'سجّل الدخول بحساب PSN للمستخدم الثاني (الحساب الفرعي) على PS5. وبذلك لا ينفصل ذراع التحكم عن التلفاز وأنت تلعب بحسابك.';
+
+  @override
+  String get setupSignInPrivacy =>
+      'تسجيل الدخول يتم في صفحة Sony نفسها. لا تُحفظ كلمة مرورك في هذا التطبيق أو في أي مكان آخر.';
+
+  @override
+  String get setupPairTitle => 'اقترن بـ PS5';
+
+  @override
+  String get setupPairSubtitle => 'اقترن هاتفك بـ PS5.';
+
+  @override
+  String get setupPairStepA => 'انتقل إلى المستخدم الثاني على PS5.';
+
+  @override
+  String get setupPairStepB =>
+      'في الإعدادات › النظام › Remote Play، شغّل \"تمكين Remote Play\".';
+
+  @override
+  String get setupPairStepC =>
+      'افتح \"ربط الجهاز\". يظهر رمز من 8 أرقام على الشاشة.';
+
+  @override
+  String get setupFoundConsole => 'الجهاز المكتشف';
+
+  @override
+  String get setupSearching => 'جارٍ البحث…';
+
+  @override
+  String get setupRefresh => 'تحديث';
+
+  @override
+  String get setupNotFound =>
+      'لم يُعثر على PS5. يجب أن يكون الهاتف وPS5 على نفس شبكة Wi-Fi. يمكنك أيضًا كتابة عنوان IP لـ PS5 أدناه (على PS5: الإعدادات › الشبكة › حالة الاتصال).';
+
+  @override
+  String get setupIpLabel => 'عنوان IP لـ PS5';
+
+  @override
+  String get setupEnterIp => 'أدخل عنوان IP يدويًا';
+
+  @override
+  String get setupPairCode => 'رمز الاقتران';
+
+  @override
+  String get setupErrorNoHost => 'اختر PS5 أولًا أو اكتب عنوان IP.';
+
+  @override
+  String get setupErrorPin => 'أدخل الرمز المكوّن من 8 أرقام الظاهر على PS5.';
+
+  @override
+  String get setupErrorPairFailed => 'فشل الاقتران.';
+
+  @override
+  String get setupPairing => 'جارٍ الاقتران…';
+
+  @override
+  String get setupPairAction => 'اقترن';
+
+  @override
+  String setupStepOf(int number) {
+    return 'الخطوة $number / 2';
+  }
+
+  @override
+  String get setupWaitingPsn => 'أكمل تسجيل الدخول عبر PSN أولًا.';
+
+  @override
+  String get setupConsoleAwake => 'مشغّل';
+
+  @override
+  String get setupConsoleResting => 'في وضع السكون';
+
+  @override
+  String get setupPsnLoginTitle => 'تسجيل دخول PSN';
+
+  @override
+  String get setupLoginIncomplete => 'لم يكتمل تسجيل الدخول.';
+
+  @override
+  String get setupManualId => 'أدخل معرّف الحساب يدويًا';
+
+  @override
+  String get setupManualIdHelp =>
+      'إذا لم تُفتح صفحة تسجيل الدخول، يمكنك لصق معرّف حساب PSN الذي حصلت عليه من أداة مثل Chiaki هنا.';
+
+  @override
+  String get setupManualIdHint => 'معرّف الحساب بصيغة Base64';
+
+  @override
+  String get setupManualIdError =>
+      'يجب أن يكون معرّف الحساب 8 بايت بصيغة base64.';
+
+  @override
+  String get setupReload => 'أعد تحميل الصفحة';
+
+  @override
+  String get setupConnectingAccount => 'جارٍ ربط الحساب…';
+
+  @override
+  String get commonCancel => 'إلغاء';
+
+  @override
+  String get splashTagline => 'العب بلغتك';
+
+  @override
   String get devicePs5 => 'PS5';
 
   @override

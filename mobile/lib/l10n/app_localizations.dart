@@ -148,6 +148,252 @@ abstract class AppLocalizations {
   /// **'Yalnızca arayüz dili; oyun ve çeviri dilini değiştirmez.'**
   String get settingsAppLanguageNote;
 
+  /// No description provided for @commonOk.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tamam'**
+  String get commonOk;
+
+  /// No description provided for @setupTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kurulum'**
+  String get setupTitle;
+
+  /// No description provided for @setupSubtitleAccount.
+  ///
+  /// In tr, this message translates to:
+  /// **'Önce PlayStation hesabını bağla.'**
+  String get setupSubtitleAccount;
+
+  /// No description provided for @setupSubtitlePs5.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 ile bağlantıyı tamamla.'**
+  String get setupSubtitlePs5;
+
+  /// No description provided for @setupSignInTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'PSN ile giriş yap'**
+  String get setupSignInTitle;
+
+  /// No description provided for @setupSignInSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'PlayStation Network hesabını bağla.'**
+  String get setupSignInSubtitle;
+
+  /// No description provided for @setupSignedIn.
+  ///
+  /// In tr, this message translates to:
+  /// **'PSN hesabı bağlandı.'**
+  String get setupSignedIn;
+
+  /// No description provided for @setupChange.
+  ///
+  /// In tr, this message translates to:
+  /// **'Değiştir'**
+  String get setupChange;
+
+  /// No description provided for @setupSignInBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5\'teki ikinci kullanıcının (yan hesabın) PSN hesabıyla giriş yap. Böylece oyunu kendi hesabınla oynarken kumandan TV\'den kopmaz.'**
+  String get setupSignInBody;
+
+  /// No description provided for @setupSignInPrivacy.
+  ///
+  /// In tr, this message translates to:
+  /// **'Giriş Sony\'nin kendi sayfasında yapılır. Şifren bu uygulamaya ya da başka bir yere kaydedilmez.'**
+  String get setupSignInPrivacy;
+
+  /// No description provided for @setupPairTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 ile eşleştir'**
+  String get setupPairTitle;
+
+  /// No description provided for @setupPairSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonu PS5\'inle eşleştir.'**
+  String get setupPairSubtitle;
+
+  /// No description provided for @setupPairStepA.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5\'te ikinci kullanıcıya geç.'**
+  String get setupPairStepA;
+
+  /// No description provided for @setupPairStepB.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ayarlar › Sistem › Uzaktan Oynatma\'da \"Uzaktan Oynatmayı Etkinleştir\"i aç.'**
+  String get setupPairStepB;
+
+  /// No description provided for @setupPairStepC.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Cihaz Eşleştir\"e gir. Ekranda 8 haneli bir kod görünür.'**
+  String get setupPairStepC;
+
+  /// No description provided for @setupFoundConsole.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bulunan konsol'**
+  String get setupFoundConsole;
+
+  /// No description provided for @setupSearching.
+  ///
+  /// In tr, this message translates to:
+  /// **'Aranıyor…'**
+  String get setupSearching;
+
+  /// No description provided for @setupRefresh.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yenile'**
+  String get setupRefresh;
+
+  /// No description provided for @setupNotFound.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 bulunamadı. Telefon ve PS5 aynı Wi-Fi ağında olmalı. PS5\'in IP adresini aşağıya elle de yazabilirsin (PS5\'te Ayarlar › Ağ › Bağlantı Durumu).'**
+  String get setupNotFound;
+
+  /// No description provided for @setupIpLabel.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 IP adresi'**
+  String get setupIpLabel;
+
+  /// No description provided for @setupEnterIp.
+  ///
+  /// In tr, this message translates to:
+  /// **'IP adresini elle yaz'**
+  String get setupEnterIp;
+
+  /// No description provided for @setupPairCode.
+  ///
+  /// In tr, this message translates to:
+  /// **'Eşleştirme kodu'**
+  String get setupPairCode;
+
+  /// No description provided for @setupErrorNoHost.
+  ///
+  /// In tr, this message translates to:
+  /// **'Önce PS5\'i seç ya da IP adresini yaz.'**
+  String get setupErrorNoHost;
+
+  /// No description provided for @setupErrorPin.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 ekranındaki 8 haneli kodu gir.'**
+  String get setupErrorPin;
+
+  /// No description provided for @setupErrorPairFailed.
+  ///
+  /// In tr, this message translates to:
+  /// **'Eşleştirme başarısız.'**
+  String get setupErrorPairFailed;
+
+  /// No description provided for @setupPairing.
+  ///
+  /// In tr, this message translates to:
+  /// **'Eşleştiriliyor…'**
+  String get setupPairing;
+
+  /// No description provided for @setupPairAction.
+  ///
+  /// In tr, this message translates to:
+  /// **'Eşleştir'**
+  String get setupPairAction;
+
+  /// No description provided for @setupStepOf.
+  ///
+  /// In tr, this message translates to:
+  /// **'Adım {number} / 2'**
+  String setupStepOf(int number);
+
+  /// No description provided for @setupWaitingPsn.
+  ///
+  /// In tr, this message translates to:
+  /// **'Önce PSN girişini tamamla.'**
+  String get setupWaitingPsn;
+
+  /// No description provided for @setupConsoleAwake.
+  ///
+  /// In tr, this message translates to:
+  /// **'açık'**
+  String get setupConsoleAwake;
+
+  /// No description provided for @setupConsoleResting.
+  ///
+  /// In tr, this message translates to:
+  /// **'dinlenmede'**
+  String get setupConsoleResting;
+
+  /// No description provided for @setupPsnLoginTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'PSN Girişi'**
+  String get setupPsnLoginTitle;
+
+  /// No description provided for @setupLoginIncomplete.
+  ///
+  /// In tr, this message translates to:
+  /// **'Giriş tamamlanmadı.'**
+  String get setupLoginIncomplete;
+
+  /// No description provided for @setupManualId.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hesap kimliğini elle gir'**
+  String get setupManualId;
+
+  /// No description provided for @setupManualIdHelp.
+  ///
+  /// In tr, this message translates to:
+  /// **'Giriş sayfası açılmıyorsa, Chiaki gibi araçlardan aldığın PSN hesap kimliğini buraya yapıştırabilirsin.'**
+  String get setupManualIdHelp;
+
+  /// No description provided for @setupManualIdHint.
+  ///
+  /// In tr, this message translates to:
+  /// **'Base64 hesap kimliği'**
+  String get setupManualIdHint;
+
+  /// No description provided for @setupManualIdError.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hesap kimliği 8 baytlık base64 olmalı.'**
+  String get setupManualIdError;
+
+  /// No description provided for @setupReload.
+  ///
+  /// In tr, this message translates to:
+  /// **'Sayfayı yeniden yükle'**
+  String get setupReload;
+
+  /// No description provided for @setupConnectingAccount.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hesap bağlanıyor…'**
+  String get setupConnectingAccount;
+
+  /// No description provided for @commonCancel.
+  ///
+  /// In tr, this message translates to:
+  /// **'Vazgeç'**
+  String get commonCancel;
+
+  /// No description provided for @splashTagline.
+  ///
+  /// In tr, this message translates to:
+  /// **'Oyunu kendi dilinde oyna'**
+  String get splashTagline;
+
   /// No description provided for @devicePs5.
   ///
   /// In tr, this message translates to:

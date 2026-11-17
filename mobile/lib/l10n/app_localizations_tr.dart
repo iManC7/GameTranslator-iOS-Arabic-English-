@@ -35,6 +35,137 @@ class AppLocalizationsTr extends AppLocalizations {
       'Yalnızca arayüz dili; oyun ve çeviri dilini değiştirmez.';
 
   @override
+  String get commonOk => 'Tamam';
+
+  @override
+  String get setupTitle => 'Kurulum';
+
+  @override
+  String get setupSubtitleAccount => 'Önce PlayStation hesabını bağla.';
+
+  @override
+  String get setupSubtitlePs5 => 'PS5 ile bağlantıyı tamamla.';
+
+  @override
+  String get setupSignInTitle => 'PSN ile giriş yap';
+
+  @override
+  String get setupSignInSubtitle => 'PlayStation Network hesabını bağla.';
+
+  @override
+  String get setupSignedIn => 'PSN hesabı bağlandı.';
+
+  @override
+  String get setupChange => 'Değiştir';
+
+  @override
+  String get setupSignInBody =>
+      'PS5\'teki ikinci kullanıcının (yan hesabın) PSN hesabıyla giriş yap. Böylece oyunu kendi hesabınla oynarken kumandan TV\'den kopmaz.';
+
+  @override
+  String get setupSignInPrivacy =>
+      'Giriş Sony\'nin kendi sayfasında yapılır. Şifren bu uygulamaya ya da başka bir yere kaydedilmez.';
+
+  @override
+  String get setupPairTitle => 'PS5 ile eşleştir';
+
+  @override
+  String get setupPairSubtitle => 'Telefonu PS5\'inle eşleştir.';
+
+  @override
+  String get setupPairStepA => 'PS5\'te ikinci kullanıcıya geç.';
+
+  @override
+  String get setupPairStepB =>
+      'Ayarlar › Sistem › Uzaktan Oynatma\'da \"Uzaktan Oynatmayı Etkinleştir\"i aç.';
+
+  @override
+  String get setupPairStepC =>
+      '\"Cihaz Eşleştir\"e gir. Ekranda 8 haneli bir kod görünür.';
+
+  @override
+  String get setupFoundConsole => 'Bulunan konsol';
+
+  @override
+  String get setupSearching => 'Aranıyor…';
+
+  @override
+  String get setupRefresh => 'Yenile';
+
+  @override
+  String get setupNotFound =>
+      'PS5 bulunamadı. Telefon ve PS5 aynı Wi-Fi ağında olmalı. PS5\'in IP adresini aşağıya elle de yazabilirsin (PS5\'te Ayarlar › Ağ › Bağlantı Durumu).';
+
+  @override
+  String get setupIpLabel => 'PS5 IP adresi';
+
+  @override
+  String get setupEnterIp => 'IP adresini elle yaz';
+
+  @override
+  String get setupPairCode => 'Eşleştirme kodu';
+
+  @override
+  String get setupErrorNoHost => 'Önce PS5\'i seç ya da IP adresini yaz.';
+
+  @override
+  String get setupErrorPin => 'PS5 ekranındaki 8 haneli kodu gir.';
+
+  @override
+  String get setupErrorPairFailed => 'Eşleştirme başarısız.';
+
+  @override
+  String get setupPairing => 'Eşleştiriliyor…';
+
+  @override
+  String get setupPairAction => 'Eşleştir';
+
+  @override
+  String setupStepOf(int number) {
+    return 'Adım $number / 2';
+  }
+
+  @override
+  String get setupWaitingPsn => 'Önce PSN girişini tamamla.';
+
+  @override
+  String get setupConsoleAwake => 'açık';
+
+  @override
+  String get setupConsoleResting => 'dinlenmede';
+
+  @override
+  String get setupPsnLoginTitle => 'PSN Girişi';
+
+  @override
+  String get setupLoginIncomplete => 'Giriş tamamlanmadı.';
+
+  @override
+  String get setupManualId => 'Hesap kimliğini elle gir';
+
+  @override
+  String get setupManualIdHelp =>
+      'Giriş sayfası açılmıyorsa, Chiaki gibi araçlardan aldığın PSN hesap kimliğini buraya yapıştırabilirsin.';
+
+  @override
+  String get setupManualIdHint => 'Base64 hesap kimliği';
+
+  @override
+  String get setupManualIdError => 'Hesap kimliği 8 baytlık base64 olmalı.';
+
+  @override
+  String get setupReload => 'Sayfayı yeniden yükle';
+
+  @override
+  String get setupConnectingAccount => 'Hesap bağlanıyor…';
+
+  @override
+  String get commonCancel => 'Vazgeç';
+
+  @override
+  String get splashTagline => 'Oyunu kendi dilinde oyna';
+
+  @override
   String get devicePs5 => 'PS5';
 
   @override

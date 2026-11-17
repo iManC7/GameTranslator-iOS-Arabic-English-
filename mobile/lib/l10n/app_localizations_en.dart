@@ -35,6 +35,137 @@ class AppLocalizationsEn extends AppLocalizations {
       'Interface language only; does not change the game or translation language.';
 
   @override
+  String get commonOk => 'OK';
+
+  @override
+  String get setupTitle => 'Setup';
+
+  @override
+  String get setupSubtitleAccount => 'First connect your PlayStation account.';
+
+  @override
+  String get setupSubtitlePs5 => 'Finish the connection with the PS5.';
+
+  @override
+  String get setupSignInTitle => 'Sign in with PSN';
+
+  @override
+  String get setupSignInSubtitle => 'Connect your PlayStation Network account.';
+
+  @override
+  String get setupSignedIn => 'PSN account connected.';
+
+  @override
+  String get setupChange => 'Change';
+
+  @override
+  String get setupSignInBody =>
+      'Sign in with the PSN account of the second user (alt account) on the PS5. That way your controller is not detached from the TV while you play on your own account.';
+
+  @override
+  String get setupSignInPrivacy =>
+      'Sign-in happens on Sony\'s own page. Your password is not stored in this app or anywhere else.';
+
+  @override
+  String get setupPairTitle => 'Pair with the PS5';
+
+  @override
+  String get setupPairSubtitle => 'Pair your phone with the PS5.';
+
+  @override
+  String get setupPairStepA => 'Switch to the second user on the PS5.';
+
+  @override
+  String get setupPairStepB =>
+      'In Settings › System › Remote Play, turn on \"Enable Remote Play\".';
+
+  @override
+  String get setupPairStepC =>
+      'Open \"Link Device\". An 8-digit code appears on the screen.';
+
+  @override
+  String get setupFoundConsole => 'Found console';
+
+  @override
+  String get setupSearching => 'Searching…';
+
+  @override
+  String get setupRefresh => 'Refresh';
+
+  @override
+  String get setupNotFound =>
+      'PS5 not found. The phone and the PS5 must be on the same Wi-Fi network. You can also type the PS5 IP address below (on the PS5: Settings › Network › Connection Status).';
+
+  @override
+  String get setupIpLabel => 'PS5 IP address';
+
+  @override
+  String get setupEnterIp => 'Enter the IP address manually';
+
+  @override
+  String get setupPairCode => 'Pairing code';
+
+  @override
+  String get setupErrorNoHost => 'Select the PS5 first or type its IP address.';
+
+  @override
+  String get setupErrorPin => 'Enter the 8-digit code shown on the PS5.';
+
+  @override
+  String get setupErrorPairFailed => 'Pairing failed.';
+
+  @override
+  String get setupPairing => 'Pairing…';
+
+  @override
+  String get setupPairAction => 'Pair';
+
+  @override
+  String setupStepOf(int number) {
+    return 'Step $number / 2';
+  }
+
+  @override
+  String get setupWaitingPsn => 'Complete the PSN sign-in first.';
+
+  @override
+  String get setupConsoleAwake => 'on';
+
+  @override
+  String get setupConsoleResting => 'in rest mode';
+
+  @override
+  String get setupPsnLoginTitle => 'PSN Sign-in';
+
+  @override
+  String get setupLoginIncomplete => 'Sign-in did not complete.';
+
+  @override
+  String get setupManualId => 'Enter the account ID manually';
+
+  @override
+  String get setupManualIdHelp =>
+      'If the sign-in page does not open, you can paste the PSN account ID you got from a tool like Chiaki here.';
+
+  @override
+  String get setupManualIdHint => 'Base64 account ID';
+
+  @override
+  String get setupManualIdError => 'The account ID must be 8 bytes of base64.';
+
+  @override
+  String get setupReload => 'Reload the page';
+
+  @override
+  String get setupConnectingAccount => 'Connecting the account…';
+
+  @override
+  String get commonCancel => 'Cancel';
+
+  @override
+  String get splashTagline => 'Play the game in your own language';
+
+  @override
   String get devicePs5 => 'PS5';
 
   @override

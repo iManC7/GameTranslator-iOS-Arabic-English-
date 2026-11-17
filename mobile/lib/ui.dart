@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import 'dart:ui' show ImageFilter;
 
+import 'l10n/app_localizations.dart';
+
 import 'package:cupertino_ui/cupertino_ui.dart'
     show
         CupertinoActionSheet,
@@ -629,7 +631,7 @@ Future<String?> showApplePicker(BuildContext context, {required String title, re
       cancelButton: CupertinoActionSheetAction(
         isDefaultAction: true,
         onPressed: () => Navigator.of(context).pop(),
-        child: const Text('Vazgeç', style: TextStyle(fontFamily: 'Inter')),
+        child: Text(AppLocalizations.of(context).commonCancel, style: const TextStyle(fontFamily: 'Inter')),
       ),
     ),
   );
@@ -643,7 +645,7 @@ Future<bool> confirmApple(BuildContext context, {required String title, required
       title: Text(title, style: const TextStyle(fontFamily: 'Inter')),
       content: Padding(padding: const EdgeInsets.only(top: 4), child: Text(message, style: const TextStyle(fontFamily: 'Inter', fontSize: 13.5, height: 1.35))),
       actions: [
-        CupertinoDialogAction(onPressed: () => Navigator.of(context).pop(false), child: const Text('Vazgeç', style: TextStyle(fontFamily: 'Inter'))),
+        CupertinoDialogAction(onPressed: () => Navigator.of(context).pop(false), child: Text(AppLocalizations.of(context).commonCancel, style: const TextStyle(fontFamily: 'Inter'))),
         CupertinoDialogAction(
           isDestructiveAction: destructive,
           isDefaultAction: !destructive,
@@ -752,7 +754,7 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
             const SizedBox(height: 6),
             FadeTransition(
               opacity: tagline,
-              child: Text('Oyunu kendi dilinde oyna', style: Txt.body.copyWith(color: Tokens.textSecondary)),
+              child: Text(AppLocalizations.of(context).splashTagline, style: Txt.body.copyWith(color: Tokens.textSecondary)),
             ),
             const SizedBox(height: 60),
           ],

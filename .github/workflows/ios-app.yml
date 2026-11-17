@@ -65,7 +65,36 @@ jobs:
 
       - name: İmzasız derleme
         working-directory: mobile
-        run: flutter build ios --release --no-codesign
+        run: |
+          set -o pipefail
+          set +e
+          flutter build ios --release --no-codesign 2>&1 | tee /tmp/gt-build.log
+          status=$?
+          set -e
+          if [ "$status" -ne 0 ]; then
+            # Derleme hatasını iş akışı özetine ve açıklamalara yaz (log gizli kalmasın).
+            {
+              echo "### Derleme hatası (son 40 satır)"
+              echo '```'
+              tail -n 40 /tmp/gt-build.log
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            grep -E "(^|[^a-z])error:|^The following build commands failed|fatal error:" /tmp/gt-build.log \
+              | grep -v "^warning:" \
+              | tail -n 20 \
+              | cut -c1-900 \
+              | while IFS= read -r line; do echo "::error::${line}"; done
+            cp /tmp/gt-build.log build-failure.log || true
+          fi
+          exit "$status"
+
+      - name: Derleme günlüğü (hata)
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: build-log
+          path: mobile/build-failure.log
+          if-no-files-found: ignore
 
       - name: IPA
         run: |

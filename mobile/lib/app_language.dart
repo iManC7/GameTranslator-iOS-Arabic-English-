@@ -6,7 +6,7 @@ import 'bridge.dart';
 /// Arayüz dili (`uiLanguage` ayarı). Değişince [MaterialApp] yeni yerelle kurulur.
 ///
 /// Kayıtlı değer [auto] ise cihazın dili izlenir: desteklenen ilk cihaz dili,
-/// yoksa [fallback].
+/// yoksa [fallback] (İngilizce).
 class AppLanguage {
   AppLanguage._();
 
@@ -16,8 +16,8 @@ class AppLanguage {
   /// "Cihaz dili": kayıtlı değer bu ise cihazın diline uyulur.
   static const auto = 'auto';
 
-  /// Ayar yoksa/geçersizse kullanılan dil.
-  static const fallback = 'tr';
+  /// Aygıtın dili desteklenmiyorsa kullanılan dil.
+  static const fallback = 'en';
 
   /// Ekranda kullanılan (çözülmüş) dil.
   static final ValueNotifier<String> current = ValueNotifier<String>(fallback);
@@ -27,7 +27,7 @@ class AppLanguage {
 
   static bool isSupported(String code) => supported.contains(code);
 
-  /// Cihazın desteklenen ilk dili; yoksa [fallback].
+  /// Cihazın desteklenen ilk dili; yoksa [fallback] (İngilizce).
   static String deviceLanguage() {
     for (final locale in WidgetsBinding.instance.platformDispatcher.locales) {
       final code = locale.languageCode.toLowerCase();

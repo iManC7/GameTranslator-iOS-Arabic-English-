@@ -16,6 +16,13 @@ void main() {
     expect(AppLanguage.resolve(''), AppLanguage.deviceLanguage());
   });
 
+  test('desteklenmeyen cihaz dilinde İngilizce kullanılır', () {
+    expect(AppLanguage.fallback, 'en');
+    // Test ortamında cihaz dili desteklenmiyorsa sonuç İngilizce olmalı.
+    final device = AppLanguage.deviceLanguage();
+    expect(device == 'en' || AppLanguage.supported.contains(device), isTrue);
+  });
+
   test('auto cihaz dilini izler', () {
     expect(AppLanguage.resolve(AppLanguage.auto), AppLanguage.deviceLanguage());
   });

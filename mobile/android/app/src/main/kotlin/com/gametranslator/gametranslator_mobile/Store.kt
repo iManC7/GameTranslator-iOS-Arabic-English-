@@ -35,8 +35,8 @@ data class Settings(
     val glossary: String = "",
     /** Oyun paketleri (İngilizce→Türkçe): paketteki satır motora gitmeden paketin Türkçesiyle gösterilir. */
     val packsEnabled: Boolean = true,
-    /** Arayüz dili (tr/en/ar); oyun ve çeviri dilinden bağımsızdır. */
-    val uiLanguage: String = "tr",
+    /** Arayüz dili (tr/en/ar/auto); boş = cihazın dili. */
+    val uiLanguage: String = "",
 ) {
     /** Sözlük metni çözülmüş hâliyle; boş ya da bozuksa boş sözlük. */
     fun parsedGlossary(): Glossary {

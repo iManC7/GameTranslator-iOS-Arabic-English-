@@ -3507,6 +3507,12 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Geri'**
   String get commonBack;
+
+  /// No description provided for @settingsAppLanguageAuto.
+  ///
+  /// In tr, this message translates to:
+  /// **'Cihaz dili'**
+  String get settingsAppLanguageAuto;
 }
 
 class _AppLocalizationsDelegate

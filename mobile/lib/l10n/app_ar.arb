@@ -625,5 +625,6 @@
   "psnErrAuth": "رفضت Sony تسجيل الدخول (HTTP {status}){detail}",
   "psnErrAccount": "تعذّر الحصول على معرّف الحساب (HTTP {status})",
   "psnErrNetwork": "تعذّر الوصول إلى Sony: {error}",
-  "commonBack": "رجوع"
+  "commonBack": "رجوع",
+  "settingsAppLanguageAuto": "لغة الجهاز"
 }

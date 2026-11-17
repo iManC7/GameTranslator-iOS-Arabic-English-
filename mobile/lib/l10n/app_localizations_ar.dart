@@ -1989,4 +1989,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get commonBack => 'رجوع';
+
+  @override
+  String get settingsAppLanguageAuto => 'لغة الجهاز';
 }

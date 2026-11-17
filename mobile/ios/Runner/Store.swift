@@ -46,8 +46,8 @@ struct Settings: Equatable {
   var hideButtonHints = true
   /// Elle seçilen oyunun paketi (bilgisayar sürümündeki "Oyun" seçimi); boş: otomatik.
   var packChoice = ""
-  /// Arayüz dili (tr/en/ar); oyun ve çeviri dilinden bağımsızdır.
-  var uiLanguage = "tr"
+  /// Arayüz dili; boş = cihazın dili (AppLanguage.auto).
+  var uiLanguage = ""
 
   /// Sözlük metni çözülmüş hâliyle; boş ya da bozuksa boş sözlük (Android'deki parsedGlossary).
   func parsedGlossary() -> Glossary {

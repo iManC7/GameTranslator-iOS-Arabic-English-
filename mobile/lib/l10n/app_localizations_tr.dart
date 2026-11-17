@@ -1986,4 +1986,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get commonBack => 'Geri';
+
+  @override
+  String get settingsAppLanguageAuto => 'Cihaz dili';
 }

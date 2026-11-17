@@ -1989,4 +1989,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get commonBack => 'Back';
+
+  @override
+  String get settingsAppLanguageAuto => 'Device language';
 }

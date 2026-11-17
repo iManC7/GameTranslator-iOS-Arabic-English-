@@ -625,5 +625,6 @@
   "psnErrAuth": "Sony rejected the sign-in (HTTP {status}){detail}",
   "psnErrAccount": "Could not get the account ID (HTTP {status})",
   "psnErrNetwork": "Could not reach Sony: {error}",
-  "commonBack": "Back"
+  "commonBack": "Back",
+  "settingsAppLanguageAuto": "Device language"
 }

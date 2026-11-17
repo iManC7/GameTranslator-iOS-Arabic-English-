@@ -714,5 +714,6 @@
       }
     }
   },
-  "commonBack": "Geri"
+  "commonBack": "Geri",
+  "settingsAppLanguageAuto": "Cihaz dili"
 }

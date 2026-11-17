@@ -58,8 +58,14 @@ class _SettingsTabState extends State<SettingsTab> {
     'ja': '🇯🇵',
   };
 
-  /// Arayüz dillerinin kendi adlarıyla listesi (sistem dilinden bağımsız).
-  static const uiLanguages = {'tr': 'Türkçe', 'en': 'English', 'ar': 'العربية'};
+  /// Arayüz dillerinin kendi adlarıyla listesi (her dil kendi adıyla yazılır).
+  /// 'auto' cihazın dilini izler.
+  Map<String, String> uiLanguagesOf(AppLocalizations l) => {
+        AppLanguage.auto: l.settingsAppLanguageAuto,
+        'tr': 'Türkçe',
+        'en': 'English',
+        'ar': 'العربية',
+      };
 
   static const defaultRegion = {'top': 0.62, 'bottom': 0.97, 'left': 0.14, 'right': 0.86};
 
@@ -70,17 +76,25 @@ class _SettingsTabState extends State<SettingsTab> {
   bool updatingPatches = false;
   (bool, String)? patchesResult;
 
+  /// Kayıtlı arayüz dili; boşsa cihaz dili (eski kayıt uyumu).
+  String get uiChoice {
+    final code = settings?.uiLanguage ?? '';
+    return code.isEmpty ? AppLanguage.auto : code;
+  }
+
   /// Arayüz dilini seçer: seçim hemen uygulanır, ayarlara yazılır.
   Future<void> pickAppLanguage() async {
+    final l = AppLocalizations.of(context);
+    final languages = uiLanguagesOf(l);
     final picked = await showApplePicker(
       context,
-      title: AppLocalizations.of(context).settingsAppLanguage,
-      options: uiLanguages,
-      selected: settings?.uiLanguage ?? AppLanguage.fallback,
+      title: l.settingsAppLanguage,
+      options: languages,
+      selected: uiChoice,
     );
     if (picked == null || !mounted) return;
     change((s) => s.json['uiLanguage'] = picked);
-    AppLanguage.current.value = picked;
+    await AppLanguage.set(picked);
   }
 
   /// Bilgisayar sürümündeki "Oyun" seçimi: en üstte Otomatik, altında Türkçe yaması olan oyunlar.
@@ -327,7 +341,9 @@ class _SettingsTabState extends State<SettingsTab> {
               iconColor: Tokens.teal,
               title: l.settingsAppLanguage,
               subtitle: l.settingsAppLanguageNote,
-              value: uiLanguages[s.uiLanguage] ?? s.uiLanguage,
+              value: uiChoice == AppLanguage.auto
+                  ? '${l.settingsAppLanguageAuto} (${uiLanguagesOf(l)[AppLanguage.current.value] ?? ''})'
+                  : uiLanguagesOf(l)[uiChoice] ?? uiChoice,
               chevron: true,
               onTap: pickAppLanguage,
             ),

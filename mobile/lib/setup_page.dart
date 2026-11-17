@@ -663,7 +663,7 @@ class _PsnLoginPageState extends State<PsnLoginPage> {
       if (mounted) {
         setState(() {
           exchanging = false;
-          error = failure.message;
+          error = failure.messageOf(l);
         });
       }
     }

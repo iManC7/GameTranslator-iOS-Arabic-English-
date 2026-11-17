@@ -1968,4 +1968,22 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get tvStagePreparing => 'Hazırlanıyor…';
+
+  @override
+  String psnErrAuth(int status, String detail) {
+    return 'Sony girişi kabul etmedi (HTTP $status)$detail';
+  }
+
+  @override
+  String psnErrAccount(int status) {
+    return 'Hesap kimliği alınamadı (HTTP $status)';
+  }
+
+  @override
+  String psnErrNetwork(String error) {
+    return 'Sony\'ye ulaşılamadı: $error';
+  }
+
+  @override
+  String get commonBack => 'Geri';
 }

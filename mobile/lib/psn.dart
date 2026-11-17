@@ -6,13 +6,29 @@ import 'dart:typed_data';
 
 import 'package:http/http.dart' as http;
 
-class PsnException implements Exception {
-  PsnException(this.message);
+import 'l10n/app_localizations.dart';
 
-  final String message;
+class PsnException implements Exception {
+  PsnException(this.code, {this.status, this.detail});
+
+  /// Hata türü: 'auth', 'account', 'network'.
+  final String code;
+  final int? status;
+  final String? detail;
+
+  /// Hatanın arayüz dilindeki açıklaması.
+  String messageOf(AppLocalizations l) => switch (code) {
+        'auth' => l.psnErrAuth(status ?? 0, detail ?? ''),
+        'account' => l.psnErrAccount(status ?? 0),
+        _ => l.psnErrNetwork(detail ?? ''),
+      };
 
   @override
-  String toString() => message;
+  String toString() => switch (code) {
+        'auth' => 'Sony auth rejected (HTTP $status)${detail ?? ''}',
+        'account' => 'Account ID unavailable (HTTP $status)',
+        _ => 'Sony unreachable: ${detail ?? ''}',
+      };
 }
 
 class PsnAccount {
@@ -68,19 +84,19 @@ class PsnAccount {
       final tokenJson = _object(token.body);
       final accessToken = tokenJson?['access_token'];
       if (token.statusCode != 200 || accessToken is! String) {
-        throw PsnException('Sony girişi kabul etmedi (HTTP ${token.statusCode})${_sonyError(tokenJson)}');
+        throw PsnException('auth', status: token.statusCode, detail: _sonyError(tokenJson));
       }
       final info = await c
           .get(Uri.parse('$tokenUrl/${Uri.encodeComponent(accessToken)}'), headers: {'Authorization': auth})
           .timeout(const Duration(seconds: 30));
       final userId = _object(info.body)?['user_id'];
       final bytes = userId == null ? null : accountIdBytes('$userId');
-      if (info.statusCode != 200 || bytes == null) throw PsnException('Hesap kimliği alınamadı (HTTP ${info.statusCode})');
+      if (info.statusCode != 200 || bytes == null) throw PsnException('account', status: info.statusCode);
       return bytes;
     } on PsnException {
       rethrow;
     } catch (error) {
-      throw PsnException('Sony\'ye ulaşılamadı: $error');
+      throw PsnException('network', detail: '$error');
     } finally {
       if (own) c.close();
     }

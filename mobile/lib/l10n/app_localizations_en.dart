@@ -1971,4 +1971,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tvStagePreparing => 'Preparing…';
+
+  @override
+  String psnErrAuth(int status, String detail) {
+    return 'Sony rejected the sign-in (HTTP $status)$detail';
+  }
+
+  @override
+  String psnErrAccount(int status) {
+    return 'Could not get the account ID (HTTP $status)';
+  }
+
+  @override
+  String psnErrNetwork(String error) {
+    return 'Could not reach Sony: $error';
+  }
+
+  @override
+  String get commonBack => 'Back';
 }

@@ -396,7 +396,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
                   Expanded(
                     child: Container(
                       height: 4,
-                      margin: const EdgeInsets.only(right: 4),
+                      margin: const EdgeInsetsDirectional.only(end: 4),
                       decoration: BoxDecoration(
                         color: i <= index ? Tokens.accent : Tokens.surfaceHigh,
                         borderRadius: BorderRadius.circular(2),
@@ -611,7 +611,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
             ),
             const SizedBox(height: 4),
             Padding(
-              padding: const EdgeInsets.only(left: 46),
+              padding: const EdgeInsetsDirectional.only(start: 46),
               child: Text(l.tvInstallStepCounter(index + 1, steps.length), style: Txt.footnote.copyWith(color: Tokens.textSecondary)),
             ),
             const SizedBox(height: 14),

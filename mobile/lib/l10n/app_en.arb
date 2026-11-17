@@ -621,5 +621,9 @@
   "tvStageInstalling": "Installing on the TV…",
   "tvStageVerifying": "Verifying the installation…",
   "tvStageLaunching": "Opening on the TV…",
-  "tvStagePreparing": "Preparing…"
+  "tvStagePreparing": "Preparing…",
+  "psnErrAuth": "Sony rejected the sign-in (HTTP {status}){detail}",
+  "psnErrAccount": "Could not get the account ID (HTTP {status})",
+  "psnErrNetwork": "Could not reach Sony: {error}",
+  "commonBack": "Back"
 }

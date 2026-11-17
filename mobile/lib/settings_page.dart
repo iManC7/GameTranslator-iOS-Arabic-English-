@@ -59,8 +59,7 @@ class _SettingsTabState extends State<SettingsTab> {
   };
 
   /// Arayüz dillerinin kendi adlarıyla listesi (sistem dilinden bağımsız).
-  /// Arapça, RTL düzeni tamamlanana kadar seçicide yok (app_ar.arb hazır).
-  static const uiLanguages = {'tr': 'Türkçe', 'en': 'English'};
+  static const uiLanguages = {'tr': 'Türkçe', 'en': 'English', 'ar': 'العربية'};
 
   static const defaultRegion = {'top': 0.62, 'bottom': 0.97, 'left': 0.14, 'right': 0.86};
 

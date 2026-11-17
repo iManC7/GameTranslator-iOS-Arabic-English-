@@ -686,5 +686,33 @@
   "tvStageInstalling": "TV'ye kuruluyor…",
   "tvStageVerifying": "Kurulum doğrulanıyor…",
   "tvStageLaunching": "TV'de açılıyor…",
-  "tvStagePreparing": "Hazırlanıyor…"
+  "tvStagePreparing": "Hazırlanıyor…",
+  "psnErrAuth": "Sony girişi kabul etmedi (HTTP {status}){detail}",
+  "@psnErrAuth": {
+    "placeholders": {
+      "status": {
+        "type": "int"
+      },
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "psnErrAccount": "Hesap kimliği alınamadı (HTTP {status})",
+  "@psnErrAccount": {
+    "placeholders": {
+      "status": {
+        "type": "int"
+      }
+    }
+  },
+  "psnErrNetwork": "Sony'ye ulaşılamadı: {error}",
+  "@psnErrNetwork": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "commonBack": "Geri"
 }

@@ -621,5 +621,9 @@
   "tvStageInstalling": "يجري التثبيت على التلفاز…",
   "tvStageVerifying": "يجري التحقق من التثبيت…",
   "tvStageLaunching": "يجري الفتح على التلفاز…",
-  "tvStagePreparing": "يجري التحضير…"
+  "tvStagePreparing": "يجري التحضير…",
+  "psnErrAuth": "رفضت Sony تسجيل الدخول (HTTP {status}){detail}",
+  "psnErrAccount": "تعذّر الحصول على معرّف الحساب (HTTP {status})",
+  "psnErrNetwork": "تعذّر الوصول إلى Sony: {error}",
+  "commonBack": "رجوع"
 }

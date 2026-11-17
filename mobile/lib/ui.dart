@@ -144,13 +144,20 @@ class GlassScaffold extends StatelessWidget {
   }
 }
 
+/// Yön oku: Arapça (RTL) düzeninde aynalanır.
+IconData directionalChevron(BuildContext context, {bool back = false}) {
+  final rtl = Directionality.of(context) == TextDirection.rtl;
+  if (back) return rtl ? CupertinoIcons.chevron_forward : CupertinoIcons.chevron_back;
+  return rtl ? CupertinoIcons.chevron_back : CupertinoIcons.chevron_forward;
+}
+
 class GlassBackButton extends StatelessWidget {
   const GlassBackButton({super.key});
 
   @override
   Widget build(BuildContext context) => GlassIconButton(
-        icon: CupertinoIcons.chevron_back,
-        tooltip: 'Geri',
+        icon: directionalChevron(context, back: true),
+        tooltip: AppLocalizations.of(context).commonBack,
         onTap: () => Navigator.of(context).maybePop(),
       );
 }
@@ -341,7 +348,7 @@ class Group extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           for (var i = 0; i < children.length; i++) ...[
-            if (i > 0) Padding(padding: EdgeInsets.only(left: inset), child: const Divider()),
+            if (i > 0) Padding(padding: EdgeInsetsDirectional.only(start: inset), child: const Divider()),
             children[i],
           ],
         ],
@@ -431,7 +438,7 @@ class Cell extends StatelessWidget {
           ],
           if (chevron) ...[
             const SizedBox(width: 6),
-            const Icon(CupertinoIcons.chevron_forward, size: 15, color: Color(0x4DEBEBF5)),
+            Icon(directionalChevron(context), size: 15, color: const Color(0x4DEBEBF5)),
           ],
         ],
       ),

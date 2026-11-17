@@ -1971,4 +1971,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get tvStagePreparing => 'يجري التحضير…';
+
+  @override
+  String psnErrAuth(int status, String detail) {
+    return 'رفضت Sony تسجيل الدخول (HTTP $status)$detail';
+  }
+
+  @override
+  String psnErrAccount(int status) {
+    return 'تعذّر الحصول على معرّف الحساب (HTTP $status)';
+  }
+
+  @override
+  String psnErrNetwork(String error) {
+    return 'تعذّر الوصول إلى Sony: $error';
+  }
+
+  @override
+  String get commonBack => 'رجوع';
 }

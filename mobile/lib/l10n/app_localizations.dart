@@ -3483,6 +3483,30 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Hazırlanıyor…'**
   String get tvStagePreparing;
+
+  /// No description provided for @psnErrAuth.
+  ///
+  /// In tr, this message translates to:
+  /// **'Sony girişi kabul etmedi (HTTP {status}){detail}'**
+  String psnErrAuth(int status, String detail);
+
+  /// No description provided for @psnErrAccount.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hesap kimliği alınamadı (HTTP {status})'**
+  String psnErrAccount(int status);
+
+  /// No description provided for @psnErrNetwork.
+  ///
+  /// In tr, this message translates to:
+  /// **'Sony\'ye ulaşılamadı: {error}'**
+  String psnErrNetwork(String error);
+
+  /// No description provided for @commonBack.
+  ///
+  /// In tr, this message translates to:
+  /// **'Geri'**
+  String get commonBack;
 }
 
 class _AppLocalizationsDelegate

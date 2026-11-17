@@ -35,6 +35,713 @@ class AppLocalizationsEn extends AppLocalizations {
       'Interface language only; does not change the game or translation language.';
 
   @override
+  String get guideIntro =>
+      'Everything from setup to troubleshooting, step by step.';
+
+  @override
+  String get guidePhoneAddress => 'your phone\'s address';
+
+  @override
+  String get guideGroupStart => 'GETTING STARTED';
+
+  @override
+  String get guideGroupUsage => 'USAGE';
+
+  @override
+  String get guideGroupHelp => 'HELP';
+
+  @override
+  String get guideNextChapter => 'NEXT CHAPTER';
+
+  @override
+  String get guideTvHelpTitle => 'TV Will Not Connect';
+
+  @override
+  String get gHowTitle => 'How it works';
+
+  @override
+  String get gHowSubtitle => 'The whole setup at a glance';
+
+  @override
+  String get gHowLead =>
+      'GameTranslator links three devices. The game runs on the PS5, you play on the TV, and the phone translates in between:';
+
+  @override
+  String get gHowStep1 =>
+      'The phone takes the game picture from the PS5 over Remote Play. No camera is used.';
+
+  @override
+  String get gHowStep2 =>
+      'It reads the area of the picture where the subtitles appear and translates the text.';
+
+  @override
+  String get gHowStep3 =>
+      'It sends the translation to the TV on the same Wi-Fi. The GameTranslator app on the TV shows it over the game.';
+
+  @override
+  String get gHowNeedsTitle => 'What you need';
+
+  @override
+  String get gHowNeed1 => 'A PS5 with a second user on it (explained below).';
+
+  @override
+  String get gHowNeed2 =>
+      'A TV with the GameTranslator TV app installed: LG, Samsung or Android TV / Google TV.';
+
+  @override
+  String get gHowNeed3 =>
+      'One home network (Wi-Fi) that the phone, the PS5 and the TV are all connected to.';
+
+  @override
+  String get gHowNeed4 =>
+      'Internet for online translation. There is also an offline translation option.';
+
+  @override
+  String get gHowTip =>
+      'Setup is done once. After that you only start translation and open the app on the TV.';
+
+  @override
+  String get gPs5Title => 'Prepare the PS5';
+
+  @override
+  String get gPs5Subtitle => 'A second user and Remote Play';
+
+  @override
+  String get gPs5UserTitle => '1. Add a second user';
+
+  @override
+  String get gPs5UserBody =>
+      'The PS5 treats the device that connects over Remote Play as that user\'s controller. If the phone connects with your account, your controller is detached from the TV. That is why the phone connects with a separate user; you keep playing on your own account.';
+
+  @override
+  String get gPs5UserStep1 =>
+      'Add a new user on the PS5 (from the profile picture on the home screen: Switch User › Add User).';
+
+  @override
+  String get gPs5UserStep2 =>
+      'Sign that user in with a PSN account. You can create one for free; PS Plus is not required.';
+
+  @override
+  String get gPs5UserStep3 =>
+      'You will also sign in to PSN on the phone with this second account.';
+
+  @override
+  String get gPs5RemoteTitle => '2. Turn on Remote Play';
+
+  @override
+  String get gPs5RemoteStep1 => 'Switch to the second user on the PS5.';
+
+  @override
+  String get gPs5RemoteStep2 => 'Go to Settings › System › Remote Play.';
+
+  @override
+  String get gPs5RemoteStep3 => 'Turn on \"Enable Remote Play\".';
+
+  @override
+  String get gPs5WakeTitle => '3. Waking from rest mode (optional)';
+
+  @override
+  String get gPs5WakeBody =>
+      'So the phone can wake the PS5 when you start translation while it is in rest mode:';
+
+  @override
+  String get gPs5WakeStep1 =>
+      'Go to Settings › System › Power Saving › Features Available in Rest Mode.';
+
+  @override
+  String get gPs5WakeStep2 =>
+      'Turn on \"Stay Connected to the Internet\" and \"Enable Turning On PS5 from Network\".';
+
+  @override
+  String get gPs5Tip =>
+      'If you do not want waking, turn off Settings › PS5 › \"Wake if in rest mode\" on the phone.';
+
+  @override
+  String get gPairTitle => 'Pair the phone with the PS5';
+
+  @override
+  String get gPairSubtitle => 'PSN sign-in and the 8-digit code';
+
+  @override
+  String get gPairSignInTitle => '1. Sign in with PSN';
+
+  @override
+  String get gPairSignInStep1 =>
+      'On the setup screen tap \"Sign in with PSN\". Sony\'s own sign-in page opens.';
+
+  @override
+  String get gPairSignInStep2 =>
+      'Sign in with the account of the second user on the PS5.';
+
+  @override
+  String get gPairSignInStep3 =>
+      'When sign-in finishes, the app returns to setup by itself and shows \"PSN account connected\".';
+
+  @override
+  String get gPairSignInTip =>
+      'Your password goes straight to Sony; the app only stores your account ID.';
+
+  @override
+  String get gPairCodeTitle => '2. Enter the pairing code';
+
+  @override
+  String get gPairCodeStep1 =>
+      'On the PS5, while the second user is active, go to Settings › System › Remote Play › \"Link Device\".';
+
+  @override
+  String get gPairCodeStep2 =>
+      'An 8-digit code and a countdown appear on the screen. The code is valid for about 5 minutes.';
+
+  @override
+  String get gPairCodeStep3 =>
+      'On the phone, pick your PS5 from the \"Found console\" list.';
+
+  @override
+  String get gPairCodeStep4 => 'Type the code into the boxes and tap \"Pair\".';
+
+  @override
+  String get gPairMissingTitle => 'If the PS5 is not in the list';
+
+  @override
+  String get gPairMissing1 =>
+      'Check that the phone and the PS5 are on the same Wi-Fi network; it must not be a guest network or mobile data.';
+
+  @override
+  String get gPairMissing2 => 'Tap \"Refresh\".';
+
+  @override
+  String get gPairMissing3 =>
+      'If it still does not appear, tap \"Enter the IP address manually\". The address is shown on the PS5 under Settings › Network › Connection Status › View Connection Status.';
+
+  @override
+  String get gPairTip =>
+      'Pairing is done once. If the PS5 address changes, the app finds it again on the network.';
+
+  @override
+  String get gTvTitle => 'Prepare the TV';
+
+  @override
+  String get gTvSubtitle => 'Supported TVs and the TV app';
+
+  @override
+  String get gTvLead =>
+      'A separate GameTranslator TV app shows the subtitles on the TV. It is not in the stores yet, so it is installed on the TV once. You can install it on LG and Android TV from this phone; on Samsung, installation is currently done from a computer.';
+
+  @override
+  String get gTvSupportedTitle => 'Which TVs are supported?';
+
+  @override
+  String get gTvTableLg => 'LG';
+
+  @override
+  String get gTvTableLgDetail => 'webOS 4 and later';
+
+  @override
+  String get gTvTableSamsung => 'Samsung';
+
+  @override
+  String get gTvTableSamsungDetail => 'Tizen, 2019 and later';
+
+  @override
+  String get gTvTableAndroid => 'Android TV / Google TV';
+
+  @override
+  String get gTvTableAndroidDetail =>
+      'Vestel, Arçelik, Beko, Grundig, Philips, Sony, TCL and others';
+
+  @override
+  String get gTvTableOther => 'Others';
+
+  @override
+  String get gTvTableOtherDetail =>
+      'Linux models from Vestel/Arçelik/Beko/Grundig, Philips Saphi, Titan OS';
+
+  @override
+  String get gTvNotSupported =>
+      'Not supported: the app cannot be installed on these TVs.';
+
+  @override
+  String get gTvAndroidTip =>
+      'Is your TV an Android TV? If the home screen says Google Play Store or \"Google TV\", it is.';
+
+  @override
+  String get gTvLgTitle => 'LG';
+
+  @override
+  String get gTvLgStep1 =>
+      'On a computer, create a free LG developer account at webostv.developer.lge.com.';
+
+  @override
+  String get gTvLgStep2 =>
+      'On the TV, install the \"Developer Mode\" app from LG Content Store, sign in with your account and turn on \"Dev Mode Status\". The TV restarts.';
+
+  @override
+  String get gTvLgStep3 =>
+      'In the Developer Mode app on the TV, turn on \"Key Server\".';
+
+  @override
+  String get gTvLgStep4 =>
+      'On the phone, choose LG in the \"Install the TV app\" wizard, find your TV and type the 6-character passphrase shown on the screen (the TV step of GameTranslator on a computer does the same).';
+
+  @override
+  String get gTvLgNote =>
+      'On LG, developer mode stays on for at most 1000 hours. If you will not use it for a long time, press \"EXTEND\" in the Developer Mode app before the time runs out; once it expires the TV app is removed and you have to install it again.';
+
+  @override
+  String get gTvSamsungTitle => 'Samsung';
+
+  @override
+  String get gTvSamsungStep1 =>
+      'On the TV open the Apps screen and press 1 2 3 4 5 on the remote. The developer mode window opens.';
+
+  @override
+  String get gTvSamsungStep2 =>
+      'Turn on \"Developer mode\" and type your computer\'s address into \"Host PC IP\".';
+
+  @override
+  String get gTvSamsungStep3 =>
+      'Fully power the TV off and on by holding the power button.';
+
+  @override
+  String get gTvSamsungStep4 =>
+      'In the TV step of GameTranslator on the computer, select your TV. On the page that opens, sign in with a free Samsung account; the app is signed and installed.';
+
+  @override
+  String get gTvAndroidTitle => 'Android TV / Google TV';
+
+  @override
+  String get gTvAndroidStep1 =>
+      'On the TV go to Settings › Device Preferences › About (on Google TV: Settings › System › About).';
+
+  @override
+  String get gTvAndroidStep2 => 'Press OK 7 times on \"Build\".';
+
+  @override
+  String get gTvAndroidStep3 =>
+      'In Developer options turn on \"USB debugging\" (and \"Network debugging\" if available).';
+
+  @override
+  String get gTvAndroidStep4 =>
+      'On the phone, choose \"Android TV / Google TV\" in the \"Install the TV app\" wizard and accept the prompt on the TV.';
+
+  @override
+  String get gTvAndroidNote =>
+      'If the TV does not allow network debugging, you can also install with a USB drive: download the TV app APK from GameTranslator\'s releases page, copy it to the drive and open it with a file manager on the TV.';
+
+  @override
+  String get gTvAfterTitle => 'After installation';
+
+  @override
+  String get gTvAfterBody =>
+      'The TV app finds the phone on the network by itself; you do not need to type the TV\'s address on the phone. On Samsung the computer is only needed for installation; afterwards it can stay off.';
+
+  @override
+  String get gTvObsTitle => 'For streamers: OBS';
+
+  @override
+  String gTvObsBody(String phone) {
+    return 'While translation is on, the subtitles are also served as a web page. In OBS add a \"Browser Source\" and use http://$phone:8787/obs as the address (1920×1080). The page background is transparent; it does not show the subtitles over the game in the TV browser and is only meant for stream and recording layouts.';
+  }
+
+  @override
+  String get gFirstTitle => 'First use';
+
+  @override
+  String get gFirstSubtitle => 'Start translation and see it on the TV';
+
+  @override
+  String get gFirstStep1 =>
+      'Open the game on the PS5 with your own account and turn on subtitles in the game settings.';
+
+  @override
+  String get gFirstStep2 =>
+      'Tap the big button on the phone\'s home screen. The first time you are asked for notification permission; allow it so translation can continue in the background.';
+
+  @override
+  String get gFirstStep3 =>
+      'When the status says \"Translation on\", the PS5 card says \"Connected\". The first connection takes a few seconds.';
+
+  @override
+  String get gFirstStep4 =>
+      'Open the GameTranslator app on the TV. Within a few seconds the TV card on the phone says \"Connected\".';
+
+  @override
+  String get gFirstStep5 =>
+      'If the TV shows no game picture, press OK to open the panel and use left/right to select the HDMI input the PS5 is connected to.';
+
+  @override
+  String get gFirstStep6 =>
+      'If there is no sound from the TV, the PS5 has routed audio to Remote Play: press the PS button, open Sound › Output Device from the menu at the bottom and choose HDMI. This is done once.';
+
+  @override
+  String get gFirstStep7 =>
+      'On the phone tap \"Send a test subtitle to the TV\". If you see the text on the TV, everything is ready.';
+
+  @override
+  String get gFirstTip =>
+      'You can turn the phone screen off while translation is on. To stop, tap the button in the app or \"Stop\" in the notification.';
+
+  @override
+  String get gFirstNextTitle => 'Next time';
+
+  @override
+  String get gFirstNextBody =>
+      'Only two steps: start translation on the phone, open GameTranslator on the TV.';
+
+  @override
+  String get gFirstBatteryTitle => 'Battery and heat';
+
+  @override
+  String get gFirstBatteryBody =>
+      'The phone decodes video and reads text continuously; for long sessions keep it plugged in.';
+
+  @override
+  String get gRemoteTitle => 'TV remote';
+
+  @override
+  String get gRemoteSubtitle => 'The buttons in the TV app';
+
+  @override
+  String get gRemoteLead =>
+      'While GameTranslator is open on the TV, the remote buttons do this:';
+
+  @override
+  String get gRemoteOk => 'OK';
+
+  @override
+  String get gRemoteOkText =>
+      'Opens and closes the status panel (HDMI input, connection status).';
+
+  @override
+  String get gRemoteLeftRight => 'Left / Right';
+
+  @override
+  String get gRemoteLeftRightText =>
+      'Changes the HDMI input while the panel is open.';
+
+  @override
+  String get gRemoteNumbers => '1 – 4';
+
+  @override
+  String get gRemoteNumbersText => 'Selects the HDMI input directly.';
+
+  @override
+  String get gRemoteUpDown => 'Up / Down';
+
+  @override
+  String get gRemoteUpDownText =>
+      'Moves the subtitle up or down on the screen.';
+
+  @override
+  String get gRemoteRed => 'Red';
+
+  @override
+  String get gRemoteRedText => 'Shows the TV\'s own test caption.';
+
+  @override
+  String get gRemoteGreen => 'Green';
+
+  @override
+  String get gRemoteGreenText => 'Opens and closes the status panel.';
+
+  @override
+  String get gRemoteBlue => 'Blue';
+
+  @override
+  String get gRemoteBlueText =>
+      'Starts or stops the demo with sample subtitles.';
+
+  @override
+  String get gRemoteBack => 'Back';
+
+  @override
+  String get gRemoteBackText => 'Exits the app.';
+
+  @override
+  String get gRemoteTip =>
+      'You play with the PS5 controller; the TV remote is only needed for these settings.';
+
+  @override
+  String get gRegionTitle => 'Adjust the subtitle region';
+
+  @override
+  String get gRegionSubtitle => 'Where the phone looks on the screen';
+
+  @override
+  String get gRegionBody =>
+      'The phone reads only the area where the subtitles appear, not the whole screen. If the region is in the wrong place, no translation arrives or other text on the screen gets translated.';
+
+  @override
+  String get gRegionStep1 =>
+      'With translation on, wait for a subtitle to appear in the game.';
+
+  @override
+  String get gRegionStep2 =>
+      'Look at the blue frame in the preview on the home screen: the whole subtitle must be inside the frame.';
+
+  @override
+  String get gRegionStep3 =>
+      'If not, tap \"Adjust the subtitle region\". Pick the Top, Bottom, Left or Right edge and move it with the slider.';
+
+  @override
+  String get gRegionStep4 =>
+      'The \"Read in the frame\" line on the home screen shows what the phone reads at that moment; the whole subtitle should appear there.';
+
+  @override
+  String get gRegionBullet1 =>
+      'If the start or end of the sentence is cut off, widen the frame.';
+
+  @override
+  String get gRegionBullet2 =>
+      'If the top line of two-line subtitles disappears, move the top edge up.';
+
+  @override
+  String get gRegionBullet3 =>
+      'If other text such as objectives or map names is translated, narrow the frame.';
+
+  @override
+  String get gRegionTip =>
+      'Every game puts subtitles in a different place; when you start a new game, one look at the region is enough.';
+
+  @override
+  String get gLookTitle => 'Translation and appearance';
+
+  @override
+  String get gLookSubtitle => 'Engine, glossary and the text on the TV';
+
+  @override
+  String get gEngineTitle => 'Translation engine';
+
+  @override
+  String get gEngineGoogle => 'Google';
+
+  @override
+  String get gEngineGoogleText =>
+      'Needs internet, no key required. The best starting point for most games.';
+
+  @override
+  String get gEngineDeepl => 'DeepL';
+
+  @override
+  String get gEngineDeeplText =>
+      'Builds more natural sentences. You need to enter your own API key from DeepL.';
+
+  @override
+  String get gEngineOnDevice => 'On device';
+
+  @override
+  String get gEngineOnDeviceText =>
+      'Works offline; its quality is lower than the others. The language model downloads once on first use.';
+
+  @override
+  String get gEngineFallback =>
+      'If the internet drops, translation switches to the on-device model by itself and switches back when the connection returns.';
+
+  @override
+  String get gGlossaryTitle => 'Glossary';
+
+  @override
+  String get gGlossaryBody =>
+      'To pin character names and game terms that the translation gets wrong (English → Turkish only). Open it from Settings › Translation › Glossary. Terms in \"terms\" are translated to the text you write; names in \"keep\" stay as they are.';
+
+  @override
+  String get gLookOnTvTitle => 'Appearance on the TV';
+
+  @override
+  String get gLookOnTv1 => 'Font size and color: Settings › On TV.';
+
+  @override
+  String get gLookOnTv2 =>
+      'Subtitle position: covering the game subtitle, above it, below it, or fixed at the bottom of the screen.';
+
+  @override
+  String get gLookOnTv3 =>
+      'Background darkness: how dark the black box behind the text is. Keep it high if you are covering the game subtitle.';
+
+  @override
+  String get gTroubleTitle => 'Troubleshooting';
+
+  @override
+  String get gTroubleSubtitle => 'Common situations';
+
+  @override
+  String get gQ1 =>
+      'Translation does not start, it stays at \"Connecting to the PS5\"';
+
+  @override
+  String get gQ1A1 =>
+      'Is the PS5 on? If it is in rest mode, enable waking as described in \"Prepare the PS5\".';
+
+  @override
+  String get gQ1A2 =>
+      'Is the phone on Wi-Fi and on the same network as the PS5?';
+
+  @override
+  String get gQ1A3 => 'Is Remote Play enabled on the PS5?';
+
+  @override
+  String get gQ2 => '\"Remote Play is being used by another device\"';
+
+  @override
+  String get gQ2A1 =>
+      'The PS5 accepts only one Remote Play connection at a time. If GameTranslator on a computer or another Remote Play app is open, close it.';
+
+  @override
+  String get gQ2A2 =>
+      'If you just stopped it, wait a few seconds; the app retries by itself.';
+
+  @override
+  String get gQ3 => 'My controller got detached from the TV';
+
+  @override
+  String get gQ3A1 =>
+      'The phone connected with the account you play on. Use Settings › PS5 › \"Change the PSN account\" to switch to the second user\'s account.';
+
+  @override
+  String get gQ4 => 'The TV card stays at \"Waiting\"';
+
+  @override
+  String get gQ4A1 => 'Is the GameTranslator app open on the TV?';
+
+  @override
+  String get gQ4A2 =>
+      'Is the TV on the same network as the phone? It must not be a guest network or a different router.';
+
+  @override
+  String get gQ4A3 =>
+      'If GameTranslator on a computer is open, close it; the TV connects to the first one it finds.';
+
+  @override
+  String get gQ4A4 =>
+      'If the TV app was connected to a computer before, it may be stuck on that address. Follow the \"If the TV cannot find the phone\" steps below.';
+
+  @override
+  String get gTvNotFoundTitle => 'If the TV cannot find the phone';
+
+  @override
+  String get gRecoveryLead =>
+      'The TV app remembers the address it last connected to. If it connected to a computer before, it may keep trying that address instead of looking for the phone. Clearing the saved address makes the app scan the network again and find the phone.';
+
+  @override
+  String get gRecoveryAndroidTitle =>
+      'Android TV / Google TV (TCL, Sony, Philips, Vestel…)';
+
+  @override
+  String get gRecoveryAndroidStep1 =>
+      'On the TV go to Settings › Apps and pick GameTranslator from the list (you may need \"Show all apps\").';
+
+  @override
+  String get gRecoveryAndroidStep2 =>
+      'Choose \"Clear data\" and confirm. The app is not uninstalled; only the saved address and settings are reset.';
+
+  @override
+  String get gRecoveryAndroidStep3 =>
+      'With translation on, open GameTranslator on the TV again.';
+
+  @override
+  String get gRecoveryAndroidStep4 =>
+      'Wait up to a minute; the TV card on the phone turns \"Connected\".';
+
+  @override
+  String get gRecoverySamsungTitle => 'Samsung and LG';
+
+  @override
+  String get gRecoverySamsungStep1 =>
+      'On these TVs app data cannot be cleared separately: remove GameTranslator from the TV.';
+
+  @override
+  String get gRecoverySamsungStep2 =>
+      'Install it again with GameTranslator on a computer (the steps in \"Prepare the TV\").';
+
+  @override
+  String get gRecoverySamsungStep3 =>
+      'Close GameTranslator on the computer, start translation on the phone and open the app on the TV.';
+
+  @override
+  String get gRecoveryStillTitle => 'If it still does not work';
+
+  @override
+  String get gRecoveryStill1 =>
+      'Is GameTranslator on the computer closed? If it is open, the TV connects to it.';
+
+  @override
+  String get gRecoveryStill2 =>
+      'Are the phone and the TV on the same Wi-Fi? If \"client isolation\" (AP isolation) is on in the router, the devices cannot see each other.';
+
+  @override
+  String get gRecoveryStill3 =>
+      'The HDMI setting on the TV is also reset, so press OK to open the panel and select the PS5 input again.';
+
+  @override
+  String get gTroubleTip =>
+      'If you cannot solve a problem, you can copy the records in Settings › About › Log and share them.';
+
+  @override
+  String get gQ5 => 'No game picture on the TV, the screen is black';
+
+  @override
+  String get gQ5A1 =>
+      'Press OK to open the panel and use left/right to select the HDMI input the PS5 is connected to.';
+
+  @override
+  String get gQ5A2 =>
+      'Some Android TVs do not hand the HDMI picture to another app; on those TVs the subtitle appears but the background stays black.';
+
+  @override
+  String get gQ6 => 'No subtitle at all';
+
+  @override
+  String get gQ6A1 => 'Are the game\'s own subtitles turned on?';
+
+  @override
+  String get gQ6A2 =>
+      'If \"Read in the frame\" on the home screen is empty, the region is in the wrong place; see \"Adjust the subtitle region\".';
+
+  @override
+  String get gQ6A3 =>
+      'Does the game language match the source language in Settings › Translation?';
+
+  @override
+  String get gQ6A4 =>
+      'If \"Send a test subtitle to the TV\" works, the TV connection is fine; the problem is in reading.';
+
+  @override
+  String get gQ7 => 'The translation is partial or meaningless';
+
+  @override
+  String get gQ7A1 =>
+      'If the start or end of the sentence is missing, widen the region.';
+
+  @override
+  String get gQ7A2 =>
+      'If the engine is \"On device\", switch to Google or DeepL.';
+
+  @override
+  String get gQ7A3 =>
+      'Reading is harder with very decorative or very small fonts; increasing the subtitle size in the game and adding a background helps.';
+
+  @override
+  String get gQ8 => 'Translation arrives late';
+
+  @override
+  String get gQ8A1 =>
+      'Keep the phone and the PS5 close to the router if possible; weak Wi-Fi delays the picture.';
+
+  @override
+  String get gQ8A2 => 'With online engines the internet speed matters too.';
+
+  @override
+  String get gQ9 => 'Translation stops when I turn the screen off';
+
+  @override
+  String get gQ9A1 =>
+      'The phone\'s battery saver may be stopping the app. On the phone go to Settings › Apps › GameTranslator › Battery and choose \"Unrestricted\".';
+
+  @override
+  String get gQ9A2 =>
+      'If you turned off notification permission, turn it back on; the background service runs with a notification.';
+
+  @override
   String get commonOk => 'OK';
 
   @override

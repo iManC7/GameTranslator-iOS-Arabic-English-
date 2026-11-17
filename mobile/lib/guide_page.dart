@@ -2,6 +2,7 @@
 import 'package:material_ui/material_ui.dart';
 
 import 'bridge.dart';
+import 'l10n/app_localizations.dart';
 import 'main.dart';
 import 'tv_install_page.dart';
 import 'ui.dart';
@@ -24,12 +25,13 @@ class GuideTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
     return LargeTitleList(
-      title: 'Rehber',
+      title: l.tabGuide,
       children: [
         Padding(
           padding: const EdgeInsets.fromLTRB(4, 0, 4, 4),
-          child: Text('Kurulumdan sorun gidermeye kadar her şey, adım adım.', style: Txt.body.copyWith(color: Tokens.textSecondary)),
+          child: Text(l.guideIntro, style: Txt.body.copyWith(color: Tokens.textSecondary)),
         ),
         const GuideList(),
       ],
@@ -43,7 +45,8 @@ class GuideList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final chapters = guideChapters(null);
+    final l = AppLocalizations.of(context);
+    final chapters = guideChapters(null, l);
     Widget cell(int index) => Cell(
           icon: chapters[index].icon,
           iconColor: chapters[index].color,
@@ -55,11 +58,11 @@ class GuideList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        const GroupHeader('BAŞLANGIÇ'),
+        GroupHeader(l.guideGroupStart),
         Group(inset: 60, children: [for (var i = 0; i < 5; i++) cell(i)]),
-        const GroupHeader('KULLANIM'),
+        GroupHeader(l.guideGroupUsage),
         Group(inset: 60, children: [for (var i = 5; i < 8; i++) cell(i)]),
-        const GroupHeader('YARDIM'),
+        GroupHeader(l.guideGroupHelp),
         Group(inset: 60, children: [cell(8)]),
       ],
     );
@@ -89,11 +92,12 @@ class _GuideChapterPageState extends State<GuideChapterPage> {
 
   @override
   Widget build(BuildContext context) {
-    final chapters = guideChapters(address);
+    final l = AppLocalizations.of(context);
+    final chapters = guideChapters(address, l);
     final chapter = chapters[widget.index];
     final next = widget.index + 1 < chapters.length ? widget.index + 1 : null;
     return GlassScaffold(
-      title: 'Rehber',
+      title: l.tabGuide,
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
         children: [
@@ -120,7 +124,7 @@ class _GuideChapterPageState extends State<GuideChapterPage> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: chapter.children),
           ),
           if (next != null) ...[
-            const GroupHeader('SONRAKİ BÖLÜM'),
+            GroupHeader(l.guideNextChapter),
             Group(
               inset: 60,
               children: [
@@ -142,280 +146,267 @@ class _GuideChapterPageState extends State<GuideChapterPage> {
 }
 
 /// Bölümlerin içeriği. [address]: telefonun ağ adresi (OBS adresini tam yazmak için); bilinmiyorsa genel yazılır.
-List<GuideChapter> guideChapters(String? address) {
-  final phone = address ?? 'telefonun adresi';
+List<GuideChapter> guideChapters(String? address, AppLocalizations l) {
+  final phone = address ?? l.guidePhoneAddress;
   return [
-    const GuideChapter(
+    GuideChapter(
       icon: CupertinoIcons.arrow_right_arrow_left,
       color: Tokens.accent,
-      title: 'Nasıl çalışır?',
-      subtitle: 'Bir bakışta bütün düzen',
+      title: l.gHowTitle,
+      subtitle: l.gHowSubtitle,
       children: [
-        _P('GameTranslator üç cihazı birbirine bağlar. Oyun PS5\'te çalışır, sen TV\'de oynarsın; telefon arada çevirmenlik yapar:'),
+        _P(l.gHowLead),
         _Steps([
-          'Telefon, oyun görüntüsünü PS5\'ten Remote Play (Uzaktan Oynatma) ile alır. Kamera kullanılmaz.',
-          'Görüntüde altyazının çıktığı bölgeyi okur ve yazıyı çevirir.',
-          'Çeviriyi aynı Wi-Fi\'deki TV\'ye gönderir. TV\'deki GameTranslator uygulaması onu oyunun üstünde gösterir.',
+          l.gHowStep1,
+          l.gHowStep2,
+          l.gHowStep3,
         ]),
-        _Sub('Neler gerekli?'),
+        _Sub(l.gHowNeedsTitle),
         _Bullets([
-          'PS5 ve üzerinde ikinci bir kullanıcı (aşağıda anlatılıyor).',
-          'GameTranslator TV uygulamasının kurulu olduğu bir TV: LG, Samsung ya da Android TV / Google TV.',
-          'Telefon, PS5 ve TV\'nin bağlı olduğu tek bir ev ağı (Wi-Fi).',
-          'Çevrimiçi çeviri için internet. İnternetsiz çalışan bir çeviri seçeneği de var.',
+          l.gHowNeed1,
+          l.gHowNeed2,
+          l.gHowNeed3,
+          l.gHowNeed4,
         ]),
-        _Tip('Kurulum bir kez yapılır. Sonrasında tek yapacağın: çeviriyi başlatmak ve TV\'de uygulamayı açmak.'),
+        _Tip(l.gHowTip),
       ],
     ),
-    const GuideChapter(
+    GuideChapter(
       icon: CupertinoIcons.gamecontroller_fill,
       color: Tokens.indigo,
-      title: 'PS5\'i hazırla',
-      subtitle: 'İkinci kullanıcı ve Uzaktan Oynatma',
+      title: l.gPs5Title,
+      subtitle: l.gPs5Subtitle,
       children: [
-        _Sub('1. İkinci bir kullanıcı ekle'),
-        _P('PS5, Uzaktan Oynatma ile bağlanan cihazı o kullanıcının kumandası sayar. Telefon senin hesabınla bağlanırsa '
-            'elindeki kumanda TV\'den kopar. Bu yüzden telefon ayrı bir kullanıcıyla bağlanır; sen kendi hesabınla oynamaya devam edersin.'),
+        _Sub(l.gPs5UserTitle),
+        _P(l.gPs5UserBody),
         _Steps([
-          'PS5\'te yeni bir kullanıcı ekle (ana ekrandaki profil resminden Kullanıcı Değiştir › Kullanıcı Ekle).',
-          'Bu kullanıcıya bir PSN hesabıyla giriş yap. Hesabın yoksa ücretsiz açabilirsin; PS Plus gerekmez.',
-          'Telefonda PSN girişini de bu ikinci hesapla yapacaksın.',
+          l.gPs5UserStep1,
+          l.gPs5UserStep2,
+          l.gPs5UserStep3,
         ]),
-        _Sub('2. Uzaktan Oynatmayı aç'),
+        _Sub(l.gPs5RemoteTitle),
         _Steps([
-          'PS5\'te ikinci kullanıcıya geç.',
-          'Ayarlar › Sistem › Uzaktan Oynatma\'ya gir.',
-          '"Uzaktan Oynatmayı Etkinleştir"i aç.',
+          l.gPs5RemoteStep1,
+          l.gPs5RemoteStep2,
+          l.gPs5RemoteStep3,
         ]),
-        _Sub('3. Dinlenme modundan uyandırma (isteğe bağlı)'),
-        _P('PS5 dinlenme modundayken çeviriyi başlattığında telefonun onu uyandırabilmesi için:'),
+        _Sub(l.gPs5WakeTitle),
+        _P(l.gPs5WakeBody),
         _Steps([
-          'Ayarlar › Sistem › Güç Tasarrufu › Dinlenme Modunda Kullanılabilen Özellikler\'e gir.',
-          '"İnternete Bağlı Kal" ve "PS5\'in Ağdan Açılmasını Etkinleştir" seçeneklerini aç.',
+          l.gPs5WakeStep1,
+          l.gPs5WakeStep2,
         ]),
-        _Tip('Uyandırmayı istemiyorsan telefonda Ayarlar › PS5 › "Dinlenme modundaysa uyandır"ı kapatabilirsin.'),
+        _Tip(l.gPs5Tip),
       ],
     ),
-    const GuideChapter(
+    GuideChapter(
       icon: CupertinoIcons.link,
       color: Tokens.success,
-      title: 'Telefonu PS5 ile eşleştir',
-      subtitle: 'PSN girişi ve 8 haneli kod',
+      title: l.gPairTitle,
+      subtitle: l.gPairSubtitle,
       children: [
-        _Sub('1. PSN ile giriş yap'),
+        _Sub(l.gPairSignInTitle),
         _Steps([
-          'Kurulum ekranında "PSN ile giriş yap"a dokun. Sony\'nin kendi giriş sayfası açılır.',
-          'PS5\'teki ikinci kullanıcının hesabıyla giriş yap.',
-          'Giriş bitince uygulama kuruluma kendiliğinden döner ve "PSN hesabı bağlandı" yazar.',
+          l.gPairSignInStep1,
+          l.gPairSignInStep2,
+          l.gPairSignInStep3,
         ]),
-        _Tip('Şifren doğrudan Sony\'ye gider; uygulama yalnızca hesabının kimlik numarasını saklar.'),
-        _Sub('2. Eşleştirme kodunu gir'),
+        _Tip(l.gPairSignInTip),
+        _Sub(l.gPairCodeTitle),
         _Steps([
-          'PS5\'te ikinci kullanıcıdayken Ayarlar › Sistem › Uzaktan Oynatma › "Cihaz Eşleştir"e gir.',
-          'Ekranda 8 haneli bir kod ve geri sayım görünür. Kod yaklaşık 5 dakika geçerlidir.',
-          'Telefonda "Bulunan konsol" listesinden PS5\'ini seç.',
-          'Kodu kutulara yaz ve "Eşleştir"e dokun.',
+          l.gPairCodeStep1,
+          l.gPairCodeStep2,
+          l.gPairCodeStep3,
+          l.gPairCodeStep4,
         ]),
-        _Sub('PS5 listede yoksa'),
+        _Sub(l.gPairMissingTitle),
         _Bullets([
-          'Telefon ve PS5 aynı Wi-Fi ağında mı kontrol et; misafir ağı ya da mobil veri olmamalı.',
-          '"Yenile"ye dokun.',
-          'Yine çıkmazsa "IP adresini elle yaz"a dokun. Adres PS5\'te Ayarlar › Ağ › Bağlantı Durumu › Bağlantı Durumunu Görüntüle\'de yazar.',
+          l.gPairMissing1,
+          l.gPairMissing2,
+          l.gPairMissing3,
         ]),
-        _Tip('Eşleştirme bir kez yapılır. PS5\'in adresi değişirse uygulama onu ağda yeniden bulur.'),
+        _Tip(l.gPairTip),
       ],
     ),
     GuideChapter(
       icon: CupertinoIcons.tv_fill,
       color: Tokens.purple,
-      title: 'TV\'yi hazırla',
-      subtitle: 'Desteklenen TV\'ler ve TV uygulaması',
+      title: l.gTvTitle,
+      subtitle: l.gTvSubtitle,
       children: [
-        const _P('Altyazıyı TV\'de gösteren ayrı bir GameTranslator TV uygulaması vardır. Henüz mağazalarda olmadığı için TV\'ye '
-            'bir kez kurulur. LG ve Android TV\'ye bu telefondan kurabilirsin; Samsung\'a kurulum şimdilik bilgisayardan yapılır.'),
+        _P(l.gTvLead),
         const InstallTvButton(),
-        const _Sub('Hangi TV\'ler destekleniyor?'),
-        const _Table([
-          ('LG', 'webOS 4 ve üstü', true),
-          ('Samsung', 'Tizen, 2019 ve sonrası', true),
-          ('Android TV / Google TV', 'Vestel, Arçelik, Beko, Grundig, Philips, Sony, TCL ve diğerleri', true),
-          ('Diğerleri', 'Vestel/Arçelik/Beko/Grundig\'in Linux modelleri, Philips Saphi, Titan OS', false),
+        _Sub(l.gTvSupportedTitle),
+        _Table([
+          (l.gTvTableLg, l.gTvTableLgDetail, true),
+          (l.gTvTableSamsung, l.gTvTableSamsungDetail, true),
+          (l.gTvTableAndroid, l.gTvTableAndroidDetail, true),
+          (l.gTvTableOther, l.gTvTableOtherDetail, false),
         ]),
-        const _Tip('TV\'n Android mi? Ana ekranında Google Play Store ya da "Google TV" yazıyorsa Android\'dir.'),
-        const _Sub('LG'),
-        const _Steps([
-          'Bilgisayardan webostv.developer.lge.com adresinde ücretsiz bir LG geliştirici hesabı aç.',
-          'TV\'de LG Content Store\'dan "Developer Mode" uygulamasını kur, hesabınla giriş yap ve "Dev Mode Status"u aç. TV yeniden başlar.',
-          'TV\'de Developer Mode uygulamasında "Key Server"ı aç.',
-          'Telefonda "TV uygulamasını kur" sihirbazında LG\'yi seç, TV\'ni bul ve ekrandaki 6 karakterli parolayı yaz '
-              '(bilgisayardaki GameTranslator\'ın TV adımı da aynısını yapar).',
+        _Tip(l.gTvAndroidTip),
+        _Sub(l.gTvLgTitle),
+        _Steps([
+          l.gTvLgStep1,
+          l.gTvLgStep2,
+          l.gTvLgStep3,
+          l.gTvLgStep4,
         ]),
-        const _P('LG\'de geliştirici modu en çok 1000 saat açık kalır. Uzun süre kullanmayacaksan süre dolmadan Developer Mode '
-            'uygulamasında "EXTEND"e bas; süre dolarsa TV uygulaması silinir ve baştan kurman gerekir.'),
-        const _Sub('Samsung'),
-        const _Steps([
-          'TV\'de Uygulamalar ekranını aç ve kumandayla 1 2 3 4 5 tuşlarına bas. Geliştirici modu penceresi açılır.',
-          '"Developer mode"u aç, "Host PC IP" alanına bilgisayarının adresini yaz.',
-          'TV\'yi güç tuşunu basılı tutarak tam kapatıp aç.',
-          'Bilgisayardaki GameTranslator\'ın TV adımında TV\'ni seç. Açılan sayfada ücretsiz bir Samsung hesabıyla giriş yap; uygulama imzalanıp kurulur.',
+        _P(l.gTvLgNote),
+        _Sub(l.gTvSamsungTitle),
+        _Steps([
+          l.gTvSamsungStep1,
+          l.gTvSamsungStep2,
+          l.gTvSamsungStep3,
+          l.gTvSamsungStep4,
         ]),
-        const _Sub('Android TV / Google TV'),
-        const _Steps([
-          'TV\'de Ayarlar › Cihaz Tercihleri › Hakkında\'ya gir (Google TV\'de Ayarlar › Sistem › Hakkında).',
-          '"Yapı numarası"nın üstünde Tamam tuşuna 7 kez bas.',
-          'Geliştirici seçenekleri\'nden "USB hata ayıklama"yı (varsa "Ağ hata ayıklama"yı da) aç.',
-          'Telefonda "TV uygulamasını kur" sihirbazında "Android TV / Google TV"yi seç ve TV\'deki izin sorusunu onayla.',
+        _Sub(l.gTvAndroidTitle),
+        _Steps([
+          l.gTvAndroidStep1,
+          l.gTvAndroidStep2,
+          l.gTvAndroidStep3,
+          l.gTvAndroidStep4,
         ]),
-        const _P('TV ağdan hata ayıklamaya izin vermiyorsa USB bellekle de kurabilirsin: GameTranslator\'ın sürümler sayfasından '
-            'TV uygulamasının APK dosyasını indir, belleğe kopyala ve TV\'de bir dosya yöneticisiyle açıp kur.'),
-        const _Sub('Kurulduktan sonra'),
-        const _P('TV uygulaması telefonu ağda kendisi bulur; telefona TV\'nin adresini yazman gerekmez. Samsung\'da bilgisayara '
-            'yalnızca kurulum için ihtiyaç var; sonrasında kapalı kalabilir.'),
-        const _Sub('Yayın yapanlar için: OBS'),
-        _P('Çeviri açıkken altyazılar bir web sayfası olarak da sunulur. OBS\'te "Tarayıcı Kaynağı" ekleyip adres olarak '
-            'http://$phone:8787/obs yaz (1920×1080). Sayfanın zemini saydamdır; TV\'nin tarayıcısında oyunun üstünde göstermez, '
-            'yalnızca yayın ve kayıt düzenleri içindir.'),
+        _P(l.gTvAndroidNote),
+        _Sub(l.gTvAfterTitle),
+        _P(l.gTvAfterBody),
+        _Sub(l.gTvObsTitle),
+        _P(l.gTvObsBody(phone)),
       ],
     ),
-    const GuideChapter(
+    GuideChapter(
       icon: CupertinoIcons.play_fill,
       color: Tokens.accent,
-      title: 'İlk kullanım',
-      subtitle: 'Çeviriyi başlat ve TV\'de gör',
+      title: l.gFirstTitle,
+      subtitle: l.gFirstSubtitle,
       children: [
         _Steps([
-          'PS5\'te oyunu kendi hesabınla aç ve oyunun ayarlarından altyazıları aç.',
-          'Telefonda ana ekrandaki büyük düğmeye dokun. İlk seferde bildirim izni sorulur; izin ver ki çeviri arka planda sürsün.',
-          'Durum "Çeviri açık" olunca PS5 kartı "Bağlı" yazar. İlk bağlantı birkaç saniye sürer.',
-          'TV\'de GameTranslator uygulamasını aç. Birkaç saniye içinde telefondaki TV kartı "Bağlı" olur.',
-          'TV\'de oyun görüntüsü gelmezse Tamam tuşuyla paneli aç, sol ve sağ tuşlarıyla PS5\'in bağlı olduğu HDMI girişini seç.',
-          'TV\'den ses gelmezse PS5 sesi Remote Play\'e yönlendirmiştir: PS tuşuna bas, alttaki menüden Ses › Çıkış Cihazı\'nı aç ve HDMI\'ı seç. Bu bir kez yapılır.',
-          'Telefonda "TV\'ye deneme altyazısı gönder"e dokun. TV\'de yazıyı görüyorsan her şey hazır.',
+          l.gFirstStep1,
+          l.gFirstStep2,
+          l.gFirstStep3,
+          l.gFirstStep4,
+          l.gFirstStep5,
+          l.gFirstStep6,
+          l.gFirstStep7,
         ]),
-        _Tip('Çeviri açıkken telefonun ekranını kapatabilirsin. Durdurmak için uygulamadaki düğmeye ya da bildirimdeki "Durdur"a dokun.'),
-        _Sub('Sonraki seferler'),
-        _P('Yalnızca iki adım: telefonda çeviriyi başlat, TV\'de GameTranslator\'ı aç.'),
-        _Sub('Pil ve ısınma'),
-        _P('Telefon sürekli video çözüp yazı okur; uzun oturumlarda şarja takılı kullan.'),
+        _Tip(l.gFirstTip),
+        _Sub(l.gFirstNextTitle),
+        _P(l.gFirstNextBody),
+        _Sub(l.gFirstBatteryTitle),
+        _P(l.gFirstBatteryBody),
       ],
     ),
-    const GuideChapter(
+    GuideChapter(
       icon: CupertinoIcons.dot_radiowaves_left_right,
       color: Tokens.gray,
-      title: 'TV kumandası',
-      subtitle: 'TV uygulamasındaki tuşlar',
+      title: l.gRemoteTitle,
+      subtitle: l.gRemoteSubtitle,
       children: [
-        _P('TV\'de GameTranslator açıkken kumandanın tuşları şunları yapar:'),
+        _P(l.gRemoteLead),
         _Keys([
-          ('Tamam', 'Durum panelini açar ve kapatır (HDMI girişi, bağlantı durumu).'),
-          ('Sol / Sağ', 'Panel açıkken HDMI girişini değiştirir.'),
-          ('1 – 4', 'HDMI girişini doğrudan seçer.'),
-          ('Yukarı / Aşağı', 'Altyazıyı ekranda yukarı ya da aşağı kaydırır.'),
-          ('Kırmızı', 'TV\'nin kendi deneme yazısını gösterir.'),
-          ('Yeşil', 'Durum panelini açar ve kapatır.'),
-          ('Mavi', 'Örnek altyazılarla tanıtımı başlatır ya da durdurur.'),
-          ('Geri', 'Uygulamadan çıkar.'),
+          (l.gRemoteOk, l.gRemoteOkText),
+          (l.gRemoteLeftRight, l.gRemoteLeftRightText),
+          (l.gRemoteNumbers, l.gRemoteNumbersText),
+          (l.gRemoteUpDown, l.gRemoteUpDownText),
+          (l.gRemoteRed, l.gRemoteRedText),
+          (l.gRemoteGreen, l.gRemoteGreenText),
+          (l.gRemoteBlue, l.gRemoteBlueText),
+          (l.gRemoteBack, l.gRemoteBackText),
         ]),
-        _Tip('Oyunu PS5 kumandasıyla oynarsın; TV kumandası yalnızca bu ayarlar için gerekir.'),
+        _Tip(l.gRemoteTip),
       ],
     ),
-    const GuideChapter(
+    GuideChapter(
       icon: CupertinoIcons.crop,
       color: Tokens.teal,
-      title: 'Altyazı bölgesini ayarla',
-      subtitle: 'Telefonun ekranda nereye bakacağı',
+      title: l.gRegionTitle,
+      subtitle: l.gRegionSubtitle,
       children: [
-        _P('Telefon bütün ekranı değil, yalnızca altyazının çıktığı bölgeyi okur. Bölge yanlış yerdeyse çeviri gelmez ya da '
-            'ekrandaki başka yazılar çevrilir.'),
+        _P(l.gRegionBody),
         _Steps([
-          'Çeviri açıkken oyunda bir altyazı çıkmasını bekle.',
-          'Ana ekrandaki önizlemede mavi çerçeveye bak: altyazının tamamı çerçevenin içinde olmalı.',
-          'Değilse "Altyazı bölgesini ayarla"ya dokun. Üst, Alt, Sol ya da Sağ kenarı seç ve sürgüyle yerini değiştir.',
-          'Ana ekrandaki "Çerçevede okunan" satırı telefonun o anda ne okuduğunu gösterir; altyazının tamamı orada görünmeli.',
+          l.gRegionStep1,
+          l.gRegionStep2,
+          l.gRegionStep3,
+          l.gRegionStep4,
         ]),
         _Bullets([
-          'Cümlenin başı ya da sonu kesiliyorsa çerçeveyi genişlet.',
-          'İki satırlı altyazılarda üst satır kayboluyorsa üst kenarı yukarı al.',
-          'Görev yazıları, harita adları gibi başka yazılar çevriliyorsa çerçeveyi daralt.',
+          l.gRegionBullet1,
+          l.gRegionBullet2,
+          l.gRegionBullet3,
         ]),
-        _Tip('Her oyun altyazıyı farklı yere koyar; yeni bir oyuna başladığında bölgeye bir kez bakmak yeter.'),
+        _Tip(l.gRegionTip),
       ],
     ),
-    const GuideChapter(
+    GuideChapter(
       icon: CupertinoIcons.textformat,
       color: Tokens.warning,
-      title: 'Çeviri ve görünüm',
-      subtitle: 'Motor, sözlük ve TV\'deki yazı',
+      title: l.gLookTitle,
+      subtitle: l.gLookSubtitle,
       children: [
-        _Sub('Çeviri motoru'),
+        _Sub(l.gEngineTitle),
         _Keys([
-          ('Google', 'İnternet ister, anahtar gerekmez. Çoğu oyun için en iyi başlangıç.'),
-          ('DeepL', 'Daha doğal cümleler kurar. DeepL\'den aldığın kendi API anahtarını yazman gerekir.'),
-          ('Cihazda', 'İnternetsiz çalışır; kalitesi diğerlerinden düşüktür. İlk kullanımda dil modeli bir kez iner.'),
+          (l.gEngineGoogle, l.gEngineGoogleText),
+          (l.gEngineDeepl, l.gEngineDeeplText),
+          (l.gEngineOnDevice, l.gEngineOnDeviceText),
         ]),
-        _P('İnternet koparsa çeviri kendiliğinden cihazdaki modele geçer ve bağlantı gelince geri döner.'),
-        _Sub('Terim sözlüğü'),
-        _P('Çevirinin bozduğu karakter adlarını ve oyun terimlerini sabitlemek içindir (yalnız İngilizce → Türkçe). '
-            'Ayarlar › Çeviri › Terim sözlüğü\'nden açılır. "terms" içindeki terimler yazdığın Türkçeyle çevrilir, '
-            '"keep" içindeki adlar olduğu gibi kalır.'),
-        _Sub('TV\'deki görünüm'),
+        _P(l.gEngineFallback),
+        _Sub(l.gGlossaryTitle),
+        _P(l.gGlossaryBody),
+        _Sub(l.gLookOnTvTitle),
         _Bullets([
-          'Yazı boyutu ve rengi: Ayarlar › TV\'de görünüm.',
-          'Altyazının yeri: oyunun altyazısını örterek, üstünde, altında ya da ekranın altında sabit.',
-          'Zemin koyuluğu: yazının arkasındaki siyah kutunun koyuluğu. Oyunun altyazısını örtüyorsan yüksek tut.',
+          l.gLookOnTv1,
+          l.gLookOnTv2,
+          l.gLookOnTv3,
         ]),
       ],
     ),
-    const GuideChapter(
+    GuideChapter(
       icon: CupertinoIcons.wrench_fill,
       color: Tokens.danger,
-      title: 'Sorun giderme',
-      subtitle: 'Sık karşılaşılan durumlar',
+      title: l.gTroubleTitle,
+      subtitle: l.gTroubleSubtitle,
       children: [
-        _Qa('Çeviri başlamıyor, "PS5\'e bağlanılıyor"da kalıyor', [
-          'PS5 açık mı? Dinlenme modundaysa uyandırma ayarlarını "PS5\'i hazırla" bölümündeki gibi aç.',
-          'Telefon Wi-Fi\'ye bağlı ve PS5 ile aynı ağda mı?',
-          'PS5\'te Uzaktan Oynatma açık mı?',
+        _Qa(l.gQ1, [
+          l.gQ1A1,
+          l.gQ1A2,
+          l.gQ1A3,
         ]),
-        _Qa('"Uzaktan Oynatma başka bir cihaz tarafından kullanılıyor"', [
-          'PS5 aynı anda tek bir Uzaktan Oynatma bağlantısı kabul eder. Bilgisayardaki GameTranslator ya da başka bir Remote Play uygulaması açıksa kapat.',
-          'Az önce durdurduysan birkaç saniye bekle; uygulama kendiliğinden yeniden dener.',
+        _Qa(l.gQ2, [
+          l.gQ2A1,
+          l.gQ2A2,
         ]),
-        _Qa('Kumandam TV\'den koptu', [
-          'Telefon senin oynadığın hesapla bağlanmış. Ayarlar › PS5 › "PSN hesabını değiştir" ile ikinci kullanıcının hesabına geç.',
+        _Qa(l.gQ3, [l.gQ3A1]),
+        _Qa(l.gQ4, [
+          l.gQ4A1,
+          l.gQ4A2,
+          l.gQ4A3,
+          l.gQ4A4,
         ]),
-        _Qa('TV kartı "Bekleniyor"da kalıyor', [
-        'TV\'de GameTranslator uygulaması açık mı?',
-        'TV, telefonla aynı ağda mı? Misafir ağı ya da farklı bir modem olmamalı.',
-        'Bilgisayardaki GameTranslator açıksa kapat; TV ağda ilk bulduğuna bağlanır.',
-        'TV uygulaması daha önce bilgisayara bağlandıysa o adreste takılı kalmış olabilir. Aşağıdaki "TV telefonu bulamıyorsa" adımlarını uygula.',
-      ]),
-      _Sub('TV telefonu bulamıyorsa'),
-      ...tvRecoverySteps,
-      _Qa('TV\'de oyun görüntüsü yok, ekran siyah', [
-          'Tamam ile paneli aç ve sol/sağ ile PS5\'in bağlı olduğu HDMI girişini seç.',
-          'Bazı Android TV\'ler HDMI görüntüsünü başka uygulamaya vermez; o TV\'lerde altyazı görünür ama arkası siyah kalır.',
+        _Sub(l.gTvNotFoundTitle),
+        ...tvRecoverySteps(l),
+        _Qa(l.gQ5, [
+          l.gQ5A1,
+          l.gQ5A2,
         ]),
-        _Qa('Altyazı hiç gelmiyor', [
-          'Oyunun kendi altyazıları açık mı?',
-          'Ana ekrandaki "Çerçevede okunan" boşsa bölge yanlış yerdedir; "Altyazı bölgesini ayarla" bölümüne bak.',
-          'Oyunun dili ile Ayarlar › Çeviri\'deki kaynak dil aynı mı?',
-          '"TV\'ye deneme altyazısı gönder" çalışıyorsa TV bağlantısı sağlamdır; sorun okumadadır.',
+        _Qa(l.gQ6, [
+          l.gQ6A1,
+          l.gQ6A2,
+          l.gQ6A3,
+          l.gQ6A4,
         ]),
-        _Qa('Çeviri yarım ya da anlamsız', [
-          'Cümlenin başı ya da sonu eksikse bölgeyi genişlet.',
-          'Motor "Cihazda" ise Google ya da DeepL\'e geç.',
-          'Çok süslü ya da çok küçük yazı tiplerinde okuma zorlaşır; oyunda altyazı boyutunu büyütmek ve arka plan eklemek yardımcı olur.',
+        _Qa(l.gQ7, [
+          l.gQ7A1,
+          l.gQ7A2,
+          l.gQ7A3,
         ]),
-        _Qa('Çeviri geç geliyor', [
-          'Telefon ve PS5 mümkünse modeme yakın olsun; zayıf Wi-Fi görüntüyü geciktirir.',
-          'Çevrimiçi motorlarda internet hızı da etkiler.',
+        _Qa(l.gQ8, [
+          l.gQ8A1,
+          l.gQ8A2,
         ]),
-        _Qa('Ekranı kapatınca çeviri duruyor', [
-          'Telefonun pil tasarrufu uygulamayı durduruyor olabilir. Telefonun Ayarlar › Uygulamalar › GameTranslator › Pil bölümünden "Kısıtlanmamış"ı seç.',
-          'Bildirim iznini kapattıysan aç; arka plan servisi bildirimle çalışır.',
+        _Qa(l.gQ9, [
+          l.gQ9A1,
+          l.gQ9A2,
         ]),
-        _Tip('Çözemediğin bir sorun olursa Ayarlar › Hakkında › Günlük\'teki kayıtları kopyalayıp paylaşabilirsin.'),
+        _Tip(l.gTroubleTip),
       ],
     ),
   ];
@@ -507,7 +498,7 @@ class _Bullets extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 8, left: 9, right: 12),
+                    padding: const EdgeInsetsDirectional.only(top: 8, start: 9, end: 12),
                     child: Container(width: 6, height: 6, decoration: const BoxDecoration(color: Tokens.accentText, shape: BoxShape.circle)),
                   ),
                   Expanded(child: Text(item, style: const TextStyle(color: Tokens.textSecondary, fontSize: 15.5, height: 1.42, letterSpacing: -0.2))),
@@ -586,6 +577,7 @@ class _Table extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.only(top: 10),
       child: Container(
@@ -612,7 +604,7 @@ class _Table extends StatelessWidget {
                           Text(rows[i].$1, style: const TextStyle(fontWeight: FontWeight.w700)),
                           Text(rows[i].$2, style: const TextStyle(color: Tokens.textSecondary, fontSize: 13.5, height: 1.35)),
                           if (!rows[i].$3)
-                            const Text('Desteklenmiyor: bu TV\'lere uygulama kurulamıyor.', style: TextStyle(color: Tokens.danger, fontSize: 13)),
+                            Text(l.gTvNotSupported, style: const TextStyle(color: Tokens.danger, fontSize: 13)),
                         ],
                       ),
                     ),
@@ -645,7 +637,7 @@ class _Qa extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Padding(
-                padding: EdgeInsets.only(top: 2, right: 10),
+                padding: EdgeInsetsDirectional.only(top: 2, end: 10),
                 child: Icon(CupertinoIcons.question_circle_fill, size: 18, color: Tokens.warning),
               ),
               Expanded(child: Text(question, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, height: 1.35))),
@@ -660,29 +652,28 @@ class _Qa extends StatelessWidget {
 
 /// TV uygulaması eski bir adrese (ör. kapalı bilgisayara) takılı kaldığında yapılacaklar. Sorun gidermede ve
 /// ana ekrandaki uyarıdan açılan sayfada aynı metin kullanılır.
-const tvRecoverySteps = <Widget>[
-  _P('TV uygulaması en son bağlandığı adresi hatırlar. Daha önce bilgisayara bağlandıysa, telefonu aramak yerine o '
-      'adresi denemeye devam edebilir. Kayıtlı adresi silince uygulama ağı baştan tarar ve telefonu bulur.'),
-  _Sub('Android TV / Google TV (TCL, Sony, Philips, Vestel…)'),
-  _Steps([
-    'TV\'de Ayarlar › Uygulamalar\'a gir ve listeden GameTranslator\'ı seç ("Tüm uygulamaları göster" gerekebilir).',
-    '"Verileri temizle"yi seç ve onayla. Uygulama silinmez, yalnızca kayıtlı adres ve ayarlar sıfırlanır.',
-    'Telefonda çeviri açıkken TV\'de GameTranslator\'ı yeniden aç.',
-    'Bir dakikaya kadar bekle; telefondaki TV karosu "Bağlı" olur.',
-  ]),
-  _Sub('Samsung ve LG'),
-  _Steps([
-    'Bu TV\'lerde uygulama verisi ayrı silinemez: GameTranslator\'ı TV\'den kaldır.',
-    'Bilgisayardaki GameTranslator ile yeniden kur ("TV\'yi hazırla" bölümündeki adımlar).',
-    'Bilgisayardaki GameTranslator\'ı kapat, telefonda çeviriyi başlat ve TV\'de uygulamayı aç.',
-  ]),
-  _Sub('Yine olmazsa'),
-  _Bullets([
-    'Bilgisayardaki GameTranslator kapalı mı? Açıksa TV ona bağlanır.',
-    'Telefon ve TV aynı Wi-Fi ağında mı? Modemde "istemci yalıtımı" (AP isolation) açıksa cihazlar birbirini göremez.',
-    'TV\'de HDMI ayarı da sıfırlandığı için Tamam ile paneli açıp PS5\'in girişini yeniden seç.',
-  ]),
-];
+List<Widget> tvRecoverySteps(AppLocalizations l) => [
+      _P(l.gRecoveryLead),
+      _Sub(l.gRecoveryAndroidTitle),
+      _Steps([
+        l.gRecoveryAndroidStep1,
+        l.gRecoveryAndroidStep2,
+        l.gRecoveryAndroidStep3,
+        l.gRecoveryAndroidStep4,
+      ]),
+      _Sub(l.gRecoverySamsungTitle),
+      _Steps([
+        l.gRecoverySamsungStep1,
+        l.gRecoverySamsungStep2,
+        l.gRecoverySamsungStep3,
+      ]),
+      _Sub(l.gRecoveryStillTitle),
+      _Bullets([
+        l.gRecoveryStill1,
+        l.gRecoveryStill2,
+        l.gRecoveryStill3,
+      ]),
+    ];
 
 /// Ana ekrandaki "TV hâlâ bağlanmadı" uyarısından açılan yardım sayfası.
 class TvHelpPage extends StatelessWidget {
@@ -690,14 +681,15 @@ class TvHelpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
     return GlassScaffold(
-      title: 'TV Bağlanmıyor',
+      title: l.guideTvHelpTitle,
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
-        children: const [
+        children: [
           Glass(
-            padding: EdgeInsets.fromLTRB(18, 10, 18, 20),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: tvRecoverySteps),
+            padding: const EdgeInsets.fromLTRB(18, 10, 18, 20),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: tvRecoverySteps(l)),
           ),
         ],
       ),
@@ -714,7 +706,7 @@ class InstallTvButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: GlowButton(
           icon: CupertinoIcons.tv_fill,
-          label: 'TV uygulamasını kur',
+          label: AppLocalizations.of(context).homeInstallTvTitle,
           onPressed: () => Navigator.of(context).push(appleRoute<void>((_) => const TvInstallPage())),
         ),
       );

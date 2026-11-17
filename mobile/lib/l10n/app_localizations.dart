@@ -148,6 +148,1194 @@ abstract class AppLocalizations {
   /// **'Yalnızca arayüz dili; oyun ve çeviri dilini değiştirmez.'**
   String get settingsAppLanguageNote;
 
+  /// No description provided for @guideIntro.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kurulumdan sorun gidermeye kadar her şey, adım adım.'**
+  String get guideIntro;
+
+  /// No description provided for @guidePhoneAddress.
+  ///
+  /// In tr, this message translates to:
+  /// **'telefonun adresi'**
+  String get guidePhoneAddress;
+
+  /// No description provided for @guideGroupStart.
+  ///
+  /// In tr, this message translates to:
+  /// **'BAŞLANGIÇ'**
+  String get guideGroupStart;
+
+  /// No description provided for @guideGroupUsage.
+  ///
+  /// In tr, this message translates to:
+  /// **'KULLANIM'**
+  String get guideGroupUsage;
+
+  /// No description provided for @guideGroupHelp.
+  ///
+  /// In tr, this message translates to:
+  /// **'YARDIM'**
+  String get guideGroupHelp;
+
+  /// No description provided for @guideNextChapter.
+  ///
+  /// In tr, this message translates to:
+  /// **'SONRAKİ BÖLÜM'**
+  String get guideNextChapter;
+
+  /// No description provided for @guideTvHelpTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV Bağlanmıyor'**
+  String get guideTvHelpTitle;
+
+  /// No description provided for @gHowTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Nasıl çalışır?'**
+  String get gHowTitle;
+
+  /// No description provided for @gHowSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bir bakışta bütün düzen'**
+  String get gHowSubtitle;
+
+  /// No description provided for @gHowLead.
+  ///
+  /// In tr, this message translates to:
+  /// **'GameTranslator üç cihazı birbirine bağlar. Oyun PS5\'te çalışır, sen TV\'de oynarsın; telefon arada çevirmenlik yapar:'**
+  String get gHowLead;
+
+  /// No description provided for @gHowStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefon, oyun görüntüsünü PS5\'ten Remote Play (Uzaktan Oynatma) ile alır. Kamera kullanılmaz.'**
+  String get gHowStep1;
+
+  /// No description provided for @gHowStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Görüntüde altyazının çıktığı bölgeyi okur ve yazıyı çevirir.'**
+  String get gHowStep2;
+
+  /// No description provided for @gHowStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviriyi aynı Wi-Fi\'deki TV\'ye gönderir. TV\'deki GameTranslator uygulaması onu oyunun üstünde gösterir.'**
+  String get gHowStep3;
+
+  /// No description provided for @gHowNeedsTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Neler gerekli?'**
+  String get gHowNeedsTitle;
+
+  /// No description provided for @gHowNeed1.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 ve üzerinde ikinci bir kullanıcı (aşağıda anlatılıyor).'**
+  String get gHowNeed1;
+
+  /// No description provided for @gHowNeed2.
+  ///
+  /// In tr, this message translates to:
+  /// **'GameTranslator TV uygulamasının kurulu olduğu bir TV: LG, Samsung ya da Android TV / Google TV.'**
+  String get gHowNeed2;
+
+  /// No description provided for @gHowNeed3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefon, PS5 ve TV\'nin bağlı olduğu tek bir ev ağı (Wi-Fi).'**
+  String get gHowNeed3;
+
+  /// No description provided for @gHowNeed4.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çevrimiçi çeviri için internet. İnternetsiz çalışan bir çeviri seçeneği de var.'**
+  String get gHowNeed4;
+
+  /// No description provided for @gHowTip.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kurulum bir kez yapılır. Sonrasında tek yapacağın: çeviriyi başlatmak ve TV\'de uygulamayı açmak.'**
+  String get gHowTip;
+
+  /// No description provided for @gPs5Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5\'i hazırla'**
+  String get gPs5Title;
+
+  /// No description provided for @gPs5Subtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'İkinci kullanıcı ve Uzaktan Oynatma'**
+  String get gPs5Subtitle;
+
+  /// No description provided for @gPs5UserTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'1. İkinci bir kullanıcı ekle'**
+  String get gPs5UserTitle;
+
+  /// No description provided for @gPs5UserBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5, Uzaktan Oynatma ile bağlanan cihazı o kullanıcının kumandası sayar. Telefon senin hesabınla bağlanırsa elindeki kumanda TV\'den kopar. Bu yüzden telefon ayrı bir kullanıcıyla bağlanır; sen kendi hesabınla oynamaya devam edersin.'**
+  String get gPs5UserBody;
+
+  /// No description provided for @gPs5UserStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5\'te yeni bir kullanıcı ekle (ana ekrandaki profil resminden Kullanıcı Değiştir › Kullanıcı Ekle).'**
+  String get gPs5UserStep1;
+
+  /// No description provided for @gPs5UserStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bu kullanıcıya bir PSN hesabıyla giriş yap. Hesabın yoksa ücretsiz açabilirsin; PS Plus gerekmez.'**
+  String get gPs5UserStep2;
+
+  /// No description provided for @gPs5UserStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonda PSN girişini de bu ikinci hesapla yapacaksın.'**
+  String get gPs5UserStep3;
+
+  /// No description provided for @gPs5RemoteTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'2. Uzaktan Oynatmayı aç'**
+  String get gPs5RemoteTitle;
+
+  /// No description provided for @gPs5RemoteStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5\'te ikinci kullanıcıya geç.'**
+  String get gPs5RemoteStep1;
+
+  /// No description provided for @gPs5RemoteStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ayarlar › Sistem › Uzaktan Oynatma\'ya gir.'**
+  String get gPs5RemoteStep2;
+
+  /// No description provided for @gPs5RemoteStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Uzaktan Oynatmayı Etkinleştir\"i aç.'**
+  String get gPs5RemoteStep3;
+
+  /// No description provided for @gPs5WakeTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'3. Dinlenme modundan uyandırma (isteğe bağlı)'**
+  String get gPs5WakeTitle;
+
+  /// No description provided for @gPs5WakeBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 dinlenme modundayken çeviriyi başlattığında telefonun onu uyandırabilmesi için:'**
+  String get gPs5WakeBody;
+
+  /// No description provided for @gPs5WakeStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ayarlar › Sistem › Güç Tasarrufu › Dinlenme Modunda Kullanılabilen Özellikler\'e gir.'**
+  String get gPs5WakeStep1;
+
+  /// No description provided for @gPs5WakeStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"İnternete Bağlı Kal\" ve \"PS5\'in Ağdan Açılmasını Etkinleştir\" seçeneklerini aç.'**
+  String get gPs5WakeStep2;
+
+  /// No description provided for @gPs5Tip.
+  ///
+  /// In tr, this message translates to:
+  /// **'Uyandırmayı istemiyorsan telefonda Ayarlar › PS5 › \"Dinlenme modundaysa uyandır\"ı kapatabilirsin.'**
+  String get gPs5Tip;
+
+  /// No description provided for @gPairTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonu PS5 ile eşleştir'**
+  String get gPairTitle;
+
+  /// No description provided for @gPairSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'PSN girişi ve 8 haneli kod'**
+  String get gPairSubtitle;
+
+  /// No description provided for @gPairSignInTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'1. PSN ile giriş yap'**
+  String get gPairSignInTitle;
+
+  /// No description provided for @gPairSignInStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kurulum ekranında \"PSN ile giriş yap\"a dokun. Sony\'nin kendi giriş sayfası açılır.'**
+  String get gPairSignInStep1;
+
+  /// No description provided for @gPairSignInStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5\'teki ikinci kullanıcının hesabıyla giriş yap.'**
+  String get gPairSignInStep2;
+
+  /// No description provided for @gPairSignInStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Giriş bitince uygulama kuruluma kendiliğinden döner ve \"PSN hesabı bağlandı\" yazar.'**
+  String get gPairSignInStep3;
+
+  /// No description provided for @gPairSignInTip.
+  ///
+  /// In tr, this message translates to:
+  /// **'Şifren doğrudan Sony\'ye gider; uygulama yalnızca hesabının kimlik numarasını saklar.'**
+  String get gPairSignInTip;
+
+  /// No description provided for @gPairCodeTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'2. Eşleştirme kodunu gir'**
+  String get gPairCodeTitle;
+
+  /// No description provided for @gPairCodeStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5\'te ikinci kullanıcıdayken Ayarlar › Sistem › Uzaktan Oynatma › \"Cihaz Eşleştir\"e gir.'**
+  String get gPairCodeStep1;
+
+  /// No description provided for @gPairCodeStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ekranda 8 haneli bir kod ve geri sayım görünür. Kod yaklaşık 5 dakika geçerlidir.'**
+  String get gPairCodeStep2;
+
+  /// No description provided for @gPairCodeStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonda \"Bulunan konsol\" listesinden PS5\'ini seç.'**
+  String get gPairCodeStep3;
+
+  /// No description provided for @gPairCodeStep4.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kodu kutulara yaz ve \"Eşleştir\"e dokun.'**
+  String get gPairCodeStep4;
+
+  /// No description provided for @gPairMissingTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 listede yoksa'**
+  String get gPairMissingTitle;
+
+  /// No description provided for @gPairMissing1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefon ve PS5 aynı Wi-Fi ağında mı kontrol et; misafir ağı ya da mobil veri olmamalı.'**
+  String get gPairMissing1;
+
+  /// No description provided for @gPairMissing2.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Yenile\"ye dokun.'**
+  String get gPairMissing2;
+
+  /// No description provided for @gPairMissing3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yine çıkmazsa \"IP adresini elle yaz\"a dokun. Adres PS5\'te Ayarlar › Ağ › Bağlantı Durumu › Bağlantı Durumunu Görüntüle\'de yazar.'**
+  String get gPairMissing3;
+
+  /// No description provided for @gPairTip.
+  ///
+  /// In tr, this message translates to:
+  /// **'Eşleştirme bir kez yapılır. PS5\'in adresi değişirse uygulama onu ağda yeniden bulur.'**
+  String get gPairTip;
+
+  /// No description provided for @gTvTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'yi hazırla'**
+  String get gTvTitle;
+
+  /// No description provided for @gTvSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Desteklenen TV\'ler ve TV uygulaması'**
+  String get gTvSubtitle;
+
+  /// No description provided for @gTvLead.
+  ///
+  /// In tr, this message translates to:
+  /// **'Altyazıyı TV\'de gösteren ayrı bir GameTranslator TV uygulaması vardır. Henüz mağazalarda olmadığı için TV\'ye bir kez kurulur. LG ve Android TV\'ye bu telefondan kurabilirsin; Samsung\'a kurulum şimdilik bilgisayardan yapılır.'**
+  String get gTvLead;
+
+  /// No description provided for @gTvSupportedTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hangi TV\'ler destekleniyor?'**
+  String get gTvSupportedTitle;
+
+  /// No description provided for @gTvTableLg.
+  ///
+  /// In tr, this message translates to:
+  /// **'LG'**
+  String get gTvTableLg;
+
+  /// No description provided for @gTvTableLgDetail.
+  ///
+  /// In tr, this message translates to:
+  /// **'webOS 4 ve üstü'**
+  String get gTvTableLgDetail;
+
+  /// No description provided for @gTvTableSamsung.
+  ///
+  /// In tr, this message translates to:
+  /// **'Samsung'**
+  String get gTvTableSamsung;
+
+  /// No description provided for @gTvTableSamsungDetail.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tizen, 2019 ve sonrası'**
+  String get gTvTableSamsungDetail;
+
+  /// No description provided for @gTvTableAndroid.
+  ///
+  /// In tr, this message translates to:
+  /// **'Android TV / Google TV'**
+  String get gTvTableAndroid;
+
+  /// No description provided for @gTvTableAndroidDetail.
+  ///
+  /// In tr, this message translates to:
+  /// **'Vestel, Arçelik, Beko, Grundig, Philips, Sony, TCL ve diğerleri'**
+  String get gTvTableAndroidDetail;
+
+  /// No description provided for @gTvTableOther.
+  ///
+  /// In tr, this message translates to:
+  /// **'Diğerleri'**
+  String get gTvTableOther;
+
+  /// No description provided for @gTvTableOtherDetail.
+  ///
+  /// In tr, this message translates to:
+  /// **'Vestel/Arçelik/Beko/Grundig\'in Linux modelleri, Philips Saphi, Titan OS'**
+  String get gTvTableOtherDetail;
+
+  /// No description provided for @gTvNotSupported.
+  ///
+  /// In tr, this message translates to:
+  /// **'Desteklenmiyor: bu TV\'lere uygulama kurulamıyor.'**
+  String get gTvNotSupported;
+
+  /// No description provided for @gTvAndroidTip.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'n Android mi? Ana ekranında Google Play Store ya da \"Google TV\" yazıyorsa Android\'dir.'**
+  String get gTvAndroidTip;
+
+  /// No description provided for @gTvLgTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'LG'**
+  String get gTvLgTitle;
+
+  /// No description provided for @gTvLgStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bilgisayardan webostv.developer.lge.com adresinde ücretsiz bir LG geliştirici hesabı aç.'**
+  String get gTvLgStep1;
+
+  /// No description provided for @gTvLgStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de LG Content Store\'dan \"Developer Mode\" uygulamasını kur, hesabınla giriş yap ve \"Dev Mode Status\"u aç. TV yeniden başlar.'**
+  String get gTvLgStep2;
+
+  /// No description provided for @gTvLgStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de Developer Mode uygulamasında \"Key Server\"ı aç.'**
+  String get gTvLgStep3;
+
+  /// No description provided for @gTvLgStep4.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonda \"TV uygulamasını kur\" sihirbazında LG\'yi seç, TV\'ni bul ve ekrandaki 6 karakterli parolayı yaz (bilgisayardaki GameTranslator\'ın TV adımı da aynısını yapar).'**
+  String get gTvLgStep4;
+
+  /// No description provided for @gTvLgNote.
+  ///
+  /// In tr, this message translates to:
+  /// **'LG\'de geliştirici modu en çok 1000 saat açık kalır. Uzun süre kullanmayacaksan süre dolmadan Developer Mode uygulamasında \"EXTEND\"e bas; süre dolarsa TV uygulaması silinir ve baştan kurman gerekir.'**
+  String get gTvLgNote;
+
+  /// No description provided for @gTvSamsungTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Samsung'**
+  String get gTvSamsungTitle;
+
+  /// No description provided for @gTvSamsungStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de Uygulamalar ekranını aç ve kumandayla 1 2 3 4 5 tuşlarına bas. Geliştirici modu penceresi açılır.'**
+  String get gTvSamsungStep1;
+
+  /// No description provided for @gTvSamsungStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Developer mode\"u aç, \"Host PC IP\" alanına bilgisayarının adresini yaz.'**
+  String get gTvSamsungStep2;
+
+  /// No description provided for @gTvSamsungStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'yi güç tuşunu basılı tutarak tam kapatıp aç.'**
+  String get gTvSamsungStep3;
+
+  /// No description provided for @gTvSamsungStep4.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bilgisayardaki GameTranslator\'ın TV adımında TV\'ni seç. Açılan sayfada ücretsiz bir Samsung hesabıyla giriş yap; uygulama imzalanıp kurulur.'**
+  String get gTvSamsungStep4;
+
+  /// No description provided for @gTvAndroidTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Android TV / Google TV'**
+  String get gTvAndroidTitle;
+
+  /// No description provided for @gTvAndroidStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de Ayarlar › Cihaz Tercihleri › Hakkında\'ya gir (Google TV\'de Ayarlar › Sistem › Hakkında).'**
+  String get gTvAndroidStep1;
+
+  /// No description provided for @gTvAndroidStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Yapı numarası\"nın üstünde Tamam tuşuna 7 kez bas.'**
+  String get gTvAndroidStep2;
+
+  /// No description provided for @gTvAndroidStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Geliştirici seçenekleri\'nden \"USB hata ayıklama\"yı (varsa \"Ağ hata ayıklama\"yı da) aç.'**
+  String get gTvAndroidStep3;
+
+  /// No description provided for @gTvAndroidStep4.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonda \"TV uygulamasını kur\" sihirbazında \"Android TV / Google TV\"yi seç ve TV\'deki izin sorusunu onayla.'**
+  String get gTvAndroidStep4;
+
+  /// No description provided for @gTvAndroidNote.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV ağdan hata ayıklamaya izin vermiyorsa USB bellekle de kurabilirsin: GameTranslator\'ın sürümler sayfasından TV uygulamasının APK dosyasını indir, belleğe kopyala ve TV\'de bir dosya yöneticisiyle açıp kur.'**
+  String get gTvAndroidNote;
+
+  /// No description provided for @gTvAfterTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kurulduktan sonra'**
+  String get gTvAfterTitle;
+
+  /// No description provided for @gTvAfterBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV uygulaması telefonu ağda kendisi bulur; telefona TV\'nin adresini yazman gerekmez. Samsung\'da bilgisayara yalnızca kurulum için ihtiyaç var; sonrasında kapalı kalabilir.'**
+  String get gTvAfterBody;
+
+  /// No description provided for @gTvObsTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yayın yapanlar için: OBS'**
+  String get gTvObsTitle;
+
+  /// No description provided for @gTvObsBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviri açıkken altyazılar bir web sayfası olarak da sunulur. OBS\'te \"Tarayıcı Kaynağı\" ekleyip adres olarak http://{phone}:8787/obs yaz (1920×1080). Sayfanın zemini saydamdır; TV\'nin tarayıcısında oyunun üstünde göstermez, yalnızca yayın ve kayıt düzenleri içindir.'**
+  String gTvObsBody(String phone);
+
+  /// No description provided for @gFirstTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'İlk kullanım'**
+  String get gFirstTitle;
+
+  /// No description provided for @gFirstSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviriyi başlat ve TV\'de gör'**
+  String get gFirstSubtitle;
+
+  /// No description provided for @gFirstStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5\'te oyunu kendi hesabınla aç ve oyunun ayarlarından altyazıları aç.'**
+  String get gFirstStep1;
+
+  /// No description provided for @gFirstStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonda ana ekrandaki büyük düğmeye dokun. İlk seferde bildirim izni sorulur; izin ver ki çeviri arka planda sürsün.'**
+  String get gFirstStep2;
+
+  /// No description provided for @gFirstStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Durum \"Çeviri açık\" olunca PS5 kartı \"Bağlı\" yazar. İlk bağlantı birkaç saniye sürer.'**
+  String get gFirstStep3;
+
+  /// No description provided for @gFirstStep4.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de GameTranslator uygulamasını aç. Birkaç saniye içinde telefondaki TV kartı \"Bağlı\" olur.'**
+  String get gFirstStep4;
+
+  /// No description provided for @gFirstStep5.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de oyun görüntüsü gelmezse Tamam tuşuyla paneli aç, sol ve sağ tuşlarıyla PS5\'in bağlı olduğu HDMI girişini seç.'**
+  String get gFirstStep5;
+
+  /// No description provided for @gFirstStep6.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'den ses gelmezse PS5 sesi Remote Play\'e yönlendirmiştir: PS tuşuna bas, alttaki menüden Ses › Çıkış Cihazı\'nı aç ve HDMI\'ı seç. Bu bir kez yapılır.'**
+  String get gFirstStep6;
+
+  /// No description provided for @gFirstStep7.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonda \"TV\'ye deneme altyazısı gönder\"e dokun. TV\'de yazıyı görüyorsan her şey hazır.'**
+  String get gFirstStep7;
+
+  /// No description provided for @gFirstTip.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviri açıkken telefonun ekranını kapatabilirsin. Durdurmak için uygulamadaki düğmeye ya da bildirimdeki \"Durdur\"a dokun.'**
+  String get gFirstTip;
+
+  /// No description provided for @gFirstNextTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Sonraki seferler'**
+  String get gFirstNextTitle;
+
+  /// No description provided for @gFirstNextBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yalnızca iki adım: telefonda çeviriyi başlat, TV\'de GameTranslator\'ı aç.'**
+  String get gFirstNextBody;
+
+  /// No description provided for @gFirstBatteryTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Pil ve ısınma'**
+  String get gFirstBatteryTitle;
+
+  /// No description provided for @gFirstBatteryBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefon sürekli video çözüp yazı okur; uzun oturumlarda şarja takılı kullan.'**
+  String get gFirstBatteryBody;
+
+  /// No description provided for @gRemoteTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV kumandası'**
+  String get gRemoteTitle;
+
+  /// No description provided for @gRemoteSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV uygulamasındaki tuşlar'**
+  String get gRemoteSubtitle;
+
+  /// No description provided for @gRemoteLead.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de GameTranslator açıkken kumandanın tuşları şunları yapar:'**
+  String get gRemoteLead;
+
+  /// No description provided for @gRemoteOk.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tamam'**
+  String get gRemoteOk;
+
+  /// No description provided for @gRemoteOkText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Durum panelini açar ve kapatır (HDMI girişi, bağlantı durumu).'**
+  String get gRemoteOkText;
+
+  /// No description provided for @gRemoteLeftRight.
+  ///
+  /// In tr, this message translates to:
+  /// **'Sol / Sağ'**
+  String get gRemoteLeftRight;
+
+  /// No description provided for @gRemoteLeftRightText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Panel açıkken HDMI girişini değiştirir.'**
+  String get gRemoteLeftRightText;
+
+  /// No description provided for @gRemoteNumbers.
+  ///
+  /// In tr, this message translates to:
+  /// **'1 – 4'**
+  String get gRemoteNumbers;
+
+  /// No description provided for @gRemoteNumbersText.
+  ///
+  /// In tr, this message translates to:
+  /// **'HDMI girişini doğrudan seçer.'**
+  String get gRemoteNumbersText;
+
+  /// No description provided for @gRemoteUpDown.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yukarı / Aşağı'**
+  String get gRemoteUpDown;
+
+  /// No description provided for @gRemoteUpDownText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Altyazıyı ekranda yukarı ya da aşağı kaydırır.'**
+  String get gRemoteUpDownText;
+
+  /// No description provided for @gRemoteRed.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kırmızı'**
+  String get gRemoteRed;
+
+  /// No description provided for @gRemoteRedText.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'nin kendi deneme yazısını gösterir.'**
+  String get gRemoteRedText;
+
+  /// No description provided for @gRemoteGreen.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yeşil'**
+  String get gRemoteGreen;
+
+  /// No description provided for @gRemoteGreenText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Durum panelini açar ve kapatır.'**
+  String get gRemoteGreenText;
+
+  /// No description provided for @gRemoteBlue.
+  ///
+  /// In tr, this message translates to:
+  /// **'Mavi'**
+  String get gRemoteBlue;
+
+  /// No description provided for @gRemoteBlueText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Örnek altyazılarla tanıtımı başlatır ya da durdurur.'**
+  String get gRemoteBlueText;
+
+  /// No description provided for @gRemoteBack.
+  ///
+  /// In tr, this message translates to:
+  /// **'Geri'**
+  String get gRemoteBack;
+
+  /// No description provided for @gRemoteBackText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Uygulamadan çıkar.'**
+  String get gRemoteBackText;
+
+  /// No description provided for @gRemoteTip.
+  ///
+  /// In tr, this message translates to:
+  /// **'Oyunu PS5 kumandasıyla oynarsın; TV kumandası yalnızca bu ayarlar için gerekir.'**
+  String get gRemoteTip;
+
+  /// No description provided for @gRegionTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Altyazı bölgesini ayarla'**
+  String get gRegionTitle;
+
+  /// No description provided for @gRegionSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonun ekranda nereye bakacağı'**
+  String get gRegionSubtitle;
+
+  /// No description provided for @gRegionBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefon bütün ekranı değil, yalnızca altyazının çıktığı bölgeyi okur. Bölge yanlış yerdeyse çeviri gelmez ya da ekrandaki başka yazılar çevrilir.'**
+  String get gRegionBody;
+
+  /// No description provided for @gRegionStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviri açıkken oyunda bir altyazı çıkmasını bekle.'**
+  String get gRegionStep1;
+
+  /// No description provided for @gRegionStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ana ekrandaki önizlemede mavi çerçeveye bak: altyazının tamamı çerçevenin içinde olmalı.'**
+  String get gRegionStep2;
+
+  /// No description provided for @gRegionStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Değilse \"Altyazı bölgesini ayarla\"ya dokun. Üst, Alt, Sol ya da Sağ kenarı seç ve sürgüyle yerini değiştir.'**
+  String get gRegionStep3;
+
+  /// No description provided for @gRegionStep4.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ana ekrandaki \"Çerçevede okunan\" satırı telefonun o anda ne okuduğunu gösterir; altyazının tamamı orada görünmeli.'**
+  String get gRegionStep4;
+
+  /// No description provided for @gRegionBullet1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Cümlenin başı ya da sonu kesiliyorsa çerçeveyi genişlet.'**
+  String get gRegionBullet1;
+
+  /// No description provided for @gRegionBullet2.
+  ///
+  /// In tr, this message translates to:
+  /// **'İki satırlı altyazılarda üst satır kayboluyorsa üst kenarı yukarı al.'**
+  String get gRegionBullet2;
+
+  /// No description provided for @gRegionBullet3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Görev yazıları, harita adları gibi başka yazılar çevriliyorsa çerçeveyi daralt.'**
+  String get gRegionBullet3;
+
+  /// No description provided for @gRegionTip.
+  ///
+  /// In tr, this message translates to:
+  /// **'Her oyun altyazıyı farklı yere koyar; yeni bir oyuna başladığında bölgeye bir kez bakmak yeter.'**
+  String get gRegionTip;
+
+  /// No description provided for @gLookTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviri ve görünüm'**
+  String get gLookTitle;
+
+  /// No description provided for @gLookSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Motor, sözlük ve TV\'deki yazı'**
+  String get gLookSubtitle;
+
+  /// No description provided for @gEngineTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviri motoru'**
+  String get gEngineTitle;
+
+  /// No description provided for @gEngineGoogle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Google'**
+  String get gEngineGoogle;
+
+  /// No description provided for @gEngineGoogleText.
+  ///
+  /// In tr, this message translates to:
+  /// **'İnternet ister, anahtar gerekmez. Çoğu oyun için en iyi başlangıç.'**
+  String get gEngineGoogleText;
+
+  /// No description provided for @gEngineDeepl.
+  ///
+  /// In tr, this message translates to:
+  /// **'DeepL'**
+  String get gEngineDeepl;
+
+  /// No description provided for @gEngineDeeplText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Daha doğal cümleler kurar. DeepL\'den aldığın kendi API anahtarını yazman gerekir.'**
+  String get gEngineDeeplText;
+
+  /// No description provided for @gEngineOnDevice.
+  ///
+  /// In tr, this message translates to:
+  /// **'Cihazda'**
+  String get gEngineOnDevice;
+
+  /// No description provided for @gEngineOnDeviceText.
+  ///
+  /// In tr, this message translates to:
+  /// **'İnternetsiz çalışır; kalitesi diğerlerinden düşüktür. İlk kullanımda dil modeli bir kez iner.'**
+  String get gEngineOnDeviceText;
+
+  /// No description provided for @gEngineFallback.
+  ///
+  /// In tr, this message translates to:
+  /// **'İnternet koparsa çeviri kendiliğinden cihazdaki modele geçer ve bağlantı gelince geri döner.'**
+  String get gEngineFallback;
+
+  /// No description provided for @gGlossaryTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Terim sözlüğü'**
+  String get gGlossaryTitle;
+
+  /// No description provided for @gGlossaryBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çevirinin bozduğu karakter adlarını ve oyun terimlerini sabitlemek içindir (yalnız İngilizce → Türkçe). Ayarlar › Çeviri › Terim sözlüğü\'nden açılır. \"terms\" içindeki terimler yazdığın Türkçeyle çevrilir, \"keep\" içindeki adlar olduğu gibi kalır.'**
+  String get gGlossaryBody;
+
+  /// No description provided for @gLookOnTvTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'deki görünüm'**
+  String get gLookOnTvTitle;
+
+  /// No description provided for @gLookOnTv1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yazı boyutu ve rengi: Ayarlar › TV\'de görünüm.'**
+  String get gLookOnTv1;
+
+  /// No description provided for @gLookOnTv2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Altyazının yeri: oyunun altyazısını örterek, üstünde, altında ya da ekranın altında sabit.'**
+  String get gLookOnTv2;
+
+  /// No description provided for @gLookOnTv3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Zemin koyuluğu: yazının arkasındaki siyah kutunun koyuluğu. Oyunun altyazısını örtüyorsan yüksek tut.'**
+  String get gLookOnTv3;
+
+  /// No description provided for @gTroubleTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Sorun giderme'**
+  String get gTroubleTitle;
+
+  /// No description provided for @gTroubleSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Sık karşılaşılan durumlar'**
+  String get gTroubleSubtitle;
+
+  /// No description provided for @gQ1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviri başlamıyor, \"PS5\'e bağlanılıyor\"da kalıyor'**
+  String get gQ1;
+
+  /// No description provided for @gQ1A1.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 açık mı? Dinlenme modundaysa uyandırma ayarlarını \"PS5\'i hazırla\" bölümündeki gibi aç.'**
+  String get gQ1A1;
+
+  /// No description provided for @gQ1A2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefon Wi-Fi\'ye bağlı ve PS5 ile aynı ağda mı?'**
+  String get gQ1A2;
+
+  /// No description provided for @gQ1A3.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5\'te Uzaktan Oynatma açık mı?'**
+  String get gQ1A3;
+
+  /// No description provided for @gQ2.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Uzaktan Oynatma başka bir cihaz tarafından kullanılıyor\"'**
+  String get gQ2;
+
+  /// No description provided for @gQ2A1.
+  ///
+  /// In tr, this message translates to:
+  /// **'PS5 aynı anda tek bir Uzaktan Oynatma bağlantısı kabul eder. Bilgisayardaki GameTranslator ya da başka bir Remote Play uygulaması açıksa kapat.'**
+  String get gQ2A1;
+
+  /// No description provided for @gQ2A2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Az önce durdurduysan birkaç saniye bekle; uygulama kendiliğinden yeniden dener.'**
+  String get gQ2A2;
+
+  /// No description provided for @gQ3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kumandam TV\'den koptu'**
+  String get gQ3;
+
+  /// No description provided for @gQ3A1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefon senin oynadığın hesapla bağlanmış. Ayarlar › PS5 › \"PSN hesabını değiştir\" ile ikinci kullanıcının hesabına geç.'**
+  String get gQ3A1;
+
+  /// No description provided for @gQ4.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV kartı \"Bekleniyor\"da kalıyor'**
+  String get gQ4;
+
+  /// No description provided for @gQ4A1.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de GameTranslator uygulaması açık mı?'**
+  String get gQ4A1;
+
+  /// No description provided for @gQ4A2.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV, telefonla aynı ağda mı? Misafir ağı ya da farklı bir modem olmamalı.'**
+  String get gQ4A2;
+
+  /// No description provided for @gQ4A3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bilgisayardaki GameTranslator açıksa kapat; TV ağda ilk bulduğuna bağlanır.'**
+  String get gQ4A3;
+
+  /// No description provided for @gQ4A4.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV uygulaması daha önce bilgisayara bağlandıysa o adreste takılı kalmış olabilir. Aşağıdaki \"TV telefonu bulamıyorsa\" adımlarını uygula.'**
+  String get gQ4A4;
+
+  /// No description provided for @gTvNotFoundTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV telefonu bulamıyorsa'**
+  String get gTvNotFoundTitle;
+
+  /// No description provided for @gRecoveryLead.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV uygulaması en son bağlandığı adresi hatırlar. Daha önce bilgisayara bağlandıysa, telefonu aramak yerine o adresi denemeye devam edebilir. Kayıtlı adresi silince uygulama ağı baştan tarar ve telefonu bulur.'**
+  String get gRecoveryLead;
+
+  /// No description provided for @gRecoveryAndroidTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Android TV / Google TV (TCL, Sony, Philips, Vestel…)'**
+  String get gRecoveryAndroidTitle;
+
+  /// No description provided for @gRecoveryAndroidStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de Ayarlar › Uygulamalar\'a gir ve listeden GameTranslator\'ı seç (\"Tüm uygulamaları göster\" gerekebilir).'**
+  String get gRecoveryAndroidStep1;
+
+  /// No description provided for @gRecoveryAndroidStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Verileri temizle\"yi seç ve onayla. Uygulama silinmez, yalnızca kayıtlı adres ve ayarlar sıfırlanır.'**
+  String get gRecoveryAndroidStep2;
+
+  /// No description provided for @gRecoveryAndroidStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonda çeviri açıkken TV\'de GameTranslator\'ı yeniden aç.'**
+  String get gRecoveryAndroidStep3;
+
+  /// No description provided for @gRecoveryAndroidStep4.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bir dakikaya kadar bekle; telefondaki TV karosu \"Bağlı\" olur.'**
+  String get gRecoveryAndroidStep4;
+
+  /// No description provided for @gRecoverySamsungTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Samsung ve LG'**
+  String get gRecoverySamsungTitle;
+
+  /// No description provided for @gRecoverySamsungStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bu TV\'lerde uygulama verisi ayrı silinemez: GameTranslator\'ı TV\'den kaldır.'**
+  String get gRecoverySamsungStep1;
+
+  /// No description provided for @gRecoverySamsungStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bilgisayardaki GameTranslator ile yeniden kur (\"TV\'yi hazırla\" bölümündeki adımlar).'**
+  String get gRecoverySamsungStep2;
+
+  /// No description provided for @gRecoverySamsungStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bilgisayardaki GameTranslator\'ı kapat, telefonda çeviriyi başlat ve TV\'de uygulamayı aç.'**
+  String get gRecoverySamsungStep3;
+
+  /// No description provided for @gRecoveryStillTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yine olmazsa'**
+  String get gRecoveryStillTitle;
+
+  /// No description provided for @gRecoveryStill1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bilgisayardaki GameTranslator kapalı mı? Açıksa TV ona bağlanır.'**
+  String get gRecoveryStill1;
+
+  /// No description provided for @gRecoveryStill2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefon ve TV aynı Wi-Fi ağında mı? Modemde \"istemci yalıtımı\" (AP isolation) açıksa cihazlar birbirini göremez.'**
+  String get gRecoveryStill2;
+
+  /// No description provided for @gRecoveryStill3.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de HDMI ayarı da sıfırlandığı için Tamam ile paneli açıp PS5\'in girişini yeniden seç.'**
+  String get gRecoveryStill3;
+
+  /// No description provided for @gTroubleTip.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çözemediğin bir sorun olursa Ayarlar › Hakkında › Günlük\'teki kayıtları kopyalayıp paylaşabilirsin.'**
+  String get gTroubleTip;
+
+  /// No description provided for @gQ5.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de oyun görüntüsü yok, ekran siyah'**
+  String get gQ5;
+
+  /// No description provided for @gQ5A1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tamam ile paneli aç ve sol/sağ ile PS5\'in bağlı olduğu HDMI girişini seç.'**
+  String get gQ5A1;
+
+  /// No description provided for @gQ5A2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bazı Android TV\'ler HDMI görüntüsünü başka uygulamaya vermez; o TV\'lerde altyazı görünür ama arkası siyah kalır.'**
+  String get gQ5A2;
+
+  /// No description provided for @gQ6.
+  ///
+  /// In tr, this message translates to:
+  /// **'Altyazı hiç gelmiyor'**
+  String get gQ6;
+
+  /// No description provided for @gQ6A1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Oyunun kendi altyazıları açık mı?'**
+  String get gQ6A1;
+
+  /// No description provided for @gQ6A2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ana ekrandaki \"Çerçevede okunan\" boşsa bölge yanlış yerdedir; \"Altyazı bölgesini ayarla\" bölümüne bak.'**
+  String get gQ6A2;
+
+  /// No description provided for @gQ6A3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Oyunun dili ile Ayarlar › Çeviri\'deki kaynak dil aynı mı?'**
+  String get gQ6A3;
+
+  /// No description provided for @gQ6A4.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"TV\'ye deneme altyazısı gönder\" çalışıyorsa TV bağlantısı sağlamdır; sorun okumadadır.'**
+  String get gQ6A4;
+
+  /// No description provided for @gQ7.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviri yarım ya da anlamsız'**
+  String get gQ7;
+
+  /// No description provided for @gQ7A1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Cümlenin başı ya da sonu eksikse bölgeyi genişlet.'**
+  String get gQ7A1;
+
+  /// No description provided for @gQ7A2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Motor \"Cihazda\" ise Google ya da DeepL\'e geç.'**
+  String get gQ7A2;
+
+  /// No description provided for @gQ7A3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çok süslü ya da çok küçük yazı tiplerinde okuma zorlaşır; oyunda altyazı boyutunu büyütmek ve arka plan eklemek yardımcı olur.'**
+  String get gQ7A3;
+
+  /// No description provided for @gQ8.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviri geç geliyor'**
+  String get gQ8;
+
+  /// No description provided for @gQ8A1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefon ve PS5 mümkünse modeme yakın olsun; zayıf Wi-Fi görüntüyü geciktirir.'**
+  String get gQ8A1;
+
+  /// No description provided for @gQ8A2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çevrimiçi motorlarda internet hızı da etkiler.'**
+  String get gQ8A2;
+
+  /// No description provided for @gQ9.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ekranı kapatınca çeviri duruyor'**
+  String get gQ9;
+
+  /// No description provided for @gQ9A1.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonun pil tasarrufu uygulamayı durduruyor olabilir. Telefonun Ayarlar › Uygulamalar › GameTranslator › Pil bölümünden \"Kısıtlanmamış\"ı seç.'**
+  String get gQ9A1;
+
+  /// No description provided for @gQ9A2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bildirim iznini kapattıysan aç; arka plan servisi bildirimle çalışır.'**
+  String get gQ9A2;
+
   /// No description provided for @commonOk.
   ///
   /// In tr, this message translates to:

@@ -35,6 +35,704 @@ class AppLocalizationsAr extends AppLocalizations {
       'لغة الواجهة فقط؛ لا تغيّر لغة اللعبة أو الترجمة.';
 
   @override
+  String get guideIntro => 'كل شيء من الإعداد إلى حل المشكلات، خطوة بخطوة.';
+
+  @override
+  String get guidePhoneAddress => 'عنوان هاتفك';
+
+  @override
+  String get guideGroupStart => 'البداية';
+
+  @override
+  String get guideGroupUsage => 'الاستخدام';
+
+  @override
+  String get guideGroupHelp => 'المساعدة';
+
+  @override
+  String get guideNextChapter => 'الفصل التالي';
+
+  @override
+  String get guideTvHelpTitle => 'التلفاز لا يتصل';
+
+  @override
+  String get gHowTitle => 'كيف يعمل؟';
+
+  @override
+  String get gHowSubtitle => 'المنظومة كاملة بلمحة';
+
+  @override
+  String get gHowLead =>
+      'يربط GameTranslator ثلاثة أجهزة. اللعبة تعمل على PS5، وأنت تلعب على التلفاز، والهاتف يترجم في الوسط:';
+
+  @override
+  String get gHowStep1 =>
+      'يأخذ الهاتف صورة اللعبة من PS5 عبر Remote Play. لا تُستخدم الكاميرا.';
+
+  @override
+  String get gHowStep2 =>
+      'يقرأ المنطقة التي تظهر فيها الترجمة في الصورة ويترجم النص.';
+
+  @override
+  String get gHowStep3 =>
+      'يرسل الترجمة إلى التلفاز على نفس شبكة Wi-Fi، ويعرضها تطبيق GameTranslator فوق اللعبة.';
+
+  @override
+  String get gHowNeedsTitle => 'ما المطلوب؟';
+
+  @override
+  String get gHowNeed1 => 'جهاز PS5 وعليه مستخدم ثانٍ (موضّح أدناه).';
+
+  @override
+  String get gHowNeed2 =>
+      'تلفاز مثبّت عليه تطبيق GameTranslator: LG أو Samsung أو Android TV / Google TV.';
+
+  @override
+  String get gHowNeed3 =>
+      'شبكة منزلية واحدة (Wi-Fi) يتصل بها الهاتف وPS5 والتلفاز.';
+
+  @override
+  String get gHowNeed4 =>
+      'إنترنت للترجمة عبر الإنترنت. وهناك خيار ترجمة يعمل بلا إنترنت.';
+
+  @override
+  String get gHowTip =>
+      'الإعداد يتم مرة واحدة. بعدها كل ما تفعله: بدء الترجمة وفتح التطبيق على التلفاز.';
+
+  @override
+  String get gPs5Title => 'جهّز PS5';
+
+  @override
+  String get gPs5Subtitle => 'مستخدم ثانٍ وRemote Play';
+
+  @override
+  String get gPs5UserTitle => '1. أضف مستخدمًا ثانيًا';
+
+  @override
+  String get gPs5UserBody =>
+      'يعتبر PS5 الجهاز المتصل عبر Remote Play ذراع تحكم ذلك المستخدم. فإذا اتصل الهاتف بحسابك انفصل ذراعك عن التلفاز. لذلك يتصل الهاتف بمستخدم منفصل؛ وتستمر أنت باللعب بحسابك.';
+
+  @override
+  String get gPs5UserStep1 =>
+      'أضف مستخدمًا جديدًا على PS5 (من صورة الملف على الشاشة الرئيسية: تبديل المستخدم › إضافة مستخدم).';
+
+  @override
+  String get gPs5UserStep2 =>
+      'سجّل دخول هذا المستخدم بحساب PSN. يمكنك إنشاء حساب مجانًا؛ لا حاجة إلى PS Plus.';
+
+  @override
+  String get gPs5UserStep3 =>
+      'ستسجّل الدخول إلى PSN على الهاتف أيضًا بهذا الحساب الثاني.';
+
+  @override
+  String get gPs5RemoteTitle => '2. شغّل Remote Play';
+
+  @override
+  String get gPs5RemoteStep1 => 'انتقل إلى المستخدم الثاني على PS5.';
+
+  @override
+  String get gPs5RemoteStep2 => 'ادخل إلى الإعدادات › النظام › Remote Play.';
+
+  @override
+  String get gPs5RemoteStep3 => 'شغّل \"تمكين Remote Play\".';
+
+  @override
+  String get gPs5WakeTitle => '3. الإيقاظ من وضع السكون (اختياري)';
+
+  @override
+  String get gPs5WakeBody =>
+      'ليتمكن الهاتف من إيقاظ PS5 عند بدء الترجمة وهو في وضع السكون:';
+
+  @override
+  String get gPs5WakeStep1 =>
+      'ادخل إلى الإعدادات › النظام › توفير الطاقة › الميزات المتاحة في وضع السكون.';
+
+  @override
+  String get gPs5WakeStep2 =>
+      'شغّل \"البقاء متصلًا بالإنترنت\" و\"تمكين تشغيل PS5 من الشبكة\".';
+
+  @override
+  String get gPs5Tip =>
+      'إن لم ترغب في الإيقاظ، أوقف على الهاتف: الإعدادات › PS5 › \"الإيقاظ من وضع السكون\".';
+
+  @override
+  String get gPairTitle => 'اقترن الهاتف بـ PS5';
+
+  @override
+  String get gPairSubtitle => 'تسجيل الدخول عبر PSN والرمز المكوّن من 8 أرقام';
+
+  @override
+  String get gPairSignInTitle => '1. سجّل الدخول عبر PSN';
+
+  @override
+  String get gPairSignInStep1 =>
+      'في شاشة الإعداد اضغط \"سجّل الدخول عبر PSN\". تُفتح صفحة Sony الرسمية.';
+
+  @override
+  String get gPairSignInStep2 => 'سجّل الدخول بحساب المستخدم الثاني على PS5.';
+
+  @override
+  String get gPairSignInStep3 =>
+      'عند انتهاء تسجيل الدخول يعود التطبيق إلى الإعداد تلقائيًا ويظهر \"تم ربط حساب PSN\".';
+
+  @override
+  String get gPairSignInTip =>
+      'كلمة مرورك تذهب إلى Sony مباشرة؛ والتطبيق يحفظ معرّف حسابك فقط.';
+
+  @override
+  String get gPairCodeTitle => '2. أدخل رمز الاقتران';
+
+  @override
+  String get gPairCodeStep1 =>
+      'على PS5 وأنت على المستخدم الثاني، ادخل إلى الإعدادات › النظام › Remote Play › \"ربط الجهاز\".';
+
+  @override
+  String get gPairCodeStep2 =>
+      'يظهر على الشاشة رمز من 8 أرقام وعدّ تنازلي. الرمز صالح نحو 5 دقائق.';
+
+  @override
+  String get gPairCodeStep3 =>
+      'على الهاتف اختر جهاز PS5 من قائمة \"الجهاز المكتشف\".';
+
+  @override
+  String get gPairCodeStep4 => 'اكتب الرمز في المربعات واضغط \"اقترن\".';
+
+  @override
+  String get gPairMissingTitle => 'إذا لم يظهر PS5 في القائمة';
+
+  @override
+  String get gPairMissing1 =>
+      'تأكد أن الهاتف وPS5 على نفس شبكة Wi-Fi؛ لا شبكة ضيوف ولا بيانات جوّال.';
+
+  @override
+  String get gPairMissing2 => 'اضغط \"تحديث\".';
+
+  @override
+  String get gPairMissing3 =>
+      'إن لم يظهر، اضغط \"أدخل عنوان IP يدويًا\". يظهر العنوان على PS5 في الإعدادات › الشبكة › حالة الاتصال › عرض حالة الاتصال.';
+
+  @override
+  String get gPairTip =>
+      'الاقتران يتم مرة واحدة. وإذا تغيّر عنوان PS5 يجده التطبيق على الشبكة من جديد.';
+
+  @override
+  String get gTvTitle => 'جهّز التلفاز';
+
+  @override
+  String get gTvSubtitle => 'التلفازات المدعومة وتطبيق التلفاز';
+
+  @override
+  String get gTvLead =>
+      'هناك تطبيق GameTranslator منفصل للتلفاز يعرض الترجمة عليه. لم يكن في المتاجر بعد، لذا يُثبَّت على التلفاز مرة واحدة. يمكنك تثبيته على LG وAndroid TV من هذا الهاتف؛ أما على Samsung فالتثبيت يتم حاليًا من حاسوب.';
+
+  @override
+  String get gTvSupportedTitle => 'أي التلفازات مدعومة؟';
+
+  @override
+  String get gTvTableLg => 'LG';
+
+  @override
+  String get gTvTableLgDetail => 'webOS 4 وما بعده';
+
+  @override
+  String get gTvTableSamsung => 'Samsung';
+
+  @override
+  String get gTvTableSamsungDetail => 'Tizen، 2019 وما بعده';
+
+  @override
+  String get gTvTableAndroid => 'Android TV / Google TV';
+
+  @override
+  String get gTvTableAndroidDetail =>
+      'Vestel وArçelik وBeko وGrundig وPhilips وSony وTCL وغيرها';
+
+  @override
+  String get gTvTableOther => 'أخرى';
+
+  @override
+  String get gTvTableOtherDetail =>
+      'موديلات Linux من Vestel/Arçelik/Beko/Grundig، وPhilips Saphi، وTitan OS';
+
+  @override
+  String get gTvNotSupported =>
+      'غير مدعوم: لا يمكن تثبيت التطبيق على هذه التلفازات.';
+
+  @override
+  String get gTvAndroidTip =>
+      'هل تلفازك Android؟ إن ظهر Google Play Store أو \"Google TV\" على شاشته الرئيسية فهو كذلك.';
+
+  @override
+  String get gTvLgTitle => 'LG';
+
+  @override
+  String get gTvLgStep1 =>
+      'من حاسوب، أنشئ حساب مطوّر LG مجانيًا على webostv.developer.lge.com.';
+
+  @override
+  String get gTvLgStep2 =>
+      'على التلفاز ثبّت تطبيق \"Developer Mode\" من LG Content Store، وسجّل الدخول بحسابك وشغّل \"Dev Mode Status\". سيُعاد تشغيل التلفاز.';
+
+  @override
+  String get gTvLgStep3 =>
+      'في تطبيق Developer Mode على التلفاز شغّل \"Key Server\".';
+
+  @override
+  String get gTvLgStep4 =>
+      'على الهاتف اختر LG في معالج \"ثبّت تطبيق التلفاز\"، واعثر على تلفازك واكتب كلمة المرور المكوّنة من 6 أحرف الظاهرة على الشاشة (خطوة التلفاز في GameTranslator على الحاسوب تفعل الشيء نفسه).';
+
+  @override
+  String get gTvLgNote =>
+      'في LG يبقى وضع المطوّر مفعّلًا 1000 ساعة كحد أقصى. إن لم تستخدمه مدة طويلة فاضغط \"EXTEND\" في تطبيق Developer Mode قبل انتهاء المدة؛ وإذا انتهت يُحذف تطبيق التلفاز وتحتاج إلى تثبيته من جديد.';
+
+  @override
+  String get gTvSamsungTitle => 'Samsung';
+
+  @override
+  String get gTvSamsungStep1 =>
+      'على التلفاز افتح شاشة التطبيقات واضغط 1 2 3 4 5 في الريموت. تُفتح نافذة وضع المطوّر.';
+
+  @override
+  String get gTvSamsungStep2 =>
+      'شغّل \"Developer mode\" واكتب عنوان حاسوبك في خانة \"Host PC IP\".';
+
+  @override
+  String get gTvSamsungStep3 =>
+      'أطفئ التلفاز تمامًا ثم شغّله بالضغط المستمر على زر الطاقة.';
+
+  @override
+  String get gTvSamsungStep4 =>
+      'في خطوة التلفاز في GameTranslator على الحاسوب اختر تلفازك. في الصفحة التي تُفتح سجّل الدخول بحساب Samsung مجاني؛ يُوقَّع التطبيق ويُثبَّت.';
+
+  @override
+  String get gTvAndroidTitle => 'Android TV / Google TV';
+
+  @override
+  String get gTvAndroidStep1 =>
+      'على التلفاز ادخل إلى الإعدادات › تفضيلات الجهاز › حول (في Google TV: الإعدادات › النظام › حول).';
+
+  @override
+  String get gTvAndroidStep2 => 'اضغط زر OK سبع مرات على \"رقم البنية\".';
+
+  @override
+  String get gTvAndroidStep3 =>
+      'من خيارات المطوّر شغّل \"تصحيح أخطاء USB\" (و\"تصحيح أخطاء الشبكة\" إن وُجد).';
+
+  @override
+  String get gTvAndroidStep4 =>
+      'على الهاتف اختر \"Android TV / Google TV\" في معالج \"ثبّت تطبيق التلفاز\" ووافق على الطلب الظاهر على التلفاز.';
+
+  @override
+  String get gTvAndroidNote =>
+      'إذا لم يسمح التلفاز بتصحيح الأخطاء عبر الشبكة يمكنك التثبيت بذاكرة USB: نزّل ملف APK لتطبيق التلفاز من صفحة الإصدارات في GameTranslator، وانسخه إلى الذاكرة وافتحه بمدير ملفات على التلفاز.';
+
+  @override
+  String get gTvAfterTitle => 'بعد التثبيت';
+
+  @override
+  String get gTvAfterBody =>
+      'يجد تطبيق التلفاز الهاتف على الشبكة تلقائيًا؛ لا تحتاج إلى كتابة عنوان التلفاز على الهاتف. في Samsung لا يُحتاج إلى الحاسوب إلا للتثبيت؛ وبعدها يمكن إبقاؤه مغلقًا.';
+
+  @override
+  String get gTvObsTitle => 'للبثّ: OBS';
+
+  @override
+  String gTvObsBody(String phone) {
+    return 'عند تفعيل الترجمة تُقدَّم الترجمات أيضًا كصفحة ويب. في OBS أضف \"مصدر متصفح\" واستخدم العنوان http://$phone:8787/obs (بمقاس 1920×1080). خلفية الصفحة شفافة؛ ولا تعرض الترجمة فوق اللعبة في متصفح التلفاز، بل هي لتخطيطات البث والتسجيل فقط.';
+  }
+
+  @override
+  String get gFirstTitle => 'الاستخدام الأول';
+
+  @override
+  String get gFirstSubtitle => 'ابدأ الترجمة وشاهدها على التلفاز';
+
+  @override
+  String get gFirstStep1 =>
+      'افتح اللعبة على PS5 بحسابك وشغّل الترجمات من إعدادات اللعبة.';
+
+  @override
+  String get gFirstStep2 =>
+      'اضغط الزر الكبير في الشاشة الرئيسية للهاتف. في المرة الأولى يُطلب إذن الإشعارات؛ اسمح به لتستمر الترجمة في الخلفية.';
+
+  @override
+  String get gFirstStep3 =>
+      'عندما تصبح الحالة \"الترجمة مفعّلة\" تظهر بطاقة PS5 \"متصل\". الاتصال الأول يستغرق بضع ثوانٍ.';
+
+  @override
+  String get gFirstStep4 =>
+      'افتح تطبيق GameTranslator على التلفاز. خلال ثوانٍ تصبح بطاقة التلفاز على الهاتف \"متصل\".';
+
+  @override
+  String get gFirstStep5 =>
+      'إن لم تظهر صورة اللعبة على التلفاز، افتح اللوحة بزر OK واختر بيمين ويسار مدخل HDMI الذي يتصل به PS5.';
+
+  @override
+  String get gFirstStep6 =>
+      'إن لم يكن هناك صوت من التلفاز فقد وجّه PS5 الصوت إلى Remote Play: اضغط زر PS، وافتح الصوت › جهاز الإخراج من القائمة السفلية واختر HDMI. يتم هذا مرة واحدة.';
+
+  @override
+  String get gFirstStep7 =>
+      'على الهاتف اضغط \"أرسل ترجمة تجريبية إلى التلفاز\". إن رأيت النص على التلفاز فكل شيء جاهز.';
+
+  @override
+  String get gFirstTip =>
+      'يمكنك إطفاء شاشة الهاتف والترجمة مفعّلة. للإيقاف اضغط الزر في التطبيق أو \"إيقاف\" في الإشعار.';
+
+  @override
+  String get gFirstNextTitle => 'المرات القادمة';
+
+  @override
+  String get gFirstNextBody =>
+      'خطوتان فقط: ابدأ الترجمة على الهاتف، وافتح GameTranslator على التلفاز.';
+
+  @override
+  String get gFirstBatteryTitle => 'البطارية والحرارة';
+
+  @override
+  String get gFirstBatteryBody =>
+      'يفكّ الهاتف ترميز الفيديو ويقرأ النص باستمرار؛ في الجلسات الطويلة استخدمه موصولًا بالشاحن.';
+
+  @override
+  String get gRemoteTitle => 'ريموت التلفاز';
+
+  @override
+  String get gRemoteSubtitle => 'الأزرار في تطبيق التلفاز';
+
+  @override
+  String get gRemoteLead =>
+      'عندما يكون GameTranslator مفتوحًا على التلفاز تفعل أزرار الريموت ما يلي:';
+
+  @override
+  String get gRemoteOk => 'OK';
+
+  @override
+  String get gRemoteOkText =>
+      'يفتح لوحة الحالة ويغلقها (مدخل HDMI، حالة الاتصال).';
+
+  @override
+  String get gRemoteLeftRight => 'يسار / يمين';
+
+  @override
+  String get gRemoteLeftRightText =>
+      'يغيّر مدخل HDMI عندما تكون اللوحة مفتوحة.';
+
+  @override
+  String get gRemoteNumbers => '1 – 4';
+
+  @override
+  String get gRemoteNumbersText => 'يختار مدخل HDMI مباشرة.';
+
+  @override
+  String get gRemoteUpDown => 'أعلى / أسفل';
+
+  @override
+  String get gRemoteUpDownText => 'يحرّك الترجمة أعلى أو أسفل الشاشة.';
+
+  @override
+  String get gRemoteRed => 'الأحمر';
+
+  @override
+  String get gRemoteRedText => 'يعرض نص الاختبار الخاص بالتلفاز.';
+
+  @override
+  String get gRemoteGreen => 'الأخضر';
+
+  @override
+  String get gRemoteGreenText => 'يفتح لوحة الحالة ويغلقها.';
+
+  @override
+  String get gRemoteBlue => 'الأزرق';
+
+  @override
+  String get gRemoteBlueText => 'يبدأ أو يوقف العرض التعريفي بترجمات نموذجية.';
+
+  @override
+  String get gRemoteBack => 'رجوع';
+
+  @override
+  String get gRemoteBackText => 'يخرج من التطبيق.';
+
+  @override
+  String get gRemoteTip =>
+      'تلعب بذراع PS5؛ وريموت التلفاز مطلوب لهذه الإعدادات فقط.';
+
+  @override
+  String get gRegionTitle => 'اضبط منطقة الترجمة';
+
+  @override
+  String get gRegionSubtitle => 'أين ينظر الهاتف على الشاشة';
+
+  @override
+  String get gRegionBody =>
+      'لا يقرأ الهاتف الشاشة كلها، بل منطقة ظهور الترجمة فقط. إن كانت المنطقة في المكان الخطأ فلا تأتي ترجمة، أو تُترجم نصوص أخرى على الشاشة.';
+
+  @override
+  String get gRegionStep1 => 'والترجمة مفعّلة، انتظر ظهور ترجمة في اللعبة.';
+
+  @override
+  String get gRegionStep2 =>
+      'انظر إلى الإطار الأزرق في المعاينة على الشاشة الرئيسية: يجب أن تكون الترجمة كاملة داخل الإطار.';
+
+  @override
+  String get gRegionStep3 =>
+      'إن لم تكن كذلك اضغط \"اضبط منطقة الترجمة\". اختر الحافة العليا أو السفلى أو اليسرى أو اليمنى وحرّكها بالمنزلق.';
+
+  @override
+  String get gRegionStep4 =>
+      'سطر \"المقروء داخل الإطار\" في الشاشة الرئيسية يُظهر ما يقرأه الهاتف في تلك اللحظة؛ ويجب أن تظهر فيه الترجمة كاملة.';
+
+  @override
+  String get gRegionBullet1 => 'إذا قُطع بداية الجملة أو نهايتها فوسّع الإطار.';
+
+  @override
+  String get gRegionBullet2 =>
+      'إذا اختفى السطر الأعلى في الترجمات ذات السطرين فارفع الحافة العليا.';
+
+  @override
+  String get gRegionBullet3 =>
+      'إذا تُرجمت نصوص أخرى مثل أهداف المهام أو أسماء الخرائط فضيّق الإطار.';
+
+  @override
+  String get gRegionTip =>
+      'كل لعبة تضع الترجمة في مكان مختلف؛ عند بدء لعبة جديدة تكفي نظرة واحدة على المنطقة.';
+
+  @override
+  String get gLookTitle => 'الترجمة والمظهر';
+
+  @override
+  String get gLookSubtitle => 'المحرك والقاموس والنص على التلفاز';
+
+  @override
+  String get gEngineTitle => 'محرك الترجمة';
+
+  @override
+  String get gEngineGoogle => 'Google';
+
+  @override
+  String get gEngineGoogleText =>
+      'يحتاج إنترنت ولا يحتاج مفتاحًا. أفضل بداية لمعظم الألعاب.';
+
+  @override
+  String get gEngineDeepl => 'DeepL';
+
+  @override
+  String get gEngineDeeplText =>
+      'يبني جملًا أكثر طبيعية. تحتاج إلى إدخال مفتاح API الخاص بك من DeepL.';
+
+  @override
+  String get gEngineOnDevice => 'على الجهاز';
+
+  @override
+  String get gEngineOnDeviceText =>
+      'يعمل بلا إنترنت؛ جودته أقل من غيره. يُنزَّل نموذج اللغة مرة واحدة عند أول استخدام.';
+
+  @override
+  String get gEngineFallback =>
+      'إذا انقطع الإنترنت تنتقل الترجمة تلقائيًا إلى نموذج الجهاز، وتعود عند رجوع الاتصال.';
+
+  @override
+  String get gGlossaryTitle => 'قاموس المصطلحات';
+
+  @override
+  String get gGlossaryBody =>
+      'لتثبيت أسماء الشخصيات ومصطلحات اللعبة التي يخطئ فيها المترجم (من الإنجليزية إلى التركية فقط). يُفتح من الإعدادات › الترجمة › قاموس المصطلحات. تُترجم المصطلحات في \"terms\" إلى النص الذي تكتبه، وتبقى الأسماء في \"keep\" كما هي.';
+
+  @override
+  String get gLookOnTvTitle => 'المظهر على التلفاز';
+
+  @override
+  String get gLookOnTv1 => 'حجم الخط ولونه: الإعدادات › على التلفاز.';
+
+  @override
+  String get gLookOnTv2 =>
+      'موضع الترجمة: تغطية ترجمة اللعبة، أو فوقها، أو تحتها، أو ثابت أسفل الشاشة.';
+
+  @override
+  String get gLookOnTv3 =>
+      'عتامة الخلفية: مدى عتامة الصندوق الأسود خلف النص. أبقها عالية إن كنت تغطي ترجمة اللعبة.';
+
+  @override
+  String get gTroubleTitle => 'حل المشكلات';
+
+  @override
+  String get gTroubleSubtitle => 'حالات متكررة';
+
+  @override
+  String get gQ1 => 'الترجمة لا تبدأ وتبقى عند \"جارٍ الاتصال بـ PS5\"';
+
+  @override
+  String get gQ1A1 =>
+      'هل PS5 مشغّل؟ إن كان في وضع السكون فشغّل الإيقاظ كما في فصل \"جهّز PS5\".';
+
+  @override
+  String get gQ1A2 => 'هل الهاتف متصل بـ Wi-Fi وعلى نفس شبكة PS5؟';
+
+  @override
+  String get gQ1A3 => 'هل Remote Play مفعّل على PS5؟';
+
+  @override
+  String get gQ2 => '\"Remote Play مستخدم من جهاز آخر\"';
+
+  @override
+  String get gQ2A1 =>
+      'يقبل PS5 اتصال Remote Play واحدًا في الوقت نفسه. إن كان GameTranslator على حاسوب أو أي تطبيق Remote Play آخر مفتوحًا فأغلقه.';
+
+  @override
+  String get gQ2A2 =>
+      'إن كنت أوقفتَه للتو فانتظر بضع ثوانٍ؛ يعيد التطبيق المحاولة تلقائيًا.';
+
+  @override
+  String get gQ3 => 'انفصل ذراع التحكم عن التلفاز';
+
+  @override
+  String get gQ3A1 =>
+      'اتصل الهاتف بالحساب الذي تلعب به. انتقل إلى حساب المستخدم الثاني من الإعدادات › PS5 › \"غيّر حساب PSN\".';
+
+  @override
+  String get gQ4 => 'بطاقة التلفاز تبقى \"بانتظار\"';
+
+  @override
+  String get gQ4A1 => 'هل تطبيق GameTranslator مفتوح على التلفاز؟';
+
+  @override
+  String get gQ4A2 =>
+      'هل التلفاز على نفس شبكة الهاتف؟ لا شبكة ضيوف ولا موجّه مختلف.';
+
+  @override
+  String get gQ4A3 =>
+      'إن كان GameTranslator على حاسوب مفتوحًا فأغلقه؛ يتصل التلفاز بأول جهاز يجده.';
+
+  @override
+  String get gQ4A4 =>
+      'إذا كان تطبيق التلفاز قد اتصل بحاسوب سابقًا فقد يعلق على ذلك العنوان. اتبع خطوات \"إذا لم يجد التلفاز الهاتف\" أدناه.';
+
+  @override
+  String get gTvNotFoundTitle => 'إذا لم يجد التلفاز الهاتف';
+
+  @override
+  String get gRecoveryLead =>
+      'يتذكّر تطبيق التلفاز آخر عنوان اتصل به. فإن اتصل بحاسوب سابقًا فقد يستمر في تجربة ذلك العنوان بدل البحث عن الهاتف. ومسح العنوان المحفوظ يجعل التطبيق يفحص الشبكة من جديد ويجد الهاتف.';
+
+  @override
+  String get gRecoveryAndroidTitle =>
+      'Android TV / Google TV (TCL، Sony، Philips، Vestel…)';
+
+  @override
+  String get gRecoveryAndroidStep1 =>
+      'على التلفاز ادخل إلى الإعدادات › التطبيقات واختر GameTranslator من القائمة (قد تحتاج إلى \"إظهار كل التطبيقات\").';
+
+  @override
+  String get gRecoveryAndroidStep2 =>
+      'اختر \"مسح البيانات\" وأكّد. لا يُحذف التطبيق؛ تُصفَّر فقط البيانات والعنوان المحفوظ والإعدادات.';
+
+  @override
+  String get gRecoveryAndroidStep3 =>
+      'والترجمة مفعّلة، أعد فتح GameTranslator على التلفاز.';
+
+  @override
+  String get gRecoveryAndroidStep4 =>
+      'انتظر حتى دقيقة؛ تصبح بطاقة التلفاز على الهاتف \"متصل\".';
+
+  @override
+  String get gRecoverySamsungTitle => 'Samsung وLG';
+
+  @override
+  String get gRecoverySamsungStep1 =>
+      'في هذه التلفازات لا تُمسح بيانات التطبيق منفصلة: أزل GameTranslator من التلفاز.';
+
+  @override
+  String get gRecoverySamsungStep2 =>
+      'أعد تثبيته بواسطة GameTranslator على حاسوب (خطوات فصل \"جهّز التلفاز\").';
+
+  @override
+  String get gRecoverySamsungStep3 =>
+      'أغلق GameTranslator على الحاسوب، وابدأ الترجمة على الهاتف، وافتح التطبيق على التلفاز.';
+
+  @override
+  String get gRecoveryStillTitle => 'إن لم ينجح ذلك';
+
+  @override
+  String get gRecoveryStill1 =>
+      'هل GameTranslator على الحاسوب مغلق؟ إن كان مفتوحًا فسيتصل التلفاز به.';
+
+  @override
+  String get gRecoveryStill2 =>
+      'هل الهاتف والتلفاز على نفس شبكة Wi-Fi؟ إن كان \"عزل العملاء\" (AP isolation) مفعّلًا في الموجّه فلا ترى الأجهزة بعضها.';
+
+  @override
+  String get gRecoveryStill3 =>
+      'إعداد HDMI على التلفاز يُصفَّر أيضًا، لذا اضغط OK لفتح اللوحة واختر مدخل PS5 من جديد.';
+
+  @override
+  String get gTroubleTip =>
+      'إن واجهت مشكلة لم تحلّها، يمكنك نسخ السجلات من الإعدادات › حول › السجل ومشاركتها.';
+
+  @override
+  String get gQ5 => 'لا توجد صورة للعبة على التلفاز والشاشة سوداء';
+
+  @override
+  String get gQ5A1 =>
+      'اضغط OK لفتح اللوحة واختر بيمين ويسار مدخل HDMI الذي يتصل به PS5.';
+
+  @override
+  String get gQ5A2 =>
+      'بعض تلفازات Android لا تمنح صورة HDMI لتطبيق آخر؛ في تلك التلفازات تظهر الترجمة لكن الخلفية تبقى سوداء.';
+
+  @override
+  String get gQ6 => 'لا تأتي أي ترجمة';
+
+  @override
+  String get gQ6A1 => 'هل ترجمات اللعبة نفسها مفعّلة؟';
+
+  @override
+  String get gQ6A2 =>
+      'إذا كان \"المقروء داخل الإطار\" فارغًا فالمنطقة في المكان الخطأ؛ راجع فصل \"اضبط منطقة الترجمة\".';
+
+  @override
+  String get gQ6A3 =>
+      'هل لغة اللعبة مطابقة للغة المصدر في الإعدادات › الترجمة؟';
+
+  @override
+  String get gQ6A4 =>
+      'إن كان \"أرسل ترجمة تجريبية إلى التلفاز\" يعمل فاتصال التلفاز سليم؛ والمشكلة في القراءة.';
+
+  @override
+  String get gQ7 => 'الترجمة ناقصة أو بلا معنى';
+
+  @override
+  String get gQ7A1 => 'إذا كان بداية الجملة أو نهايتها ناقصًا فوسّع المنطقة.';
+
+  @override
+  String get gQ7A2 =>
+      'إن كان المحرك \"على الجهاز\" فانتقل إلى Google أو DeepL.';
+
+  @override
+  String get gQ7A3 =>
+      'القراءة تصعب مع الخطوط المزخرفة جدًا أو الصغيرة جدًا؛ ويساعد تكبير حجم الترجمة في اللعبة وإضافة خلفية.';
+
+  @override
+  String get gQ8 => 'الترجمة تصل متأخرة';
+
+  @override
+  String get gQ8A1 =>
+      'أبقِ الهاتف وPS5 قريبين من الموجّه إن أمكن؛ فWi-Fi الضعيف يؤخّر الصورة.';
+
+  @override
+  String get gQ8A2 => 'في المحركات عبر الإنترنت تؤثر سرعة الإنترنت أيضًا.';
+
+  @override
+  String get gQ9 => 'الترجمة تتوقف عند إطفاء الشاشة';
+
+  @override
+  String get gQ9A1 =>
+      'قد يوقف موفّر البطارية التطبيق. من الهاتف ادخل إلى الإعدادات › التطبيقات › GameTranslator › البطارية واختر \"غير مقيّد\".';
+
+  @override
+  String get gQ9A2 =>
+      'إن كنت أوقفت إذن الإشعارات فشغّله؛ فخدمة الخلفية تعمل بإشعار.';
+
+  @override
   String get commonOk => 'حسنًا';
 
   @override

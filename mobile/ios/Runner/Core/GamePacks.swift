@@ -760,12 +760,25 @@ struct CRC32 {
       var i = 0
       let n = data.count
       while i + 8 <= n {
-        let one = crc ^ (UInt32(data[i]) | UInt32(data[i + 1]) << 8 | UInt32(data[i + 2]) << 16 | UInt32(data[i + 3]) << 24)
-        let two = UInt32(data[i + 4]) | UInt32(data[i + 5]) << 8 | UInt32(data[i + 6]) << 16 | UInt32(data[i + 7]) << 24
-        crc = t[7 * 256 + Int(one & 0xff)] ^ t[6 * 256 + Int((one >> 8) & 0xff)]
-          ^ t[5 * 256 + Int((one >> 16) & 0xff)] ^ t[4 * 256 + Int(one >> 24)]
-          ^ t[3 * 256 + Int(two & 0xff)] ^ t[2 * 256 + Int((two >> 8) & 0xff)]
-          ^ t[1 * 256 + Int((two >> 16) & 0xff)] ^ t[Int(two >> 24)]
+        let b0: UInt32 = UInt32(data[i])
+        let b1: UInt32 = UInt32(data[i + 1]) << 8
+        let b2: UInt32 = UInt32(data[i + 2]) << 16
+        let b3: UInt32 = UInt32(data[i + 3]) << 24
+        let b4: UInt32 = UInt32(data[i + 4])
+        let b5: UInt32 = UInt32(data[i + 5]) << 8
+        let b6: UInt32 = UInt32(data[i + 6]) << 16
+        let b7: UInt32 = UInt32(data[i + 7]) << 24
+        let one: UInt32 = crc ^ (b0 | b1 | b2 | b3)
+        let two: UInt32 = b4 | b5 | b6 | b7
+        let p0: UInt32 = t[7 * 256 + Int(one & 0xff)]
+        let p1: UInt32 = t[6 * 256 + Int((one >> 8) & 0xff)]
+        let p2: UInt32 = t[5 * 256 + Int((one >> 16) & 0xff)]
+        let p3: UInt32 = t[4 * 256 + Int(one >> 24)]
+        let p4: UInt32 = t[3 * 256 + Int(two & 0xff)]
+        let p5: UInt32 = t[2 * 256 + Int((two >> 8) & 0xff)]
+        let p6: UInt32 = t[1 * 256 + Int((two >> 16) & 0xff)]
+        let p7: UInt32 = t[Int(two >> 24)]
+        crc = p0 ^ p1 ^ p2 ^ p3 ^ p4 ^ p5 ^ p6 ^ p7
         i += 8
       }
       while i < n {

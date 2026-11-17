@@ -1465,4 +1465,507 @@ class AppLocalizationsTr extends AppLocalizations {
     );
     return '$game paketi kullanılıyor · $_temp0 paketten';
   }
+
+  @override
+  String get tvInstallTitle => 'TV Uygulamasını Kur';
+
+  @override
+  String tvInstallStepLabel(int number) {
+    return 'ADIM $number / 4';
+  }
+
+  @override
+  String get tvInstallBrandQuestion => 'TV\'nin markası ne?';
+
+  @override
+  String get tvInstallIntroBody =>
+      'Altyazıyı TV\'de gösteren GameTranslator uygulamasını telefondan TV\'ne kuracağız. Telefon ve TV aynı Wi-Fi ağında olsun.';
+
+  @override
+  String get tvInstallSavedHeader => 'KAYITLI TV';
+
+  @override
+  String tvInstallSavedSubtitle(String host, String version, String phone) {
+    return '$host · TV\'de $version · telefonda $phone';
+  }
+
+  @override
+  String get tvInstallUpdateAvailable => 'Güncelleme var';
+
+  @override
+  String get tvInstallUpdate => 'Güncelle';
+
+  @override
+  String get tvInstallReinstall => 'Yeniden kur';
+
+  @override
+  String get tvInstallBrandHeader => 'MARKA';
+
+  @override
+  String get tvInstallBrandAndroidSubtitle =>
+      'TCL, Sony, Philips, Xiaomi, Vestel, Arçelik, Beko, Grundig… Ana ekranda Google Play ya da \"Google TV\" yazar.';
+
+  @override
+  String get tvInstallBrandLgSubtitle =>
+      'webOS. Ana ekranda \"LG Content Store\" ve alt şeritte renkli uygulama kartları bulunur.';
+
+  @override
+  String get tvInstallBrandSamsungSubtitle =>
+      'Tizen, 2019 ve sonrası. Ana ekranda \"Samsung TV Plus\" ve \"Smart Hub\" bulunur.';
+
+  @override
+  String get tvInstallBrandFooter =>
+      'Emin değil misin? TV\'nin Ayarlar › Destek (ya da Hakkında) ekranında model ve işletim sistemi yazar. Vestel/Arçelik/Beko/Grundig\'in Linux modelleri, Philips Saphi ve Titan OS desteklenmiyor.';
+
+  @override
+  String get tvInstallSamsungStep => 'Samsung: bilgisayardan kur';
+
+  @override
+  String get tvInstallSamsungNoticeTitle =>
+      'Samsung TV\'ye kurulum şimdilik bilgisayardan';
+
+  @override
+  String get tvInstallSamsungNoticeText =>
+      'Samsung, uygulamanın her TV için Samsung hesabıyla ayrıca imzalanmasını istiyor. Telefondan kurulum henüz hazır değil; bilgisayardaki GameTranslator bunu kendisi yapar. Kurulum bir kez yapılır, sonra bilgisayar gerekmez.';
+
+  @override
+  String get tvInstallSamsungStepsTitle => 'Kısaca adımlar';
+
+  @override
+  String get tvInstallSamsungStep1 =>
+      'TV\'de Uygulamalar ekranını aç, kumandayla 1 2 3 4 5 tuşlarına bas.';
+
+  @override
+  String get tvInstallSamsungStep2 =>
+      '\"Developer mode\"u \"On\" yap, \"Host PC IP\" alanına BİLGİSAYARIN adresini yaz, OK\'e bas.';
+
+  @override
+  String get tvInstallSamsungStep3 =>
+      'TV\'yi güç tuşunu basılı tutarak tam kapatıp aç.';
+
+  @override
+  String get tvInstallSamsungStep4 =>
+      'Bilgisayarda GameTranslator\'ın TV adımında Samsung TV\'ni seç ve açılan sayfada Samsung hesabınla giriş yap.';
+
+  @override
+  String get tvInstallShowDetailed => 'Rehberde ayrıntılı göster';
+
+  @override
+  String get tvInstallOtherBrand => 'Başka marka seç';
+
+  @override
+  String get tvInstallFindStep => 'TV\'ni bul';
+
+  @override
+  String get tvInstallFindBodyAndroid =>
+      'Ağda hata ayıklaması açık Android TV\'ler aranıyor. Hata ayıklamayı henüz açmadıysan TV burada görünmez; sorun değil, \"Adımları göster\" ile devam et.';
+
+  @override
+  String get tvInstallFindBodyLg =>
+      'Telefonla aynı ağdaki LG TV\'ler aranıyor. TV açık olsun.';
+
+  @override
+  String get tvInstallSearchingHeader => 'ARANIYOR…';
+
+  @override
+  String get tvInstallFoundHeader => 'BULUNAN TV\'LER';
+
+  @override
+  String get tvInstallScanning => 'Ağ taranıyor, birkaç saniye sürer…';
+
+  @override
+  String get tvInstallNotFound => 'TV bulunamadı';
+
+  @override
+  String get tvInstallNotSearched => 'Henüz aranmadı';
+
+  @override
+  String get tvInstallNotSearchedNote =>
+      'Yenile\'ye dokun ya da adresi elle yaz.';
+
+  @override
+  String get tvInstallReady => 'Hazır';
+
+  @override
+  String get tvInstallRefresh => 'Yenile';
+
+  @override
+  String get tvInstallManualHeader => 'ADRESİ ELLE YAZ';
+
+  @override
+  String get tvInstallIpHint => 'ör. 192.168.1.40';
+
+  @override
+  String get tvInstallUseAddress => 'Bu adresi kullan';
+
+  @override
+  String get tvInstallAddressFooterAndroid =>
+      'TV\'nin adresi: Ayarlar › Ağ ve İnternet › bağlı olduğun Wi-Fi ağının adı (Google TV: Ayarlar › Ağ ve İnternet).';
+
+  @override
+  String get tvInstallAddressFooterLg =>
+      'TV\'nin adresi: Ayarlar › Genel › Ağ › Wi-Fi Bağlantısı › Gelişmiş Wi-Fi Ayarları (modele göre Ayarlar › Ağ).';
+
+  @override
+  String tvInstallSameSubnet(String phone) {
+    return 'Telefonun adresi $phone; TV\'ninki ilk üç bölümde aynı olmalı.';
+  }
+
+  @override
+  String get tvInstallShowSteps => 'Adımları göster';
+
+  @override
+  String get tvInstallIpError =>
+      'Bu bir IP adresine benzemiyor. Örnek: 192.168.1.40';
+
+  @override
+  String get tvInstallDebugStep => 'Hata ayıklamayı aç';
+
+  @override
+  String get tvInstallDevModeStep => 'Geliştirici modunu aç';
+
+  @override
+  String tvInstallStepCounter(int index, int total) {
+    return '$index. adım, toplam $total';
+  }
+
+  @override
+  String get tvInstallCopy => 'Kopyala';
+
+  @override
+  String get tvInstallCopied => 'Adres kopyalandı';
+
+  @override
+  String get tvInstallKeyServerOn => 'Key Server açık. Devam edebilirsin.';
+
+  @override
+  String get tvInstallDeviceReady => 'TV hazır. Devam edebilirsin.';
+
+  @override
+  String get tvInstallSearchingTv => 'TV ağda aranıyor…';
+
+  @override
+  String tvInstallWaitingTv(String host) {
+    return 'TV bekleniyor ($host)…';
+  }
+
+  @override
+  String get tvInstallDifferentMenu => 'Menü farklı görünüyorsa';
+
+  @override
+  String get tvInstallDidIt => 'Bunu yaptım';
+
+  @override
+  String get tvInstallGoInstall => 'Kuruluma geç';
+
+  @override
+  String get tvInstallWaitingFooter =>
+      'TV ağda görünene kadar bekleniyor. Görünmüyorsa geri dönüp TV\'nin adresini elle yaz.';
+
+  @override
+  String get tvInstallInstallStep => 'Kur';
+
+  @override
+  String get tvInstallVersionToInstall => 'Kurulacak sürüm';
+
+  @override
+  String get tvInstallPassHeader => 'TV EKRANINDAKİ PAROLA';
+
+  @override
+  String get tvInstallPassHint => 'ör. 2FEEB2';
+
+  @override
+  String get tvInstallPassFooter =>
+      'Developer Mode uygulamasında Key Server açıkken ekranın sol altında \"Passphrase\" olarak görünen 6 karakter. Yalnız bu ilk kurulumda sorulur.';
+
+  @override
+  String get tvInstallApproveTitle => 'TV\'de bir soru çıkacak';
+
+  @override
+  String get tvInstallApproveText =>
+      '\"USB hata ayıklamaya izin verilsin mi?\" sorusunda \"Bu bilgisayardan her zaman izin ver\"i işaretle ve \"İzin ver\"i seç. Soru yalnız ilk kurulumda çıkar.';
+
+  @override
+  String get tvInstallLookAtTvTitle => 'Şimdi TV\'ye bak';
+
+  @override
+  String get tvInstallLookAtTvText =>
+      'TV \"USB hata ayıklamaya izin verilsin mi?\" diye soruyor. \"Bu bilgisayardan her zaman izin ver\"i işaretle ve \"İzin ver\"i seç. Kurulum sonra kendiliğinden sürer.';
+
+  @override
+  String get tvInstallKeepScreenOn =>
+      'Telefonun ekranını açık tut. Kurulum genellikle bir dakikadan kısa sürer.';
+
+  @override
+  String get tvInstallTvSaid => 'TV\'nin söylediği';
+
+  @override
+  String get tvInstallStop => 'Durdur';
+
+  @override
+  String get tvInstallInstallButton => 'TV\'ye kur';
+
+  @override
+  String get tvInstallRetry => 'Tekrar dene';
+
+  @override
+  String get tvInstallBackToSteps => 'Adımlara dön';
+
+  @override
+  String get tvInstallInstalled => 'TV uygulaması kuruldu';
+
+  @override
+  String get tvInstallAlreadyCurrent => 'TV uygulaması zaten güncel';
+
+  @override
+  String tvInstallVersionLabel(String version) {
+    return 'Sürüm $version';
+  }
+
+  @override
+  String get tvInstallLaunchedTitle => 'TV\'de GameTranslator açıldı';
+
+  @override
+  String get tvInstallOpenOnTvTitle => 'TV\'de GameTranslator\'ı aç';
+
+  @override
+  String get tvInstallLaunchedText =>
+      'Çeviriyi telefonda başlattığında TV uygulaması telefonu ağda kendisi bulur.';
+
+  @override
+  String get tvInstallOpenOnTvText =>
+      'TV\'nin uygulamalar listesinde GameTranslator\'ı bul ve aç. Çeviriyi başlattığında telefonu kendisi bulur.';
+
+  @override
+  String get tvInstallLgHoursTitle => 'LG geliştirici modu süresi';
+
+  @override
+  String tvInstallHoursLeft(int hours) {
+    return 'Kalan süre: $hours saat.';
+  }
+
+  @override
+  String get tvInstallLgHoursText =>
+      'Süre dolarsa TV uygulaması silinir. Uzun süre kullanmayacaksan TV\'deki Developer Mode uygulamasında \"EXTEND\"e bas; bu sayfadan yeniden kurmak da süreyi uzatır.';
+
+  @override
+  String get tvInstallAndroidNote =>
+      'İstersen artık TV\'de USB hata ayıklamayı kapatabilirsin. Yeni bir sürümü kurmak için yeniden açman gerekir.';
+
+  @override
+  String get tvInstallDone => 'Bitti';
+
+  @override
+  String get tvInstallBrandFallback => 'TV';
+
+  @override
+  String get tvGuideA1Title => 'TV\'de Ayarlar\'ı aç';
+
+  @override
+  String get tvGuideA1Body =>
+      'TV kumandasındaki dişli (Ayarlar) tuşuna bas. Kumandada yoksa ana ekranın sağ üstündeki dişli simgesini seç.';
+
+  @override
+  String get tvGuideA1Different =>
+      'Google TV\'de (yeni Sony, TCL, Philips, Xiaomi modelleri) sağ üstteki profil resmini ya da dişliyi seç, sonra \"Ayarlar\"a gir.';
+
+  @override
+  String get tvGuideA2Title => '\"Hakkında\" ekranına gir';
+
+  @override
+  String get tvGuideA2Body =>
+      'Android TV: Ayarlar › Cihaz Tercihleri › Hakkında.\nGoogle TV: Ayarlar › Sistem › Hakkında.';
+
+  @override
+  String get tvGuideA2Different =>
+      'Philips: Ayarlar › Android Ayarları › Cihaz Tercihleri › Hakkında.\nSony: Ayarlar › Sistem › Hakkında (eski modellerde Cihaz Tercihleri › Hakkında).\nTCL ve Xiaomi: Ayarlar › Sistem › Hakkında ya da Cihaz Tercihleri › Hakkında.\nBulamazsan ayarlarda arama varsa \"Hakkında\" yaz.';
+
+  @override
+  String get tvGuideA3Title => 'Yapı satırına 7 kez bas';
+
+  @override
+  String get tvGuideA3Body =>
+      'Listenin altındaki \"Android TV OS yapısı\" satırını seç ve kumandanın Tamam tuşuna art arda 7 kez bas. \"Artık bir geliştiricisiniz\" yazısı çıkar.';
+
+  @override
+  String get tvGuideA3Different =>
+      'Satırın adı modele göre \"Yapı numarası\", \"Derleme\" ya da \"Build\" olabilir. TV PIN isterse TV\'nin kilit PIN\'ini gir. \"Zaten geliştiricisiniz\" yazıyorsa bu adım tamam.';
+
+  @override
+  String get tvGuideA4Title => 'Geliştirici seçenekleri\'ni aç';
+
+  @override
+  String get tvGuideA4Body =>
+      'Geri tuşuyla bir ekran geri dön. Android TV\'de Cihaz Tercihleri, Google TV\'de Sistem altında yeni bir \"Geliştirici seçenekleri\" satırı belirdi; ona gir.';
+
+  @override
+  String get tvGuideA4Different =>
+      'Satırı göremiyorsan Ayarlar\'dan tamamen çıkıp yeniden gir. Hâlâ yoksa önceki adımda 7 kez basmayı yinele.';
+
+  @override
+  String get tvGuideA5Title => '\"USB hata ayıklama\"yı aç';
+
+  @override
+  String get tvGuideA5Body =>
+      'Geliştirici seçenekleri listesinde \"USB hata ayıklama\"yı bul ve aç; çıkan uyarıda \"Tamam\"ı seç. Listede \"Ağ üzerinden hata ayıklama\" ya da \"ADB ağ hata ayıklama\" varsa onu da aç.\n\nTV açıldığında burası kendiliğinden yeşile döner.';
+
+  @override
+  String get tvGuideA5Different =>
+      'Seçeneğin adı \"Hata ayıklama (ADB)\" ya da İngilizce \"USB debugging\" olabilir. Yalnız \"Kablosuz hata ayıklama\" olup eşleştirme kodu isteyen modeller (ör. Google TV Streamer) telefondan henüz kurulamıyor; bunlarda Rehber\'deki USB bellek yolunu kullan.';
+
+  @override
+  String get tvGuideL1Title => 'Ücretsiz LG geliştirici hesabı aç';
+
+  @override
+  String get tvGuideL1Body =>
+      'Telefonun tarayıcısında aşağıdaki adrese gir, sağ üstten \"SIGN IN\", sonra \"Create Account\" ile ücretsiz hesap aç. E-postanı ve şifreni bir sonraki adımda TV\'de yazacaksın.';
+
+  @override
+  String get tvGuideL1Different =>
+      'LG hesabın zaten varsa (ör. LG ThinQ) aynı e-posta ve şifreyle giriş yapabilirsin; bu adımı geç.';
+
+  @override
+  String get tvGuideL2Title => 'TV\'ye \"Developer Mode\" uygulamasını kur';
+
+  @override
+  String get tvGuideL2Body =>
+      'TV\'de LG Content Store\'u (Uygulamalar) aç, arama kutusuna \"Developer Mode\" yaz ve uygulamayı yükle.';
+
+  @override
+  String get tvGuideL2Different =>
+      'Mağaza açılmıyorsa TV internete bağlı mı kontrol et. Eski modellerde mağazanın adı \"LG Store\" ya da \"Uygulamalar\"dır. Uygulama ekranda İngilizce görünür.';
+
+  @override
+  String get tvGuideL3Title => 'Giriş yap ve \"Dev Mode Status\"u aç';
+
+  @override
+  String get tvGuideL3Body =>
+      'Developer Mode uygulamasını aç, LG hesabının e-postası ve şifresiyle giriş yap. \"Dev Mode Status\" anahtarını aç. TV kendiliğinden yeniden başlar; açılmasını bekle.\n\nGeliştirici modu açıldığında burası kendiliğinden yeşile döner.';
+
+  @override
+  String get tvGuideL3Different =>
+      '\"Dev Mode Status\" gri ve seçilemiyorsa önce giriş yapılmamıştır. Giriş \"Login failed\" diyorsa hesabının e-postasını doğruladığından emin ol.';
+
+  @override
+  String get tvGuideL4Title => '\"Key Server\"ı aç';
+
+  @override
+  String get tvGuideL4Body =>
+      'TV açıldıktan sonra Developer Mode uygulamasını yeniden aç ve \"Key Server\" anahtarını aç. Uygulamayı ekranda bırak; kapatırsan Key Server da kapanır.\n\nKey Server açıldığında burası kendiliğinden yeşile döner.';
+
+  @override
+  String get tvGuideL4Different =>
+      'Ekranın sol altında 6 karakterlik \"Passphrase\" görünür; bir sonraki adımda onu yazacaksın.';
+
+  @override
+  String get tvErrUnreachableAndroidTitle => 'TV yanıt vermedi';
+
+  @override
+  String get tvErrUnreachableAndroidFix =>
+      'TV açık mı ve telefonla aynı Wi-Fi ağında mı? Geliştirici seçeneklerinde \"USB hata ayıklama\" açık olmalı. Bazı TV\'lerde bu ayar TV yeniden başlayınca kapanır; açıp yeniden dene.';
+
+  @override
+  String get tvErrUnreachableLgTitle => 'TV yanıt vermedi';
+
+  @override
+  String get tvErrUnreachableLgFix =>
+      'TV açık mı ve telefonla aynı Wi-Fi ağında mı? Developer Mode uygulamasında \"Dev Mode Status\" açık olmalı; açtıktan sonra TV yeniden başlar, açılmasını bekle.';
+
+  @override
+  String get tvErrKeyServerOffTitle => 'Key Server kapalı';
+
+  @override
+  String get tvErrKeyServerOffFix =>
+      'TV\'de Developer Mode uygulamasını aç, \"Key Server\"ı aç ve uygulamayı ekranda bırak. Sonra yeniden dene.';
+
+  @override
+  String get tvErrWrongPassphraseTitle => 'Parola doğru değil';
+
+  @override
+  String get tvErrWrongPassphraseFix =>
+      'TV ekranında Developer Mode uygulamasının sol altındaki 6 karakterlik \"Passphrase\"i yeniden yaz. 0 (sıfır) ile O harfi, 1 ile I harfi karışabilir.';
+
+  @override
+  String get tvErrKeyRefusedTitle => 'TV anahtarı kabul etmedi';
+
+  @override
+  String get tvErrKeyRefusedFix =>
+      'Geliştirici modu kapatılıp açıldıysa TV yeni bir anahtar üretir. Key Server\'ı açıp parolayı yeniden yaz.';
+
+  @override
+  String get tvErrNotApprovedTitle => 'TV\'de izin verilmedi';
+
+  @override
+  String get tvErrNotApprovedFix =>
+      'Yeniden dene. TV\'de \"USB hata ayıklamaya izin verilsin mi?\" sorusu çıkınca \"Bu bilgisayardan her zaman izin ver\"i işaretleyip \"İzin ver\"i seç. Soru TV ekranında yaklaşık bir buçuk dakika bekler.';
+
+  @override
+  String get tvErrNoSpaceTitle => 'TV\'de yer kalmamış';
+
+  @override
+  String get tvErrNoSpaceFix =>
+      'TV\'den kullanmadığın bir uygulamayı kaldır ve yeniden dene.';
+
+  @override
+  String get tvErrConnectionLostTitle => 'Bağlantı koptu';
+
+  @override
+  String get tvErrConnectionLostFix =>
+      'Kurulum sırasında TV ile bağlantı kesildi. Telefonun ekranı açık ve Wi-Fi\'ye bağlı kalsın; yeniden dene.';
+
+  @override
+  String get tvErrTooOldTitle => 'Bu TV çok eski';
+
+  @override
+  String get tvErrTooOldFix =>
+      'GameTranslator TV uygulaması bu TV\'nin yazılımında çalışmıyor.';
+
+  @override
+  String get tvErrPackageMissingTitle => 'TV paketi bulunamadı';
+
+  @override
+  String get tvErrPackageMissingFix =>
+      'Bu telefon uygulamasının içinde TV paketi yok. Uygulamanın son sürümünü kur.';
+
+  @override
+  String get tvErrCancelledTitle => 'Kurulum durduruldu';
+
+  @override
+  String get tvErrCancelledFix => 'Hazır olduğunda yeniden başlatabilirsin.';
+
+  @override
+  String get tvErrGenericTitle => 'TV uygulaması kurulamadı';
+
+  @override
+  String get tvErrGenericFix =>
+      'Yeniden dene. TV\'yi kapatıp açmak yarım kalan kurulumların çoğunu düzeltir. Yine olmazsa aşağıdaki \"TV\'nin söylediği\" yazısıyla birlikte bize bildir.';
+
+  @override
+  String tvStageUploading(String percent) {
+    return 'Uygulama TV\'ye gönderiliyor… %$percent';
+  }
+
+  @override
+  String get tvStageConnecting => 'TV\'ye bağlanılıyor…';
+
+  @override
+  String get tvStageApprove => 'TV\'de izin bekleniyor…';
+
+  @override
+  String get tvStageChecking => 'TV\'deki sürüme bakılıyor…';
+
+  @override
+  String get tvStageKey => 'TV\'den anahtar alınıyor…';
+
+  @override
+  String get tvStageInstalling => 'TV\'ye kuruluyor…';
+
+  @override
+  String get tvStageVerifying => 'Kurulum doğrulanıyor…';
+
+  @override
+  String get tvStageLaunching => 'TV\'de açılıyor…';
+
+  @override
+  String get tvStagePreparing => 'Hazırlanıyor…';
 }

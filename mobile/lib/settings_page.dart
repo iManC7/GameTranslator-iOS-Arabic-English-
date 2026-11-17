@@ -34,15 +34,15 @@ class _SettingsTabState extends State<SettingsTab> {
   /// Oyun/çeviri dilleri: kod → o dilin kendi adı (çevrilmez).
   static const languages = {
     'tr': 'Türkçe',
-    'en': 'İngilizce',
-    'de': 'Almanca',
-    'fr': 'Fransızca',
-    'es': 'İspanyolca',
-    'it': 'İtalyanca',
-    'pt': 'Portekizce',
-    'ru': 'Rusça',
-    'ar': 'Arapça',
-    'ja': 'Japonca',
+    'en': 'English',
+    'de': 'Deutsch',
+    'fr': 'Français',
+    'es': 'Español',
+    'it': 'Italiano',
+    'pt': 'Português',
+    'ru': 'Русский',
+    'ar': 'العربية',
+    'ja': '日本語',
   };
 
   static const flags = {

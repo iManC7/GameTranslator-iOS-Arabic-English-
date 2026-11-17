@@ -1467,4 +1467,508 @@ class AppLocalizationsEn extends AppLocalizations {
     );
     return '$game pack in use · $_temp0 from the pack';
   }
+
+  @override
+  String get tvInstallTitle => 'Install the TV App';
+
+  @override
+  String tvInstallStepLabel(int number) {
+    return 'STEP $number OF 4';
+  }
+
+  @override
+  String get tvInstallBrandQuestion => 'What brand is your TV?';
+
+  @override
+  String get tvInstallIntroBody =>
+      'We will install the GameTranslator app that shows subtitles on your TV, from your phone. The phone and the TV must be on the same Wi-Fi network.';
+
+  @override
+  String get tvInstallSavedHeader => 'SAVED TV';
+
+  @override
+  String tvInstallSavedSubtitle(String host, String version, String phone) {
+    return '$host · $version on TV · $phone on phone';
+  }
+
+  @override
+  String get tvInstallUpdateAvailable => 'Update available';
+
+  @override
+  String get tvInstallUpdate => 'Update';
+
+  @override
+  String get tvInstallReinstall => 'Install again';
+
+  @override
+  String get tvInstallBrandHeader => 'BRAND';
+
+  @override
+  String get tvInstallBrandAndroidSubtitle =>
+      'TCL, Sony, Philips, Xiaomi, Vestel, Arçelik, Beko, Grundig… The home screen shows Google Play or \"Google TV\".';
+
+  @override
+  String get tvInstallBrandLgSubtitle =>
+      'webOS. The home screen has \"LG Content Store\" and colorful app cards along the bottom bar.';
+
+  @override
+  String get tvInstallBrandSamsungSubtitle =>
+      'Tizen, 2019 and later. The home screen has \"Samsung TV Plus\" and \"Smart Hub\".';
+
+  @override
+  String get tvInstallBrandFooter =>
+      'Not sure? The TV\'s Settings › Support (or About) screen shows the model and operating system. Vestel/Arçelik/Beko/Grundig Linux models, Philips Saphi and Titan OS are not supported.';
+
+  @override
+  String get tvInstallSamsungStep => 'Samsung: install from a computer';
+
+  @override
+  String get tvInstallSamsungNoticeTitle =>
+      'Installing on a Samsung TV currently needs a computer';
+
+  @override
+  String get tvInstallSamsungNoticeText =>
+      'Samsung requires the app to be signed separately with a Samsung account for each TV. Installing from the phone is not ready yet; GameTranslator on a computer does this by itself. Installation is done once, then the computer is not needed.';
+
+  @override
+  String get tvInstallSamsungStepsTitle => 'Steps at a glance';
+
+  @override
+  String get tvInstallSamsungStep1 =>
+      'Open the Apps screen on the TV and press 1 2 3 4 5 on the remote.';
+
+  @override
+  String get tvInstallSamsungStep2 =>
+      'Set \"Developer mode\" to \"On\", type the COMPUTER\'s address in \"Host PC IP\" and press OK.';
+
+  @override
+  String get tvInstallSamsungStep3 =>
+      'Fully power the TV off and on by holding the power button.';
+
+  @override
+  String get tvInstallSamsungStep4 =>
+      'On the computer, choose your Samsung TV in GameTranslator\'s TV step and sign in with your Samsung account on the page that opens.';
+
+  @override
+  String get tvInstallShowDetailed => 'Show details in the guide';
+
+  @override
+  String get tvInstallOtherBrand => 'Choose another brand';
+
+  @override
+  String get tvInstallFindStep => 'Find your TV';
+
+  @override
+  String get tvInstallFindBodyAndroid =>
+      'Looking for Android TVs with network debugging enabled. If you have not enabled debugging yet, the TV will not appear here; that is fine, continue with \"Show steps\".';
+
+  @override
+  String get tvInstallFindBodyLg =>
+      'Looking for LG TVs on the same network as the phone. The TV must be on.';
+
+  @override
+  String get tvInstallSearchingHeader => 'SEARCHING…';
+
+  @override
+  String get tvInstallFoundHeader => 'TVS FOUND';
+
+  @override
+  String get tvInstallScanning =>
+      'Scanning the network, this takes a few seconds…';
+
+  @override
+  String get tvInstallNotFound => 'No TV found';
+
+  @override
+  String get tvInstallNotSearched => 'Not searched yet';
+
+  @override
+  String get tvInstallNotSearchedNote =>
+      'Tap Refresh or type the address manually.';
+
+  @override
+  String get tvInstallReady => 'Ready';
+
+  @override
+  String get tvInstallRefresh => 'Refresh';
+
+  @override
+  String get tvInstallManualHeader => 'TYPE THE ADDRESS MANUALLY';
+
+  @override
+  String get tvInstallIpHint => 'e.g. 192.168.1.40';
+
+  @override
+  String get tvInstallUseAddress => 'Use this address';
+
+  @override
+  String get tvInstallAddressFooterAndroid =>
+      'The TV\'s address: Settings › Network & Internet › the Wi-Fi network you are connected to (Google TV: Settings › Network & Internet).';
+
+  @override
+  String get tvInstallAddressFooterLg =>
+      'The TV\'s address: Settings › General › Network › Wi-Fi Connection › Advanced Wi-Fi Settings (on some models Settings › Network).';
+
+  @override
+  String tvInstallSameSubnet(String phone) {
+    return 'The phone\'s address is $phone; the TV\'s must share the first three parts.';
+  }
+
+  @override
+  String get tvInstallShowSteps => 'Show steps';
+
+  @override
+  String get tvInstallIpError =>
+      'This does not look like an IP address. Example: 192.168.1.40';
+
+  @override
+  String get tvInstallDebugStep => 'Enable debugging';
+
+  @override
+  String get tvInstallDevModeStep => 'Enable developer mode';
+
+  @override
+  String tvInstallStepCounter(int index, int total) {
+    return 'Step $index of $total';
+  }
+
+  @override
+  String get tvInstallCopy => 'Copy';
+
+  @override
+  String get tvInstallCopied => 'Address copied';
+
+  @override
+  String get tvInstallKeyServerOn => 'Key Server is on. You can continue.';
+
+  @override
+  String get tvInstallDeviceReady => 'The TV is ready. You can continue.';
+
+  @override
+  String get tvInstallSearchingTv => 'Looking for the TV on the network…';
+
+  @override
+  String tvInstallWaitingTv(String host) {
+    return 'Waiting for the TV ($host)…';
+  }
+
+  @override
+  String get tvInstallDifferentMenu => 'If the menu looks different';
+
+  @override
+  String get tvInstallDidIt => 'I did this';
+
+  @override
+  String get tvInstallGoInstall => 'Go to install';
+
+  @override
+  String get tvInstallWaitingFooter =>
+      'Waiting for the TV to appear on the network. If it does not, go back and type the TV\'s address manually.';
+
+  @override
+  String get tvInstallInstallStep => 'Install';
+
+  @override
+  String get tvInstallVersionToInstall => 'Version to install';
+
+  @override
+  String get tvInstallPassHeader => 'PASSWORD ON THE TV SCREEN';
+
+  @override
+  String get tvInstallPassHint => 'e.g. 2FEEB2';
+
+  @override
+  String get tvInstallPassFooter =>
+      'The 6 characters shown as \"Passphrase\" in the bottom left of the screen while Key Server is on in the Developer Mode app. Asked only during this first install.';
+
+  @override
+  String get tvInstallApproveTitle => 'A prompt will appear on the TV';
+
+  @override
+  String get tvInstallApproveText =>
+      'On the \"Allow USB debugging?\" prompt, tick \"Always allow from this computer\" and choose \"Allow\". The prompt appears only during the first install.';
+
+  @override
+  String get tvInstallLookAtTvTitle => 'Now look at the TV';
+
+  @override
+  String get tvInstallLookAtTvText =>
+      'The TV is asking \"Allow USB debugging?\". Tick \"Always allow from this computer\" and choose \"Allow\". The install then continues on its own.';
+
+  @override
+  String get tvInstallKeepScreenOn =>
+      'Keep the phone screen on. Installation usually takes less than a minute.';
+
+  @override
+  String get tvInstallTvSaid => 'What the TV said';
+
+  @override
+  String get tvInstallStop => 'Stop';
+
+  @override
+  String get tvInstallInstallButton => 'Install on TV';
+
+  @override
+  String get tvInstallRetry => 'Try again';
+
+  @override
+  String get tvInstallBackToSteps => 'Back to steps';
+
+  @override
+  String get tvInstallInstalled => 'TV app installed';
+
+  @override
+  String get tvInstallAlreadyCurrent => 'TV app is already up to date';
+
+  @override
+  String tvInstallVersionLabel(String version) {
+    return 'Version $version';
+  }
+
+  @override
+  String get tvInstallLaunchedTitle => 'GameTranslator opened on the TV';
+
+  @override
+  String get tvInstallOpenOnTvTitle => 'Open GameTranslator on the TV';
+
+  @override
+  String get tvInstallLaunchedText =>
+      'When you start translating on the phone, the TV app finds the phone on the network by itself.';
+
+  @override
+  String get tvInstallOpenOnTvText =>
+      'Find GameTranslator in the TV\'s app list and open it. It finds the phone by itself when you start translating.';
+
+  @override
+  String get tvInstallLgHoursTitle => 'LG developer mode period';
+
+  @override
+  String tvInstallHoursLeft(int hours) {
+    return 'Time left: $hours hours.';
+  }
+
+  @override
+  String get tvInstallLgHoursText =>
+      'When the period ends, the TV app is removed. If you will not use it for a long time, press \"EXTEND\" in the Developer Mode app on the TV; installing again from this page also extends it.';
+
+  @override
+  String get tvInstallAndroidNote =>
+      'If you like, you can now turn USB debugging off on the TV. You will need to turn it on again to install a new version.';
+
+  @override
+  String get tvInstallDone => 'Done';
+
+  @override
+  String get tvInstallBrandFallback => 'TV';
+
+  @override
+  String get tvGuideA1Title => 'Open Settings on the TV';
+
+  @override
+  String get tvGuideA1Body =>
+      'Press the gear (Settings) button on the TV remote. If the remote does not have one, choose the gear icon at the top right of the home screen.';
+
+  @override
+  String get tvGuideA1Different =>
+      'On Google TV (newer Sony, TCL, Philips, Xiaomi models) choose the profile picture or the gear at the top right, then go to \"Settings\".';
+
+  @override
+  String get tvGuideA2Title => 'Open the \"About\" screen';
+
+  @override
+  String get tvGuideA2Body =>
+      'Android TV: Settings › Device Preferences › About.\nGoogle TV: Settings › System › About.';
+
+  @override
+  String get tvGuideA2Different =>
+      'Philips: Settings › Android Settings › Device Preferences › About.\nSony: Settings › System › About (on older models Device Preferences › About).\nTCL and Xiaomi: Settings › System › About or Device Preferences › About.\nIf you cannot find it, type \"About\" in the settings search.';
+
+  @override
+  String get tvGuideA3Title => 'Press the build row 7 times';
+
+  @override
+  String get tvGuideA3Body =>
+      'Select the \"Android TV OS build\" row at the bottom of the list and press the remote\'s OK button 7 times in a row. A \"You are now a developer\" message appears.';
+
+  @override
+  String get tvGuideA3Different =>
+      'The row may be called \"Build number\", \"Build\" or \"Derleme\" depending on the model. If the TV asks for a PIN, enter the TV\'s lock PIN. If it says \"You are already a developer\", this step is done.';
+
+  @override
+  String get tvGuideA4Title => 'Open developer options';
+
+  @override
+  String get tvGuideA4Body =>
+      'Go back one screen with the back button. A new \"Developer options\" row has appeared under Device Preferences on Android TV and under System on Google TV; open it.';
+
+  @override
+  String get tvGuideA4Different =>
+      'If you cannot see the row, leave Settings completely and enter again. If it is still missing, repeat pressing 7 times in the previous step.';
+
+  @override
+  String get tvGuideA5Title => 'Turn on \"USB debugging\"';
+
+  @override
+  String get tvGuideA5Body =>
+      'Find \"USB debugging\" in the developer options list and turn it on; choose \"OK\" on the warning. If the list has \"Debug over network\" or \"ADB network debugging\", turn that on too.\n\nWhen the TV is on, this turns green by itself.';
+
+  @override
+  String get tvGuideA5Different =>
+      'The option may be called \"Debugging (ADB)\" or \"USB debugging\". Models that only offer \"Wireless debugging\" and ask for a pairing code (e.g. Google TV Streamer) cannot be installed from the phone yet; use the USB drive path in the Guide for those.';
+
+  @override
+  String get tvGuideL1Title => 'Create a free LG developer account';
+
+  @override
+  String get tvGuideL1Body =>
+      'Open the address below in your phone\'s browser, choose \"SIGN IN\" at the top right, then \"Create Account\" for a free account. You will type your e-mail and password on the TV in the next step.';
+
+  @override
+  String get tvGuideL1Different =>
+      'If you already have an LG account (e.g. LG ThinQ) you can sign in with the same e-mail and password; skip this step.';
+
+  @override
+  String get tvGuideL2Title => 'Install the \"Developer Mode\" app on the TV';
+
+  @override
+  String get tvGuideL2Body =>
+      'Open LG Content Store (Apps) on the TV, type \"Developer Mode\" in the search box and install the app.';
+
+  @override
+  String get tvGuideL2Different =>
+      'If the store does not open, check that the TV is connected to the internet. On older models the store is called \"LG Store\" or \"Apps\". The app appears in English.';
+
+  @override
+  String get tvGuideL3Title => 'Sign in and turn on \"Dev Mode Status\"';
+
+  @override
+  String get tvGuideL3Body =>
+      'Open the Developer Mode app and sign in with your LG account e-mail and password. Turn on the \"Dev Mode Status\" switch. The TV restarts by itself; wait for it to come back.\n\nWhen developer mode is on, this turns green by itself.';
+
+  @override
+  String get tvGuideL3Different =>
+      'If \"Dev Mode Status\" is grey and cannot be selected, you have not signed in yet. If signing in says \"Login failed\", make sure you have verified your account\'s e-mail.';
+
+  @override
+  String get tvGuideL4Title => 'Turn on \"Key Server\"';
+
+  @override
+  String get tvGuideL4Body =>
+      'After the TV comes back on, open the Developer Mode app again and turn on the \"Key Server\" switch. Leave the app on screen; if you close it, Key Server turns off too.\n\nWhen Key Server is on, this turns green by itself.';
+
+  @override
+  String get tvGuideL4Different =>
+      'A 6-character \"Passphrase\" appears at the bottom left of the screen; you will type it in the next step.';
+
+  @override
+  String get tvErrUnreachableAndroidTitle => 'The TV did not respond';
+
+  @override
+  String get tvErrUnreachableAndroidFix =>
+      'Is the TV on and on the same Wi-Fi network as the phone? \"USB debugging\" must be on in developer options. On some TVs this setting turns off when the TV restarts; turn it on and try again.';
+
+  @override
+  String get tvErrUnreachableLgTitle => 'The TV did not respond';
+
+  @override
+  String get tvErrUnreachableLgFix =>
+      'Is the TV on and on the same Wi-Fi network as the phone? \"Dev Mode Status\" must be on in the Developer Mode app; after you turn it on the TV restarts, wait for it to come back.';
+
+  @override
+  String get tvErrKeyServerOffTitle => 'Key Server is off';
+
+  @override
+  String get tvErrKeyServerOffFix =>
+      'Open the Developer Mode app on the TV, turn on \"Key Server\" and leave the app on screen. Then try again.';
+
+  @override
+  String get tvErrWrongPassphraseTitle => 'The password is not correct';
+
+  @override
+  String get tvErrWrongPassphraseFix =>
+      'Type the 6-character \"Passphrase\" shown at the bottom left of the Developer Mode app on the TV again. 0 (zero) and the letter O, 1 and the letter I can be confused.';
+
+  @override
+  String get tvErrKeyRefusedTitle => 'The TV refused the key';
+
+  @override
+  String get tvErrKeyRefusedFix =>
+      'If developer mode was turned off and on, the TV generates a new key. Turn on Key Server and type the password again.';
+
+  @override
+  String get tvErrNotApprovedTitle => 'Not allowed on the TV';
+
+  @override
+  String get tvErrNotApprovedFix =>
+      'Try again. When the \"Allow USB debugging?\" prompt appears on the TV, tick \"Always allow from this computer\" and choose \"Allow\". The prompt waits on the TV screen for about a minute and a half.';
+
+  @override
+  String get tvErrNoSpaceTitle => 'No space left on the TV';
+
+  @override
+  String get tvErrNoSpaceFix =>
+      'Uninstall an app you do not use from the TV and try again.';
+
+  @override
+  String get tvErrConnectionLostTitle => 'Connection lost';
+
+  @override
+  String get tvErrConnectionLostFix =>
+      'The connection to the TV was lost during installation. Keep the phone screen on and connected to Wi-Fi; try again.';
+
+  @override
+  String get tvErrTooOldTitle => 'This TV is too old';
+
+  @override
+  String get tvErrTooOldFix =>
+      'The GameTranslator TV app does not run on this TV\'s software.';
+
+  @override
+  String get tvErrPackageMissingTitle => 'TV package not found';
+
+  @override
+  String get tvErrPackageMissingFix =>
+      'This phone app does not contain the TV package. Install the latest version of the app.';
+
+  @override
+  String get tvErrCancelledTitle => 'Installation stopped';
+
+  @override
+  String get tvErrCancelledFix => 'You can start it again when you are ready.';
+
+  @override
+  String get tvErrGenericTitle => 'The TV app could not be installed';
+
+  @override
+  String get tvErrGenericFix =>
+      'Try again. Restarting the TV fixes most half-finished installs. If it still fails, report it to us together with the \"What the TV said\" text below.';
+
+  @override
+  String tvStageUploading(String percent) {
+    return 'Sending the app to the TV… %$percent';
+  }
+
+  @override
+  String get tvStageConnecting => 'Connecting to the TV…';
+
+  @override
+  String get tvStageApprove => 'Waiting for approval on the TV…';
+
+  @override
+  String get tvStageChecking => 'Checking the version on the TV…';
+
+  @override
+  String get tvStageKey => 'Getting a key from the TV…';
+
+  @override
+  String get tvStageInstalling => 'Installing on the TV…';
+
+  @override
+  String get tvStageVerifying => 'Verifying the installation…';
+
+  @override
+  String get tvStageLaunching => 'Opening on the TV…';
+
+  @override
+  String get tvStagePreparing => 'Preparing…';
 }

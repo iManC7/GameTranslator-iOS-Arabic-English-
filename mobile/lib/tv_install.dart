@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Telefondan TV uygulaması kurma: Android tarafındaki tvinstall/TvInstallChannel ile konuşan köprü ve hata metinleri.
 import 'package:flutter/services.dart';
+import 'l10n/app_localizations.dart';
 
 enum TvKind { lg, samsung, android }
 
@@ -133,74 +134,36 @@ class TvBridge {
 }
 
 /// Hatanın sade dilde açıklaması ve çözümü (Windows'taki TvAppCard.Message ile aynı durumlar).
-({String title, String fix}) tvErrorText(String? error, TvKind kind) {
+({String title, String fix}) tvErrorText(String? error, TvKind kind, AppLocalizations l) {
   final android = kind == TvKind.android;
   return switch (error) {
     'UNREACHABLE' => android
-        ? (
-            title: 'TV yanıt vermedi',
-            fix: 'TV açık mı ve telefonla aynı Wi-Fi ağında mı? Geliştirici seçeneklerinde "USB hata ayıklama" açık olmalı. '
-                'Bazı TV\'lerde bu ayar TV yeniden başlayınca kapanır; açıp yeniden dene.',
-          )
-        : (
-            title: 'TV yanıt vermedi',
-            fix: 'TV açık mı ve telefonla aynı Wi-Fi ağında mı? Developer Mode uygulamasında "Dev Mode Status" açık olmalı; '
-                'açtıktan sonra TV yeniden başlar, açılmasını bekle.',
-          ),
-    'KEY_SERVER_OFF' => (
-        title: 'Key Server kapalı',
-        fix: 'TV\'de Developer Mode uygulamasını aç, "Key Server"ı aç ve uygulamayı ekranda bırak. Sonra yeniden dene.',
-      ),
-    'WRONG_PASSPHRASE' => (
-        title: 'Parola doğru değil',
-        fix: 'TV ekranında Developer Mode uygulamasının sol altındaki 6 karakterlik "Passphrase"i yeniden yaz. '
-            '0 (sıfır) ile O harfi, 1 ile I harfi karışabilir.',
-      ),
-    'KEY_REFUSED' => (
-        title: 'TV anahtarı kabul etmedi',
-        fix: 'Geliştirici modu kapatılıp açıldıysa TV yeni bir anahtar üretir. Key Server\'ı açıp parolayı yeniden yaz.',
-      ),
-    'NOT_APPROVED' => (
-        title: 'TV\'de izin verilmedi',
-        fix: 'Yeniden dene. TV\'de "USB hata ayıklamaya izin verilsin mi?" sorusu çıkınca "Bu bilgisayardan her zaman izin ver"i '
-            'işaretleyip "İzin ver"i seç. Soru TV ekranında yaklaşık bir buçuk dakika bekler.',
-      ),
-    'NOT_ENOUGH_SPACE' => (
-        title: 'TV\'de yer kalmamış',
-        fix: 'TV\'den kullanmadığın bir uygulamayı kaldır ve yeniden dene.',
-      ),
-    'CONNECTION_LOST' => (
-        title: 'Bağlantı koptu',
-        fix: 'Kurulum sırasında TV ile bağlantı kesildi. Telefonun ekranı açık ve Wi-Fi\'ye bağlı kalsın; yeniden dene.',
-      ),
-    'TOO_OLD' => (
-        title: 'Bu TV çok eski',
-        fix: 'GameTranslator TV uygulaması bu TV\'nin yazılımında çalışmıyor.',
-      ),
-    'PACKAGE_MISSING' => (
-        title: 'TV paketi bulunamadı',
-        fix: 'Bu telefon uygulamasının içinde TV paketi yok. Uygulamanın son sürümünü kur.',
-      ),
-    'CANCELLED' => (title: 'Kurulum durduruldu', fix: 'Hazır olduğunda yeniden başlatabilirsin.'),
-    _ => (
-        title: 'TV uygulaması kurulamadı',
-        fix: 'Yeniden dene. TV\'yi kapatıp açmak yarım kalan kurulumların çoğunu düzeltir. Yine olmazsa aşağıdaki "TV\'nin söylediği" '
-            'yazısıyla birlikte bize bildir.',
-      ),
+        ? (title: l.tvErrUnreachableAndroidTitle, fix: l.tvErrUnreachableAndroidFix)
+        : (title: l.tvErrUnreachableLgTitle, fix: l.tvErrUnreachableLgFix),
+    'KEY_SERVER_OFF' => (title: l.tvErrKeyServerOffTitle, fix: l.tvErrKeyServerOffFix),
+    'WRONG_PASSPHRASE' => (title: l.tvErrWrongPassphraseTitle, fix: l.tvErrWrongPassphraseFix),
+    'KEY_REFUSED' => (title: l.tvErrKeyRefusedTitle, fix: l.tvErrKeyRefusedFix),
+    'NOT_APPROVED' => (title: l.tvErrNotApprovedTitle, fix: l.tvErrNotApprovedFix),
+    'NOT_ENOUGH_SPACE' => (title: l.tvErrNoSpaceTitle, fix: l.tvErrNoSpaceFix),
+    'CONNECTION_LOST' => (title: l.tvErrConnectionLostTitle, fix: l.tvErrConnectionLostFix),
+    'TOO_OLD' => (title: l.tvErrTooOldTitle, fix: l.tvErrTooOldFix),
+    'PACKAGE_MISSING' => (title: l.tvErrPackageMissingTitle, fix: l.tvErrPackageMissingFix),
+    'CANCELLED' => (title: l.tvErrCancelledTitle, fix: l.tvErrCancelledFix),
+    _ => (title: l.tvErrGenericTitle, fix: l.tvErrGenericFix),
   };
 }
 
-/// Kurulum aşamasının Türkçe adı.
-String tvStageText(String stage) {
-  if (stage.startsWith('uploading:')) return 'Uygulama TV\'ye gönderiliyor… %${stage.substring(10)}';
+/// Kurulum aşamasının adı.
+String tvStageText(String stage, AppLocalizations l) {
+  if (stage.startsWith('uploading:')) return l.tvStageUploading(stage.substring(10));
   return switch (stage) {
-    'connecting' => 'TV\'ye bağlanılıyor…',
-    'approve' => 'TV\'de izin bekleniyor…',
-    'checking' => 'TV\'deki sürüme bakılıyor…',
-    'key' => 'TV\'den anahtar alınıyor…',
-    'installing' => 'TV\'ye kuruluyor…',
-    'verifying' => 'Kurulum doğrulanıyor…',
-    'launching' => 'TV\'de açılıyor…',
-    _ => 'Hazırlanıyor…',
+    'connecting' => l.tvStageConnecting,
+    'approve' => l.tvStageApprove,
+    'checking' => l.tvStageChecking,
+    'key' => l.tvStageKey,
+    'installing' => l.tvStageInstalling,
+    'verifying' => l.tvStageVerifying,
+    'launching' => l.tvStageLaunching,
+    _ => l.tvStagePreparing,
   };
 }

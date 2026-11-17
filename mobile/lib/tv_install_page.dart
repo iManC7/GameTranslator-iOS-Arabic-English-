@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:material_ui/material_ui.dart';
 
 import 'guide_page.dart';
+import 'l10n/app_localizations.dart';
 import 'main.dart';
 import 'tv_install.dart';
 import 'ui.dart';
@@ -37,77 +38,64 @@ class _GuideStep {
 
 enum _Check { none, ready, keyServer }
 
-const _androidSteps = [
+List<_GuideStep> _androidSteps(AppLocalizations l) => [
   _GuideStep(
-    'TV\'de Ayarlar\'ı aç',
-    'TV kumandasındaki dişli (Ayarlar) tuşuna bas. Kumandada yoksa ana ekranın sağ üstündeki dişli simgesini seç.',
-    different: 'Google TV\'de (yeni Sony, TCL, Philips, Xiaomi modelleri) sağ üstteki profil resmini ya da dişliyi seç, '
-        'sonra "Ayarlar"a gir.',
+    l.tvGuideA1Title,
+    l.tvGuideA1Body,
+    different: l.tvGuideA1Different,
   ),
   _GuideStep(
-    '"Hakkında" ekranına gir',
-    'Android TV: Ayarlar › Cihaz Tercihleri › Hakkında.\nGoogle TV: Ayarlar › Sistem › Hakkında.',
-    different: 'Philips: Ayarlar › Android Ayarları › Cihaz Tercihleri › Hakkında.\n'
-        'Sony: Ayarlar › Sistem › Hakkında (eski modellerde Cihaz Tercihleri › Hakkında).\n'
-        'TCL ve Xiaomi: Ayarlar › Sistem › Hakkında ya da Cihaz Tercihleri › Hakkında.\n'
-        'Bulamazsan ayarlarda arama varsa "Hakkında" yaz.',
+    l.tvGuideA2Title,
+    l.tvGuideA2Body,
+    different: l.tvGuideA2Different,
   ),
   _GuideStep(
-    'Yapı satırına 7 kez bas',
-    'Listenin altındaki "Android TV OS yapısı" satırını seç ve kumandanın Tamam tuşuna art arda 7 kez bas. '
-        '"Artık bir geliştiricisiniz" yazısı çıkar.',
-    different: 'Satırın adı modele göre "Yapı numarası", "Derleme" ya da "Build" olabilir. TV PIN isterse TV\'nin kilit '
-        'PIN\'ini gir. "Zaten geliştiricisiniz" yazıyorsa bu adım tamam.',
+    l.tvGuideA3Title,
+    l.tvGuideA3Body,
+    different: l.tvGuideA3Different,
   ),
   _GuideStep(
-    'Geliştirici seçenekleri\'ni aç',
-    'Geri tuşuyla bir ekran geri dön. Android TV\'de Cihaz Tercihleri, Google TV\'de Sistem altında yeni bir '
-        '"Geliştirici seçenekleri" satırı belirdi; ona gir.',
-    different: 'Satırı göremiyorsan Ayarlar\'dan tamamen çıkıp yeniden gir. Hâlâ yoksa önceki adımda 7 kez basmayı yinele.',
+    l.tvGuideA4Title,
+    l.tvGuideA4Body,
+    different: l.tvGuideA4Different,
   ),
   _GuideStep(
-    '"USB hata ayıklama"yı aç',
-    'Geliştirici seçenekleri listesinde "USB hata ayıklama"yı bul ve aç; çıkan uyarıda "Tamam"ı seç. Listede '
-        '"Ağ üzerinden hata ayıklama" ya da "ADB ağ hata ayıklama" varsa onu da aç.\n\nTV açıldığında burası kendiliğinden yeşile döner.',
-    different: 'Seçeneğin adı "Hata ayıklama (ADB)" ya da İngilizce "USB debugging" olabilir. Yalnız "Kablosuz hata ayıklama" '
-        'olup eşleştirme kodu isteyen modeller (ör. Google TV Streamer) telefondan henüz kurulamıyor; bunlarda '
-        'Rehber\'deki USB bellek yolunu kullan.',
+    l.tvGuideA5Title,
+    l.tvGuideA5Body,
+    different: l.tvGuideA5Different,
     check: _Check.ready,
   ),
 ];
 
-const _lgSteps = [
+List<_GuideStep> _lgSteps(AppLocalizations l) => [
   _GuideStep(
-    'Ücretsiz LG geliştirici hesabı aç',
-    'Telefonun tarayıcısında aşağıdaki adrese gir, sağ üstten "SIGN IN", sonra "Create Account" ile ücretsiz hesap aç. '
-        'E-postanı ve şifreni bir sonraki adımda TV\'de yazacaksın.',
-    different: 'LG hesabın zaten varsa (ör. LG ThinQ) aynı e-posta ve şifreyle giriş yapabilirsin; bu adımı geç.',
+    l.tvGuideL1Title,
+    l.tvGuideL1Body,
+    different: l.tvGuideL1Different,
     copy: 'https://webostv.developer.lge.com',
   ),
   _GuideStep(
-    'TV\'ye "Developer Mode" uygulamasını kur',
-    'TV\'de LG Content Store\'u (Uygulamalar) aç, arama kutusuna "Developer Mode" yaz ve uygulamayı yükle.',
-    different: 'Mağaza açılmıyorsa TV internete bağlı mı kontrol et. Eski modellerde mağazanın adı "LG Store" ya da '
-        '"Uygulamalar"dır. Uygulama ekranda İngilizce görünür.',
+    l.tvGuideL2Title,
+    l.tvGuideL2Body,
+    different: l.tvGuideL2Different,
   ),
   _GuideStep(
-    'Giriş yap ve "Dev Mode Status"u aç',
-    'Developer Mode uygulamasını aç, LG hesabının e-postası ve şifresiyle giriş yap. "Dev Mode Status" anahtarını aç. '
-        'TV kendiliğinden yeniden başlar; açılmasını bekle.\n\nGeliştirici modu açıldığında burası kendiliğinden yeşile döner.',
-    different: '"Dev Mode Status" gri ve seçilemiyorsa önce giriş yapılmamıştır. Giriş "Login failed" diyorsa hesabının '
-        'e-postasını doğruladığından emin ol.',
+    l.tvGuideL3Title,
+    l.tvGuideL3Body,
+    different: l.tvGuideL3Different,
     check: _Check.ready,
   ),
   _GuideStep(
-    '"Key Server"ı aç',
-    'TV açıldıktan sonra Developer Mode uygulamasını yeniden aç ve "Key Server" anahtarını aç. Uygulamayı ekranda bırak; '
-        'kapatırsan Key Server da kapanır.\n\nKey Server açıldığında burası kendiliğinden yeşile döner.',
-    different: 'Ekranın sol altında 6 karakterlik "Passphrase" görünür; bir sonraki adımda onu yazacaksın.',
+    l.tvGuideL4Title,
+    l.tvGuideL4Body,
+    different: l.tvGuideL4Different,
     check: _Check.keyServer,
   ),
 ];
 
 class _TvInstallPageState extends State<TvInstallPage> {
+  AppLocalizations get l => AppLocalizations.of(context);
+
   _Step step = _Step.brand;
   TvKind? kind;
   String? host;
@@ -163,9 +151,9 @@ class _TvInstallPageState extends State<TvInstallPage> {
   }
 
   List<_GuideStep> get guideSteps => switch (kind) {
-        TvKind.android => _androidSteps,
+        TvKind.android => _androidSteps(l),
         // Anahtarı kayıtlı TV'de Key Server adımı gerekmez.
-        TvKind.lg => check?.hasKey == true ? _lgSteps.sublist(0, 3) : _lgSteps,
+        TvKind.lg => check?.hasKey == true ? _lgSteps(l).sublist(0, 3) : _lgSteps(l),
         _ => const [],
       };
 
@@ -261,11 +249,11 @@ class _TvInstallPageState extends State<TvInstallPage> {
     final address = await TvBridge.normalize(manualController.text);
     if (!mounted) return;
     if (address == null) {
-      setState(() => manualError = 'Bu bir IP adresine benzemiyor. Örnek: 192.168.1.40');
+      setState(() => manualError = l.tvInstallIpError);
       return;
     }
     FocusScope.of(context).unfocus();
-    selectTv(address, kind?.title ?? 'TV');
+    selectTv(address, kind?.title ?? l.tvInstallBrandFallback);
   }
 
   Future<void> selectTv(String address, String name) async {
@@ -375,7 +363,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
         if (!didPop) back();
       },
       child: GlassScaffold(
-        title: 'TV Uygulamasını Kur',
+        title: l.tvInstallTitle,
         body: AnimatedSwitcher(
           duration: const Duration(milliseconds: 220),
           child: KeyedSubtree(
@@ -418,7 +406,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
               ],
             ),
             const SizedBox(height: 12),
-            Text('ADIM ${index + 1} / 4', style: Txt.footnote.copyWith(color: Tokens.textSecondary, fontWeight: FontWeight.w600)),
+            Text(l.tvInstallStepLabel(index + 1), style: Txt.footnote.copyWith(color: Tokens.textSecondary, fontWeight: FontWeight.w600)),
             const SizedBox(height: 2),
             Text(title, style: Txt.title2),
           ],
@@ -430,14 +418,13 @@ class _TvInstallPageState extends State<TvInstallPage> {
   List<Widget> brandView() {
     final tv = saved;
     return [
-      progress(0, 'TV\'nin markası ne?'),
+      progress(0, l.tvInstallBrandQuestion),
       Padding(
         padding: const EdgeInsets.fromLTRB(4, 0, 4, 6),
-        child: Text('Altyazıyı TV\'de gösteren GameTranslator uygulamasını telefondan TV\'ne kuracağız. Telefon ve TV aynı Wi-Fi '
-            'ağında olsun.', style: Txt.subhead.copyWith(color: Tokens.textSecondary)),
+        child: Text(l.tvInstallIntroBody, style: Txt.subhead.copyWith(color: Tokens.textSecondary)),
       ),
       if (tv != null) ...[
-        const GroupHeader('KAYITLI TV'),
+        GroupHeader(l.tvInstallSavedHeader),
         Group(
           inset: 60,
           children: [
@@ -445,20 +432,20 @@ class _TvInstallPageState extends State<TvInstallPage> {
               icon: CupertinoIcons.tv_fill,
               iconColor: Tokens.success,
               title: tv.name.isEmpty ? tv.kind.title : tv.name,
-              subtitle: '${tv.host} · TV\'de ${tv.version ?? '?'} · telefonda ${bundled[tv.kind] ?? '?'}',
+              subtitle: l.tvInstallSavedSubtitle(tv.host, tv.version ?? '?', bundled[tv.kind] ?? '?'),
               trailing: tv.version != null && bundled[tv.kind] != null && _newer(bundled[tv.kind]!, tv.version!)
-                  ? const Pill(text: 'Güncelleme var', color: Tokens.warning)
+                  ? Pill(text: l.tvInstallUpdateAvailable, color: Tokens.warning)
                   : null,
             ),
             Cell(
-              title: tv.version != null && bundled[tv.kind] != null && _newer(bundled[tv.kind]!, tv.version!) ? 'Güncelle' : 'Yeniden kur',
+              title: tv.version != null && bundled[tv.kind] != null && _newer(bundled[tv.kind]!, tv.version!) ? l.tvInstallUpdate : l.tvInstallReinstall,
               titleColor: Tokens.accent,
               onTap: () => reinstallSaved(tv),
             ),
           ],
         ),
       ],
-      const GroupHeader('MARKA'),
+      GroupHeader(l.tvInstallBrandHeader),
       Group(
         inset: 60,
         children: [
@@ -466,7 +453,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
             icon: CupertinoIcons.tv,
             iconColor: Tokens.success,
             title: 'Android TV / Google TV',
-            subtitle: 'TCL, Sony, Philips, Xiaomi, Vestel, Arçelik, Beko, Grundig… Ana ekranda Google Play ya da "Google TV" yazar.',
+            subtitle: l.tvInstallBrandAndroidSubtitle,
             chevron: true,
             onTap: () => chooseBrand(TvKind.android),
           ),
@@ -474,7 +461,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
             icon: CupertinoIcons.tv,
             iconColor: Tokens.danger,
             title: 'LG',
-            subtitle: 'webOS. Ana ekranda "LG Content Store" ve alt şeritte renkli uygulama kartları bulunur.',
+            subtitle: l.tvInstallBrandLgSubtitle,
             chevron: true,
             onTap: () => chooseBrand(TvKind.lg),
           ),
@@ -482,47 +469,45 @@ class _TvInstallPageState extends State<TvInstallPage> {
             icon: CupertinoIcons.tv,
             iconColor: Tokens.accent,
             title: 'Samsung',
-            subtitle: 'Tizen, 2019 ve sonrası. Ana ekranda "Samsung TV Plus" ve "Smart Hub" bulunur.',
+            subtitle: l.tvInstallBrandSamsungSubtitle,
             chevron: true,
             onTap: () => chooseBrand(TvKind.samsung),
           ),
         ],
       ),
-      const GroupFooter('Emin değil misin? TV\'nin Ayarlar › Destek (ya da Hakkında) ekranında model ve işletim sistemi yazar. '
-          'Vestel/Arçelik/Beko/Grundig\'in Linux modelleri, Philips Saphi ve Titan OS desteklenmiyor.'),
+      GroupFooter(l.tvInstallBrandFooter),
     ];
   }
 
   // ----- Samsung: şimdilik bilgisayardan
 
   List<Widget> samsungView() => [
-        progress(0, 'Samsung: bilgisayardan kur'),
-        const Notice(
+        progress(0, l.tvInstallSamsungStep),
+        Notice(
           icon: CupertinoIcons.desktopcomputer,
           color: Tokens.warning,
-          title: 'Samsung TV\'ye kurulum şimdilik bilgisayardan',
-          text: 'Samsung, uygulamanın her TV için Samsung hesabıyla ayrıca imzalanmasını istiyor. Telefondan kurulum henüz hazır '
-              'değil; bilgisayardaki GameTranslator bunu kendisi yapar. Kurulum bir kez yapılır, sonra bilgisayar gerekmez.',
+          title: l.tvInstallSamsungNoticeTitle,
+          text: l.tvInstallSamsungNoticeText,
         ),
         const SizedBox(height: 14),
         SectionCard(
           icon: CupertinoIcons.list_number,
-          title: 'Kısaca adımlar',
-          children: const [
-            _Numbered(1, 'TV\'de Uygulamalar ekranını aç, kumandayla 1 2 3 4 5 tuşlarına bas.'),
-            _Numbered(2, '"Developer mode"u "On" yap, "Host PC IP" alanına BİLGİSAYARIN adresini yaz, OK\'e bas.'),
-            _Numbered(3, 'TV\'yi güç tuşunu basılı tutarak tam kapatıp aç.'),
-            _Numbered(4, 'Bilgisayarda GameTranslator\'ın TV adımında Samsung TV\'ni seç ve açılan sayfada Samsung hesabınla giriş yap.'),
+          title: l.tvInstallSamsungStepsTitle,
+          children: [
+            _Numbered(1, l.tvInstallSamsungStep1),
+            _Numbered(2, l.tvInstallSamsungStep2),
+            _Numbered(3, l.tvInstallSamsungStep3),
+            _Numbered(4, l.tvInstallSamsungStep4),
           ],
         ),
         const SizedBox(height: 16),
         GlowButton(
           icon: CupertinoIcons.book_fill,
-          label: 'Rehberde ayrıntılı göster',
+          label: l.tvInstallShowDetailed,
           onPressed: () => Navigator.of(context).push(appleRoute<void>((_) => const GuideChapterPage(index: 3))),
         ),
         const SizedBox(height: 10),
-        OutlinedButton(onPressed: () => go(_Step.brand), child: const Text('Başka marka seç')),
+        OutlinedButton(onPressed: () => go(_Step.brand), child: Text(l.tvInstallOtherBrand)),
       ];
 
   // ----- 2. TV'yi bul
@@ -531,39 +516,36 @@ class _TvInstallPageState extends State<TvInstallPage> {
     final current = kind!;
     final android = current == TvKind.android;
     return [
-      progress(1, 'TV\'ni bul'),
+      progress(1, l.tvInstallFindStep),
       Padding(
         padding: const EdgeInsets.fromLTRB(4, 0, 4, 4),
         child: Text(
-          android
-              ? 'Ağda hata ayıklaması açık Android TV\'ler aranıyor. Hata ayıklamayı henüz açmadıysan TV burada görünmez; '
-                  'sorun değil, "Adımları göster" ile devam et.'
-              : 'Telefonla aynı ağdaki LG TV\'ler aranıyor. TV açık olsun.',
+          android ? l.tvInstallFindBodyAndroid : l.tvInstallFindBodyLg,
           style: Txt.subhead.copyWith(color: Tokens.textSecondary),
         ),
       ),
-      GroupHeader(searching ? 'ARANIYOR…' : 'BULUNAN TV\'LER'),
+      GroupHeader(searching ? l.tvInstallSearchingHeader : l.tvInstallFoundHeader),
       Group(
         inset: 60,
         children: [
           if (searching)
-            const Cell(title: 'Ağ taranıyor, birkaç saniye sürer…', trailing: CupertinoActivityIndicator())
+            Cell(title: l.tvInstallScanning, trailing: const CupertinoActivityIndicator())
           else if (found.isEmpty)
-            Cell(title: searched ? 'TV bulunamadı' : 'Henüz aranmadı', subtitle: searched ? 'Yenile\'ye dokun ya da adresi elle yaz.' : null),
+            Cell(title: searched ? l.tvInstallNotFound : l.tvInstallNotSearched, subtitle: searched ? l.tvInstallNotSearchedNote : null),
           for (final tv in found)
             Cell(
               icon: CupertinoIcons.tv_fill,
               iconColor: tv.ready ? Tokens.success : Tokens.gray,
               title: tv.name,
               subtitle: tv.host,
-              trailing: tv.ready ? const Pill(text: 'Hazır', color: Tokens.success) : null,
+              trailing: tv.ready ? Pill(text: l.tvInstallReady, color: Tokens.success) : null,
               chevron: true,
               onTap: () => selectTv(tv.host, tv.name),
             ),
-          Cell(title: 'Yenile', titleColor: Tokens.accent, onTap: searching ? null : search),
+          Cell(title: l.tvInstallRefresh, titleColor: Tokens.accent, onTap: searching ? null : search),
         ],
       ),
-      const GroupHeader('ADRESİ ELLE YAZ'),
+      GroupHeader(l.tvInstallManualHeader),
       Glass(
         padding: const EdgeInsets.all(14),
         child: Column(
@@ -573,23 +555,20 @@ class _TvInstallPageState extends State<TvInstallPage> {
               controller: manualController,
               keyboardType: const TextInputType.numberWithOptions(decimal: true),
               inputFormatters: ipAddressFormatters,
-              decoration: InputDecoration(hintText: 'ör. 192.168.1.40', errorText: manualError),
+              decoration: InputDecoration(hintText: l.tvInstallIpHint, errorText: manualError),
               onSubmitted: (_) => useManual(),
             ),
             const SizedBox(height: 10),
-            OutlinedButton(onPressed: useManual, child: const Text('Bu adresi kullan')),
+            OutlinedButton(onPressed: useManual, child: Text(l.tvInstallUseAddress)),
           ],
         ),
       ),
-      GroupFooter(android
-          ? 'TV\'nin adresi: Ayarlar › Ağ ve İnternet › bağlı olduğun Wi-Fi ağının adı (Google TV: Ayarlar › Ağ ve İnternet). '
-              '${phone == null ? '' : 'Telefonun adresi $phone; TV\'ninki ilk üç bölümde aynı olmalı.'}'
-          : 'TV\'nin adresi: Ayarlar › Genel › Ağ › Wi-Fi Bağlantısı › Gelişmiş Wi-Fi Ayarları (modele göre Ayarlar › Ağ). '
-              '${phone == null ? '' : 'Telefonun adresi $phone; TV\'ninki ilk üç bölümde aynı olmalı.'}'),
+      GroupFooter('${android ? l.tvInstallAddressFooterAndroid : l.tvInstallAddressFooterLg}'
+          '${phone == null ? '' : ' ${l.tvInstallSameSubnet(phone!)}'}'),
       if (android) ...[
         const SizedBox(height: 16),
         GlowButton(
-          label: 'Adımları göster',
+          label: l.tvInstallShowSteps,
           icon: CupertinoIcons.list_number,
           onPressed: () {
             setState(() => guideIndex = 0);
@@ -609,7 +588,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
     final done = stepDone(s);
     final waiting = s.check != _Check.none && !done;
     return [
-      progress(2, kind == TvKind.android ? 'Hata ayıklamayı aç' : 'Geliştirici modunu aç'),
+      progress(2, kind == TvKind.android ? l.tvInstallDebugStep : l.tvInstallDevModeStep),
       Glass(
         padding: const EdgeInsets.fromLTRB(18, 18, 18, 20),
         child: Column(
@@ -633,7 +612,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
             const SizedBox(height: 4),
             Padding(
               padding: const EdgeInsets.only(left: 46),
-              child: Text('${index + 1}. adım, toplam ${steps.length}', style: Txt.footnote.copyWith(color: Tokens.textSecondary)),
+              child: Text(l.tvInstallStepCounter(index + 1, steps.length), style: Txt.footnote.copyWith(color: Tokens.textSecondary)),
             ),
             const SizedBox(height: 14),
             Text(s.body, style: Txt.callout),
@@ -646,11 +625,11 @@ class _TvInstallPageState extends State<TvInstallPage> {
                   children: [
                     Expanded(child: SelectableText(s.copy!, style: Txt.subhead.copyWith(fontWeight: FontWeight.w600))),
                     IconButton(
-                      tooltip: 'Kopyala',
+                      tooltip: l.tvInstallCopy,
                       icon: const Icon(CupertinoIcons.doc_on_clipboard, color: Tokens.accent),
                       onPressed: () {
                         Clipboard.setData(ClipboardData(text: s.copy!));
-                        toast(context, 'Adres kopyalandı');
+                        toast(context, l.tvInstallCopied);
                       },
                     ),
                   ],
@@ -667,7 +646,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
                 icon: CupertinoIcons.checkmark_circle_fill,
                 color: Tokens.success,
                 compact: true,
-                text: s.check == _Check.keyServer ? 'Key Server açık. Devam edebilirsin.' : 'TV hazır. Devam edebilirsin.',
+                text: s.check == _Check.keyServer ? l.tvInstallKeyServerOn : l.tvInstallDeviceReady,
               )
             : Glass(
                 radius: 18,
@@ -678,7 +657,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
                     const SizedBox(width: 12),
                     Expanded(
                       child: Text(
-                        host == null ? 'TV ağda aranıyor…' : 'TV bekleniyor ($host)…',
+                        host == null ? l.tvInstallSearchingTv : l.tvInstallWaitingTv(host!),
                         style: Txt.subhead.copyWith(color: Tokens.textSecondary),
                       ),
                     ),
@@ -688,17 +667,17 @@ class _TvInstallPageState extends State<TvInstallPage> {
       ],
       if (s.different != null) ...[
         const SizedBox(height: 12),
-        _Expandable(title: 'Menü farklı görünüyorsa', text: s.different!),
+        _Expandable(title: l.tvInstallDifferentMenu, text: s.different!),
       ],
       const SizedBox(height: 18),
       GlowButton(
-        label: waiting ? 'Bunu yaptım' : (index + 1 < steps.length ? 'Bunu yaptım' : 'Kuruluma geç'),
+        label: waiting || index + 1 < steps.length ? l.tvInstallDidIt : l.tvInstallGoInstall,
         icon: CupertinoIcons.checkmark_alt,
         // Canlı denetimde TV henüz görünmüyorsa yine de geçilebilir: bazı ağlar denetimi engeller, kurulum kendisi dener.
         onPressed: (s.check == _Check.ready && host == null && waiting) ? null : nextGuide,
       ),
       if (s.check == _Check.ready && host == null && waiting)
-        const GroupFooter('TV ağda görünene kadar bekleniyor. Görünmüyorsa geri dönüp TV\'nin adresini elle yaz.'),
+        GroupFooter(l.tvInstallWaitingFooter),
     ];
   }
 
@@ -707,18 +686,18 @@ class _TvInstallPageState extends State<TvInstallPage> {
   List<Widget> installView() {
     final current = kind!;
     final failure = result != null && !result!.ok ? result : null;
-    final text = failure == null ? null : tvErrorText(failure.error, current);
+    final text = failure == null ? null : tvErrorText(failure.error, current, l);
     return [
-      progress(3, 'Kur'),
+      progress(3, l.tvInstallInstallStep),
       Group(
         inset: 60,
         children: [
           Cell(icon: CupertinoIcons.tv_fill, iconColor: Tokens.purple, title: tvName.isEmpty ? current.title : tvName, subtitle: host),
-          Cell(icon: CupertinoIcons.cube_box_fill, iconColor: Tokens.indigo, title: 'Kurulacak sürüm', value: bundled[current] ?? '?'),
+          Cell(icon: CupertinoIcons.cube_box_fill, iconColor: Tokens.indigo, title: l.tvInstallVersionToInstall, value: bundled[current] ?? '?'),
         ],
       ),
       if (current == TvKind.lg && needsPassphrase) ...[
-        const GroupHeader('TV EKRANINDAKİ PAROLA'),
+        GroupHeader(l.tvInstallPassHeader),
         Glass(
           padding: const EdgeInsets.all(14),
           child: Column(
@@ -732,23 +711,21 @@ class _TvInstallPageState extends State<TvInstallPage> {
                 maxLength: 10,
                 style: Txt.title2.copyWith(letterSpacing: 6),
                 textAlign: TextAlign.center,
-                decoration: const InputDecoration(hintText: 'ör. 2FEEB2', counterText: ''),
+                decoration: InputDecoration(hintText: l.tvInstallPassHint, counterText: ''),
                 onSubmitted: (_) => install(),
               ),
             ],
           ),
         ),
-        const GroupFooter('Developer Mode uygulamasında Key Server açıkken ekranın sol altında "Passphrase" olarak görünen 6 karakter. '
-            'Yalnız bu ilk kurulumda sorulur.'),
+        GroupFooter(l.tvInstallPassFooter),
       ],
       if (current == TvKind.android && !installing && failure == null)
-        const Padding(
-          padding: EdgeInsets.only(top: 14),
+        Padding(
+          padding: const EdgeInsets.only(top: 14),
           child: Notice(
             icon: CupertinoIcons.hand_raised_fill,
-            title: 'TV\'de bir soru çıkacak',
-            text: '"USB hata ayıklamaya izin verilsin mi?" sorusunda "Bu bilgisayardan her zaman izin ver"i işaretle ve "İzin ver"i seç. '
-                'Soru yalnız ilk kurulumda çıkar.',
+            title: l.tvInstallApproveTitle,
+            text: l.tvInstallApproveText,
           ),
         ),
       if (installing) ...[
@@ -762,7 +739,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
                 children: [
                   const CupertinoActivityIndicator(),
                   const SizedBox(width: 12),
-                  Expanded(child: Text(tvStageText(stage), style: Txt.headline)),
+                  Expanded(child: Text(tvStageText(stage, l), style: Txt.headline)),
                 ],
               ),
               if (stage.startsWith('uploading:')) ...[
@@ -774,32 +751,31 @@ class _TvInstallPageState extends State<TvInstallPage> {
         ),
         if (stage == 'approve') ...[
           const SizedBox(height: 12),
-          const Notice(
+          Notice(
             icon: CupertinoIcons.tv,
             color: Tokens.warning,
-            title: 'Şimdi TV\'ye bak',
-            text: 'TV "USB hata ayıklamaya izin verilsin mi?" diye soruyor. "Bu bilgisayardan her zaman izin ver"i işaretle ve '
-                '"İzin ver"i seç. Kurulum sonra kendiliğinden sürer.',
+            title: l.tvInstallLookAtTvTitle,
+            text: l.tvInstallLookAtTvText,
           ),
         ],
         const SizedBox(height: 10),
-        const GroupFooter('Telefonun ekranını açık tut. Kurulum genellikle bir dakikadan kısa sürer.'),
+        GroupFooter(l.tvInstallKeepScreenOn),
       ],
       if (failure != null) ...[
         const SizedBox(height: 14),
         Notice(icon: CupertinoIcons.exclamationmark_triangle_fill, color: Tokens.danger, title: text!.title, text: text.fix),
         if ((failure.detail ?? '').isNotEmpty && failure.error != 'CANCELLED') ...[
           const SizedBox(height: 10),
-          _Expandable(title: 'TV\'nin söylediği', text: failure.detail!),
+          _Expandable(title: l.tvInstallTvSaid, text: failure.detail!),
         ],
       ],
       const SizedBox(height: 18),
       if (installing)
-        OutlinedButton(onPressed: TvBridge.cancel, child: const Text('Durdur'))
+        OutlinedButton(onPressed: TvBridge.cancel, child: Text(l.tvInstallStop))
       else ...[
         GlowButton(
           icon: failure == null ? CupertinoIcons.arrow_down_circle_fill : CupertinoIcons.arrow_clockwise,
-          label: failure == null ? 'TV\'ye kur' : 'Tekrar dene',
+          label: failure == null ? l.tvInstallInstallButton : l.tvInstallRetry,
           onPressed: install,
         ),
         if (failure != null) ...[
@@ -809,7 +785,7 @@ class _TvInstallPageState extends State<TvInstallPage> {
               setState(() => guideIndex = failure.error == 'KEY_SERVER_OFF' ? guideSteps.length - 1 : 0);
               go(_Step.guide);
             },
-            child: const Text('Adımlara dön'),
+            child: Text(l.tvInstallBackToSteps),
           ),
         ],
       ],
@@ -824,37 +800,34 @@ class _TvInstallPageState extends State<TvInstallPage> {
       const SizedBox(height: 24),
       const Center(child: Icon(CupertinoIcons.checkmark_seal_fill, size: 84, color: Tokens.success)),
       const SizedBox(height: 16),
-      Center(child: Text(r.installed ? 'TV uygulaması kuruldu' : 'TV uygulaması zaten güncel', style: Txt.title2, textAlign: TextAlign.center)),
+      Center(child: Text(r.installed ? l.tvInstallInstalled : l.tvInstallAlreadyCurrent, style: Txt.title2, textAlign: TextAlign.center)),
       const SizedBox(height: 6),
-      Center(child: Text('Sürüm ${r.version ?? '?'}', style: Txt.subhead.copyWith(color: Tokens.textSecondary))),
+      Center(child: Text(l.tvInstallVersionLabel(r.version ?? '?'), style: Txt.subhead.copyWith(color: Tokens.textSecondary))),
       const SizedBox(height: 22),
       Notice(
         icon: CupertinoIcons.tv_fill,
         color: r.launched ? Tokens.success : Tokens.accent,
-        title: r.launched ? 'TV\'de GameTranslator açıldı' : 'TV\'de GameTranslator\'ı aç',
-        text: r.launched
-            ? 'Çeviriyi telefonda başlattığında TV uygulaması telefonu ağda kendisi bulur.'
-            : 'TV\'nin uygulamalar listesinde GameTranslator\'ı bul ve aç. Çeviriyi başlattığında telefonu kendisi bulur.',
+        title: r.launched ? l.tvInstallLaunchedTitle : l.tvInstallOpenOnTvTitle,
+        text: r.launched ? l.tvInstallLaunchedText : l.tvInstallOpenOnTvText,
       ),
       if (kind == TvKind.lg) ...[
         const SizedBox(height: 12),
         Notice(
           icon: CupertinoIcons.clock_fill,
           color: Tokens.warning,
-          title: 'LG geliştirici modu süresi',
-          text: '${r.hoursLeft != null ? 'Kalan süre: ${r.hoursLeft} saat. ' : ''}Süre dolarsa TV uygulaması silinir. Uzun süre '
-              'kullanmayacaksan TV\'deki Developer Mode uygulamasında "EXTEND"e bas; bu sayfadan yeniden kurmak da süreyi uzatır.',
+          title: l.tvInstallLgHoursTitle,
+          text: '${r.hoursLeft != null ? '${l.tvInstallHoursLeft(r.hoursLeft!)} ' : ''}${l.tvInstallLgHoursText}',
         ),
       ],
       if (kind == TvKind.android) ...[
         const SizedBox(height: 12),
-        const Notice(
+        Notice(
           icon: CupertinoIcons.info_circle_fill,
-          text: 'İstersen artık TV\'de USB hata ayıklamayı kapatabilirsin. Yeni bir sürümü kurmak için yeniden açman gerekir.',
+          text: l.tvInstallAndroidNote,
         ),
       ],
       const SizedBox(height: 22),
-      GlowButton(label: 'Bitti', onPressed: () => Navigator.of(context).pop()),
+      GlowButton(label: l.tvInstallDone, onPressed: () => Navigator.of(context).pop()),
     ];
   }
 }

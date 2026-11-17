@@ -2619,6 +2619,870 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'{game} paketi kullanılıyor · {count, plural, =0{0 satır} one{{count} satır} other{{count} satır}} paketten'**
   String homePackUsage(String game, int count);
+
+  /// No description provided for @tvInstallTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV Uygulamasını Kur'**
+  String get tvInstallTitle;
+
+  /// No description provided for @tvInstallStepLabel.
+  ///
+  /// In tr, this message translates to:
+  /// **'ADIM {number} / 4'**
+  String tvInstallStepLabel(int number);
+
+  /// No description provided for @tvInstallBrandQuestion.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'nin markası ne?'**
+  String get tvInstallBrandQuestion;
+
+  /// No description provided for @tvInstallIntroBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'Altyazıyı TV\'de gösteren GameTranslator uygulamasını telefondan TV\'ne kuracağız. Telefon ve TV aynı Wi-Fi ağında olsun.'**
+  String get tvInstallIntroBody;
+
+  /// No description provided for @tvInstallSavedHeader.
+  ///
+  /// In tr, this message translates to:
+  /// **'KAYITLI TV'**
+  String get tvInstallSavedHeader;
+
+  /// No description provided for @tvInstallSavedSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'{host} · TV\'de {version} · telefonda {phone}'**
+  String tvInstallSavedSubtitle(String host, String version, String phone);
+
+  /// No description provided for @tvInstallUpdateAvailable.
+  ///
+  /// In tr, this message translates to:
+  /// **'Güncelleme var'**
+  String get tvInstallUpdateAvailable;
+
+  /// No description provided for @tvInstallUpdate.
+  ///
+  /// In tr, this message translates to:
+  /// **'Güncelle'**
+  String get tvInstallUpdate;
+
+  /// No description provided for @tvInstallReinstall.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yeniden kur'**
+  String get tvInstallReinstall;
+
+  /// No description provided for @tvInstallBrandHeader.
+  ///
+  /// In tr, this message translates to:
+  /// **'MARKA'**
+  String get tvInstallBrandHeader;
+
+  /// No description provided for @tvInstallBrandAndroidSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TCL, Sony, Philips, Xiaomi, Vestel, Arçelik, Beko, Grundig… Ana ekranda Google Play ya da \"Google TV\" yazar.'**
+  String get tvInstallBrandAndroidSubtitle;
+
+  /// No description provided for @tvInstallBrandLgSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'webOS. Ana ekranda \"LG Content Store\" ve alt şeritte renkli uygulama kartları bulunur.'**
+  String get tvInstallBrandLgSubtitle;
+
+  /// No description provided for @tvInstallBrandSamsungSubtitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tizen, 2019 ve sonrası. Ana ekranda \"Samsung TV Plus\" ve \"Smart Hub\" bulunur.'**
+  String get tvInstallBrandSamsungSubtitle;
+
+  /// No description provided for @tvInstallBrandFooter.
+  ///
+  /// In tr, this message translates to:
+  /// **'Emin değil misin? TV\'nin Ayarlar › Destek (ya da Hakkında) ekranında model ve işletim sistemi yazar. Vestel/Arçelik/Beko/Grundig\'in Linux modelleri, Philips Saphi ve Titan OS desteklenmiyor.'**
+  String get tvInstallBrandFooter;
+
+  /// No description provided for @tvInstallSamsungStep.
+  ///
+  /// In tr, this message translates to:
+  /// **'Samsung: bilgisayardan kur'**
+  String get tvInstallSamsungStep;
+
+  /// No description provided for @tvInstallSamsungNoticeTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Samsung TV\'ye kurulum şimdilik bilgisayardan'**
+  String get tvInstallSamsungNoticeTitle;
+
+  /// No description provided for @tvInstallSamsungNoticeText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Samsung, uygulamanın her TV için Samsung hesabıyla ayrıca imzalanmasını istiyor. Telefondan kurulum henüz hazır değil; bilgisayardaki GameTranslator bunu kendisi yapar. Kurulum bir kez yapılır, sonra bilgisayar gerekmez.'**
+  String get tvInstallSamsungNoticeText;
+
+  /// No description provided for @tvInstallSamsungStepsTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kısaca adımlar'**
+  String get tvInstallSamsungStepsTitle;
+
+  /// No description provided for @tvInstallSamsungStep1.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de Uygulamalar ekranını aç, kumandayla 1 2 3 4 5 tuşlarına bas.'**
+  String get tvInstallSamsungStep1;
+
+  /// No description provided for @tvInstallSamsungStep2.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Developer mode\"u \"On\" yap, \"Host PC IP\" alanına BİLGİSAYARIN adresini yaz, OK\'e bas.'**
+  String get tvInstallSamsungStep2;
+
+  /// No description provided for @tvInstallSamsungStep3.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'yi güç tuşunu basılı tutarak tam kapatıp aç.'**
+  String get tvInstallSamsungStep3;
+
+  /// No description provided for @tvInstallSamsungStep4.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bilgisayarda GameTranslator\'ın TV adımında Samsung TV\'ni seç ve açılan sayfada Samsung hesabınla giriş yap.'**
+  String get tvInstallSamsungStep4;
+
+  /// No description provided for @tvInstallShowDetailed.
+  ///
+  /// In tr, this message translates to:
+  /// **'Rehberde ayrıntılı göster'**
+  String get tvInstallShowDetailed;
+
+  /// No description provided for @tvInstallOtherBrand.
+  ///
+  /// In tr, this message translates to:
+  /// **'Başka marka seç'**
+  String get tvInstallOtherBrand;
+
+  /// No description provided for @tvInstallFindStep.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'ni bul'**
+  String get tvInstallFindStep;
+
+  /// No description provided for @tvInstallFindBodyAndroid.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ağda hata ayıklaması açık Android TV\'ler aranıyor. Hata ayıklamayı henüz açmadıysan TV burada görünmez; sorun değil, \"Adımları göster\" ile devam et.'**
+  String get tvInstallFindBodyAndroid;
+
+  /// No description provided for @tvInstallFindBodyLg.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonla aynı ağdaki LG TV\'ler aranıyor. TV açık olsun.'**
+  String get tvInstallFindBodyLg;
+
+  /// No description provided for @tvInstallSearchingHeader.
+  ///
+  /// In tr, this message translates to:
+  /// **'ARANIYOR…'**
+  String get tvInstallSearchingHeader;
+
+  /// No description provided for @tvInstallFoundHeader.
+  ///
+  /// In tr, this message translates to:
+  /// **'BULUNAN TV\'LER'**
+  String get tvInstallFoundHeader;
+
+  /// No description provided for @tvInstallScanning.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ağ taranıyor, birkaç saniye sürer…'**
+  String get tvInstallScanning;
+
+  /// No description provided for @tvInstallNotFound.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV bulunamadı'**
+  String get tvInstallNotFound;
+
+  /// No description provided for @tvInstallNotSearched.
+  ///
+  /// In tr, this message translates to:
+  /// **'Henüz aranmadı'**
+  String get tvInstallNotSearched;
+
+  /// No description provided for @tvInstallNotSearchedNote.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yenile\'ye dokun ya da adresi elle yaz.'**
+  String get tvInstallNotSearchedNote;
+
+  /// No description provided for @tvInstallReady.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hazır'**
+  String get tvInstallReady;
+
+  /// No description provided for @tvInstallRefresh.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yenile'**
+  String get tvInstallRefresh;
+
+  /// No description provided for @tvInstallManualHeader.
+  ///
+  /// In tr, this message translates to:
+  /// **'ADRESİ ELLE YAZ'**
+  String get tvInstallManualHeader;
+
+  /// No description provided for @tvInstallIpHint.
+  ///
+  /// In tr, this message translates to:
+  /// **'ör. 192.168.1.40'**
+  String get tvInstallIpHint;
+
+  /// No description provided for @tvInstallUseAddress.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bu adresi kullan'**
+  String get tvInstallUseAddress;
+
+  /// No description provided for @tvInstallAddressFooterAndroid.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'nin adresi: Ayarlar › Ağ ve İnternet › bağlı olduğun Wi-Fi ağının adı (Google TV: Ayarlar › Ağ ve İnternet).'**
+  String get tvInstallAddressFooterAndroid;
+
+  /// No description provided for @tvInstallAddressFooterLg.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'nin adresi: Ayarlar › Genel › Ağ › Wi-Fi Bağlantısı › Gelişmiş Wi-Fi Ayarları (modele göre Ayarlar › Ağ).'**
+  String get tvInstallAddressFooterLg;
+
+  /// No description provided for @tvInstallSameSubnet.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonun adresi {phone}; TV\'ninki ilk üç bölümde aynı olmalı.'**
+  String tvInstallSameSubnet(String phone);
+
+  /// No description provided for @tvInstallShowSteps.
+  ///
+  /// In tr, this message translates to:
+  /// **'Adımları göster'**
+  String get tvInstallShowSteps;
+
+  /// No description provided for @tvInstallIpError.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bu bir IP adresine benzemiyor. Örnek: 192.168.1.40'**
+  String get tvInstallIpError;
+
+  /// No description provided for @tvInstallDebugStep.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hata ayıklamayı aç'**
+  String get tvInstallDebugStep;
+
+  /// No description provided for @tvInstallDevModeStep.
+  ///
+  /// In tr, this message translates to:
+  /// **'Geliştirici modunu aç'**
+  String get tvInstallDevModeStep;
+
+  /// No description provided for @tvInstallStepCounter.
+  ///
+  /// In tr, this message translates to:
+  /// **'{index}. adım, toplam {total}'**
+  String tvInstallStepCounter(int index, int total);
+
+  /// No description provided for @tvInstallCopy.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kopyala'**
+  String get tvInstallCopy;
+
+  /// No description provided for @tvInstallCopied.
+  ///
+  /// In tr, this message translates to:
+  /// **'Adres kopyalandı'**
+  String get tvInstallCopied;
+
+  /// No description provided for @tvInstallKeyServerOn.
+  ///
+  /// In tr, this message translates to:
+  /// **'Key Server açık. Devam edebilirsin.'**
+  String get tvInstallKeyServerOn;
+
+  /// No description provided for @tvInstallDeviceReady.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV hazır. Devam edebilirsin.'**
+  String get tvInstallDeviceReady;
+
+  /// No description provided for @tvInstallSearchingTv.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV ağda aranıyor…'**
+  String get tvInstallSearchingTv;
+
+  /// No description provided for @tvInstallWaitingTv.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV bekleniyor ({host})…'**
+  String tvInstallWaitingTv(String host);
+
+  /// No description provided for @tvInstallDifferentMenu.
+  ///
+  /// In tr, this message translates to:
+  /// **'Menü farklı görünüyorsa'**
+  String get tvInstallDifferentMenu;
+
+  /// No description provided for @tvInstallDidIt.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bunu yaptım'**
+  String get tvInstallDidIt;
+
+  /// No description provided for @tvInstallGoInstall.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kuruluma geç'**
+  String get tvInstallGoInstall;
+
+  /// No description provided for @tvInstallWaitingFooter.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV ağda görünene kadar bekleniyor. Görünmüyorsa geri dönüp TV\'nin adresini elle yaz.'**
+  String get tvInstallWaitingFooter;
+
+  /// No description provided for @tvInstallInstallStep.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kur'**
+  String get tvInstallInstallStep;
+
+  /// No description provided for @tvInstallVersionToInstall.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kurulacak sürüm'**
+  String get tvInstallVersionToInstall;
+
+  /// No description provided for @tvInstallPassHeader.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV EKRANINDAKİ PAROLA'**
+  String get tvInstallPassHeader;
+
+  /// No description provided for @tvInstallPassHint.
+  ///
+  /// In tr, this message translates to:
+  /// **'ör. 2FEEB2'**
+  String get tvInstallPassHint;
+
+  /// No description provided for @tvInstallPassFooter.
+  ///
+  /// In tr, this message translates to:
+  /// **'Developer Mode uygulamasında Key Server açıkken ekranın sol altında \"Passphrase\" olarak görünen 6 karakter. Yalnız bu ilk kurulumda sorulur.'**
+  String get tvInstallPassFooter;
+
+  /// No description provided for @tvInstallApproveTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de bir soru çıkacak'**
+  String get tvInstallApproveTitle;
+
+  /// No description provided for @tvInstallApproveText.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"USB hata ayıklamaya izin verilsin mi?\" sorusunda \"Bu bilgisayardan her zaman izin ver\"i işaretle ve \"İzin ver\"i seç. Soru yalnız ilk kurulumda çıkar.'**
+  String get tvInstallApproveText;
+
+  /// No description provided for @tvInstallLookAtTvTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Şimdi TV\'ye bak'**
+  String get tvInstallLookAtTvTitle;
+
+  /// No description provided for @tvInstallLookAtTvText.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV \"USB hata ayıklamaya izin verilsin mi?\" diye soruyor. \"Bu bilgisayardan her zaman izin ver\"i işaretle ve \"İzin ver\"i seç. Kurulum sonra kendiliğinden sürer.'**
+  String get tvInstallLookAtTvText;
+
+  /// No description provided for @tvInstallKeepScreenOn.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonun ekranını açık tut. Kurulum genellikle bir dakikadan kısa sürer.'**
+  String get tvInstallKeepScreenOn;
+
+  /// No description provided for @tvInstallTvSaid.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'nin söylediği'**
+  String get tvInstallTvSaid;
+
+  /// No description provided for @tvInstallStop.
+  ///
+  /// In tr, this message translates to:
+  /// **'Durdur'**
+  String get tvInstallStop;
+
+  /// No description provided for @tvInstallInstallButton.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'ye kur'**
+  String get tvInstallInstallButton;
+
+  /// No description provided for @tvInstallRetry.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tekrar dene'**
+  String get tvInstallRetry;
+
+  /// No description provided for @tvInstallBackToSteps.
+  ///
+  /// In tr, this message translates to:
+  /// **'Adımlara dön'**
+  String get tvInstallBackToSteps;
+
+  /// No description provided for @tvInstallInstalled.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV uygulaması kuruldu'**
+  String get tvInstallInstalled;
+
+  /// No description provided for @tvInstallAlreadyCurrent.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV uygulaması zaten güncel'**
+  String get tvInstallAlreadyCurrent;
+
+  /// No description provided for @tvInstallVersionLabel.
+  ///
+  /// In tr, this message translates to:
+  /// **'Sürüm {version}'**
+  String tvInstallVersionLabel(String version);
+
+  /// No description provided for @tvInstallLaunchedTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de GameTranslator açıldı'**
+  String get tvInstallLaunchedTitle;
+
+  /// No description provided for @tvInstallOpenOnTvTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de GameTranslator\'ı aç'**
+  String get tvInstallOpenOnTvTitle;
+
+  /// No description provided for @tvInstallLaunchedText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çeviriyi telefonda başlattığında TV uygulaması telefonu ağda kendisi bulur.'**
+  String get tvInstallLaunchedText;
+
+  /// No description provided for @tvInstallOpenOnTvText.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'nin uygulamalar listesinde GameTranslator\'ı bul ve aç. Çeviriyi başlattığında telefonu kendisi bulur.'**
+  String get tvInstallOpenOnTvText;
+
+  /// No description provided for @tvInstallLgHoursTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'LG geliştirici modu süresi'**
+  String get tvInstallLgHoursTitle;
+
+  /// No description provided for @tvInstallHoursLeft.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kalan süre: {hours} saat.'**
+  String tvInstallHoursLeft(int hours);
+
+  /// No description provided for @tvInstallLgHoursText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Süre dolarsa TV uygulaması silinir. Uzun süre kullanmayacaksan TV\'deki Developer Mode uygulamasında \"EXTEND\"e bas; bu sayfadan yeniden kurmak da süreyi uzatır.'**
+  String get tvInstallLgHoursText;
+
+  /// No description provided for @tvInstallAndroidNote.
+  ///
+  /// In tr, this message translates to:
+  /// **'İstersen artık TV\'de USB hata ayıklamayı kapatabilirsin. Yeni bir sürümü kurmak için yeniden açman gerekir.'**
+  String get tvInstallAndroidNote;
+
+  /// No description provided for @tvInstallDone.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bitti'**
+  String get tvInstallDone;
+
+  /// No description provided for @tvInstallBrandFallback.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV'**
+  String get tvInstallBrandFallback;
+
+  /// No description provided for @tvGuideA1Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de Ayarlar\'ı aç'**
+  String get tvGuideA1Title;
+
+  /// No description provided for @tvGuideA1Body.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV kumandasındaki dişli (Ayarlar) tuşuna bas. Kumandada yoksa ana ekranın sağ üstündeki dişli simgesini seç.'**
+  String get tvGuideA1Body;
+
+  /// No description provided for @tvGuideA1Different.
+  ///
+  /// In tr, this message translates to:
+  /// **'Google TV\'de (yeni Sony, TCL, Philips, Xiaomi modelleri) sağ üstteki profil resmini ya da dişliyi seç, sonra \"Ayarlar\"a gir.'**
+  String get tvGuideA1Different;
+
+  /// No description provided for @tvGuideA2Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Hakkında\" ekranına gir'**
+  String get tvGuideA2Title;
+
+  /// No description provided for @tvGuideA2Body.
+  ///
+  /// In tr, this message translates to:
+  /// **'Android TV: Ayarlar › Cihaz Tercihleri › Hakkında.\nGoogle TV: Ayarlar › Sistem › Hakkında.'**
+  String get tvGuideA2Body;
+
+  /// No description provided for @tvGuideA2Different.
+  ///
+  /// In tr, this message translates to:
+  /// **'Philips: Ayarlar › Android Ayarları › Cihaz Tercihleri › Hakkında.\nSony: Ayarlar › Sistem › Hakkında (eski modellerde Cihaz Tercihleri › Hakkında).\nTCL ve Xiaomi: Ayarlar › Sistem › Hakkında ya da Cihaz Tercihleri › Hakkında.\nBulamazsan ayarlarda arama varsa \"Hakkında\" yaz.'**
+  String get tvGuideA2Different;
+
+  /// No description provided for @tvGuideA3Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yapı satırına 7 kez bas'**
+  String get tvGuideA3Title;
+
+  /// No description provided for @tvGuideA3Body.
+  ///
+  /// In tr, this message translates to:
+  /// **'Listenin altındaki \"Android TV OS yapısı\" satırını seç ve kumandanın Tamam tuşuna art arda 7 kez bas. \"Artık bir geliştiricisiniz\" yazısı çıkar.'**
+  String get tvGuideA3Body;
+
+  /// No description provided for @tvGuideA3Different.
+  ///
+  /// In tr, this message translates to:
+  /// **'Satırın adı modele göre \"Yapı numarası\", \"Derleme\" ya da \"Build\" olabilir. TV PIN isterse TV\'nin kilit PIN\'ini gir. \"Zaten geliştiricisiniz\" yazıyorsa bu adım tamam.'**
+  String get tvGuideA3Different;
+
+  /// No description provided for @tvGuideA4Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'Geliştirici seçenekleri\'ni aç'**
+  String get tvGuideA4Title;
+
+  /// No description provided for @tvGuideA4Body.
+  ///
+  /// In tr, this message translates to:
+  /// **'Geri tuşuyla bir ekran geri dön. Android TV\'de Cihaz Tercihleri, Google TV\'de Sistem altında yeni bir \"Geliştirici seçenekleri\" satırı belirdi; ona gir.'**
+  String get tvGuideA4Body;
+
+  /// No description provided for @tvGuideA4Different.
+  ///
+  /// In tr, this message translates to:
+  /// **'Satırı göremiyorsan Ayarlar\'dan tamamen çıkıp yeniden gir. Hâlâ yoksa önceki adımda 7 kez basmayı yinele.'**
+  String get tvGuideA4Different;
+
+  /// No description provided for @tvGuideA5Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"USB hata ayıklama\"yı aç'**
+  String get tvGuideA5Title;
+
+  /// No description provided for @tvGuideA5Body.
+  ///
+  /// In tr, this message translates to:
+  /// **'Geliştirici seçenekleri listesinde \"USB hata ayıklama\"yı bul ve aç; çıkan uyarıda \"Tamam\"ı seç. Listede \"Ağ üzerinden hata ayıklama\" ya da \"ADB ağ hata ayıklama\" varsa onu da aç.\n\nTV açıldığında burası kendiliğinden yeşile döner.'**
+  String get tvGuideA5Body;
+
+  /// No description provided for @tvGuideA5Different.
+  ///
+  /// In tr, this message translates to:
+  /// **'Seçeneğin adı \"Hata ayıklama (ADB)\" ya da İngilizce \"USB debugging\" olabilir. Yalnız \"Kablosuz hata ayıklama\" olup eşleştirme kodu isteyen modeller (ör. Google TV Streamer) telefondan henüz kurulamıyor; bunlarda Rehber\'deki USB bellek yolunu kullan.'**
+  String get tvGuideA5Different;
+
+  /// No description provided for @tvGuideL1Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ücretsiz LG geliştirici hesabı aç'**
+  String get tvGuideL1Title;
+
+  /// No description provided for @tvGuideL1Body.
+  ///
+  /// In tr, this message translates to:
+  /// **'Telefonun tarayıcısında aşağıdaki adrese gir, sağ üstten \"SIGN IN\", sonra \"Create Account\" ile ücretsiz hesap aç. E-postanı ve şifreni bir sonraki adımda TV\'de yazacaksın.'**
+  String get tvGuideL1Body;
+
+  /// No description provided for @tvGuideL1Different.
+  ///
+  /// In tr, this message translates to:
+  /// **'LG hesabın zaten varsa (ör. LG ThinQ) aynı e-posta ve şifreyle giriş yapabilirsin; bu adımı geç.'**
+  String get tvGuideL1Different;
+
+  /// No description provided for @tvGuideL2Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'ye \"Developer Mode\" uygulamasını kur'**
+  String get tvGuideL2Title;
+
+  /// No description provided for @tvGuideL2Body.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de LG Content Store\'u (Uygulamalar) aç, arama kutusuna \"Developer Mode\" yaz ve uygulamayı yükle.'**
+  String get tvGuideL2Body;
+
+  /// No description provided for @tvGuideL2Different.
+  ///
+  /// In tr, this message translates to:
+  /// **'Mağaza açılmıyorsa TV internete bağlı mı kontrol et. Eski modellerde mağazanın adı \"LG Store\" ya da \"Uygulamalar\"dır. Uygulama ekranda İngilizce görünür.'**
+  String get tvGuideL2Different;
+
+  /// No description provided for @tvGuideL3Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'Giriş yap ve \"Dev Mode Status\"u aç'**
+  String get tvGuideL3Title;
+
+  /// No description provided for @tvGuideL3Body.
+  ///
+  /// In tr, this message translates to:
+  /// **'Developer Mode uygulamasını aç, LG hesabının e-postası ve şifresiyle giriş yap. \"Dev Mode Status\" anahtarını aç. TV kendiliğinden yeniden başlar; açılmasını bekle.\n\nGeliştirici modu açıldığında burası kendiliğinden yeşile döner.'**
+  String get tvGuideL3Body;
+
+  /// No description provided for @tvGuideL3Different.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Dev Mode Status\" gri ve seçilemiyorsa önce giriş yapılmamıştır. Giriş \"Login failed\" diyorsa hesabının e-postasını doğruladığından emin ol.'**
+  String get tvGuideL3Different;
+
+  /// No description provided for @tvGuideL4Title.
+  ///
+  /// In tr, this message translates to:
+  /// **'\"Key Server\"ı aç'**
+  String get tvGuideL4Title;
+
+  /// No description provided for @tvGuideL4Body.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV açıldıktan sonra Developer Mode uygulamasını yeniden aç ve \"Key Server\" anahtarını aç. Uygulamayı ekranda bırak; kapatırsan Key Server da kapanır.\n\nKey Server açıldığında burası kendiliğinden yeşile döner.'**
+  String get tvGuideL4Body;
+
+  /// No description provided for @tvGuideL4Different.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ekranın sol altında 6 karakterlik \"Passphrase\" görünür; bir sonraki adımda onu yazacaksın.'**
+  String get tvGuideL4Different;
+
+  /// No description provided for @tvErrUnreachableAndroidTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV yanıt vermedi'**
+  String get tvErrUnreachableAndroidTitle;
+
+  /// No description provided for @tvErrUnreachableAndroidFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV açık mı ve telefonla aynı Wi-Fi ağında mı? Geliştirici seçeneklerinde \"USB hata ayıklama\" açık olmalı. Bazı TV\'lerde bu ayar TV yeniden başlayınca kapanır; açıp yeniden dene.'**
+  String get tvErrUnreachableAndroidFix;
+
+  /// No description provided for @tvErrUnreachableLgTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV yanıt vermedi'**
+  String get tvErrUnreachableLgTitle;
+
+  /// No description provided for @tvErrUnreachableLgFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV açık mı ve telefonla aynı Wi-Fi ağında mı? Developer Mode uygulamasında \"Dev Mode Status\" açık olmalı; açtıktan sonra TV yeniden başlar, açılmasını bekle.'**
+  String get tvErrUnreachableLgFix;
+
+  /// No description provided for @tvErrKeyServerOffTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Key Server kapalı'**
+  String get tvErrKeyServerOffTitle;
+
+  /// No description provided for @tvErrKeyServerOffFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de Developer Mode uygulamasını aç, \"Key Server\"ı aç ve uygulamayı ekranda bırak. Sonra yeniden dene.'**
+  String get tvErrKeyServerOffFix;
+
+  /// No description provided for @tvErrWrongPassphraseTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Parola doğru değil'**
+  String get tvErrWrongPassphraseTitle;
+
+  /// No description provided for @tvErrWrongPassphraseFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV ekranında Developer Mode uygulamasının sol altındaki 6 karakterlik \"Passphrase\"i yeniden yaz. 0 (sıfır) ile O harfi, 1 ile I harfi karışabilir.'**
+  String get tvErrWrongPassphraseFix;
+
+  /// No description provided for @tvErrKeyRefusedTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV anahtarı kabul etmedi'**
+  String get tvErrKeyRefusedTitle;
+
+  /// No description provided for @tvErrKeyRefusedFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'Geliştirici modu kapatılıp açıldıysa TV yeni bir anahtar üretir. Key Server\'ı açıp parolayı yeniden yaz.'**
+  String get tvErrKeyRefusedFix;
+
+  /// No description provided for @tvErrNotApprovedTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de izin verilmedi'**
+  String get tvErrNotApprovedTitle;
+
+  /// No description provided for @tvErrNotApprovedFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yeniden dene. TV\'de \"USB hata ayıklamaya izin verilsin mi?\" sorusu çıkınca \"Bu bilgisayardan her zaman izin ver\"i işaretleyip \"İzin ver\"i seç. Soru TV ekranında yaklaşık bir buçuk dakika bekler.'**
+  String get tvErrNotApprovedFix;
+
+  /// No description provided for @tvErrNoSpaceTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de yer kalmamış'**
+  String get tvErrNoSpaceTitle;
+
+  /// No description provided for @tvErrNoSpaceFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'den kullanmadığın bir uygulamayı kaldır ve yeniden dene.'**
+  String get tvErrNoSpaceFix;
+
+  /// No description provided for @tvErrConnectionLostTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bağlantı koptu'**
+  String get tvErrConnectionLostTitle;
+
+  /// No description provided for @tvErrConnectionLostFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kurulum sırasında TV ile bağlantı kesildi. Telefonun ekranı açık ve Wi-Fi\'ye bağlı kalsın; yeniden dene.'**
+  String get tvErrConnectionLostFix;
+
+  /// No description provided for @tvErrTooOldTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bu TV çok eski'**
+  String get tvErrTooOldTitle;
+
+  /// No description provided for @tvErrTooOldFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'GameTranslator TV uygulaması bu TV\'nin yazılımında çalışmıyor.'**
+  String get tvErrTooOldFix;
+
+  /// No description provided for @tvErrPackageMissingTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV paketi bulunamadı'**
+  String get tvErrPackageMissingTitle;
+
+  /// No description provided for @tvErrPackageMissingFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bu telefon uygulamasının içinde TV paketi yok. Uygulamanın son sürümünü kur.'**
+  String get tvErrPackageMissingFix;
+
+  /// No description provided for @tvErrCancelledTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kurulum durduruldu'**
+  String get tvErrCancelledTitle;
+
+  /// No description provided for @tvErrCancelledFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hazır olduğunda yeniden başlatabilirsin.'**
+  String get tvErrCancelledFix;
+
+  /// No description provided for @tvErrGenericTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV uygulaması kurulamadı'**
+  String get tvErrGenericTitle;
+
+  /// No description provided for @tvErrGenericFix.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yeniden dene. TV\'yi kapatıp açmak yarım kalan kurulumların çoğunu düzeltir. Yine olmazsa aşağıdaki \"TV\'nin söylediği\" yazısıyla birlikte bize bildir.'**
+  String get tvErrGenericFix;
+
+  /// No description provided for @tvStageUploading.
+  ///
+  /// In tr, this message translates to:
+  /// **'Uygulama TV\'ye gönderiliyor… %{percent}'**
+  String tvStageUploading(String percent);
+
+  /// No description provided for @tvStageConnecting.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'ye bağlanılıyor…'**
+  String get tvStageConnecting;
+
+  /// No description provided for @tvStageApprove.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de izin bekleniyor…'**
+  String get tvStageApprove;
+
+  /// No description provided for @tvStageChecking.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'deki sürüme bakılıyor…'**
+  String get tvStageChecking;
+
+  /// No description provided for @tvStageKey.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'den anahtar alınıyor…'**
+  String get tvStageKey;
+
+  /// No description provided for @tvStageInstalling.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'ye kuruluyor…'**
+  String get tvStageInstalling;
+
+  /// No description provided for @tvStageVerifying.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kurulum doğrulanıyor…'**
+  String get tvStageVerifying;
+
+  /// No description provided for @tvStageLaunching.
+  ///
+  /// In tr, this message translates to:
+  /// **'TV\'de açılıyor…'**
+  String get tvStageLaunching;
+
+  /// No description provided for @tvStagePreparing.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hazırlanıyor…'**
+  String get tvStagePreparing;
 }
 
 class _AppLocalizationsDelegate

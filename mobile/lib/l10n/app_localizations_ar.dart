@@ -1470,4 +1470,505 @@ class AppLocalizationsAr extends AppLocalizations {
     );
     return 'حزمة $game قيد الاستخدام · $_temp0 من الحزمة';
   }
+
+  @override
+  String get tvInstallTitle => 'تثبيت تطبيق التلفاز';
+
+  @override
+  String tvInstallStepLabel(int number) {
+    return 'الخطوة $number من 4';
+  }
+
+  @override
+  String get tvInstallBrandQuestion => 'ما ماركة تلفازك؟';
+
+  @override
+  String get tvInstallIntroBody =>
+      'سنثبّت من الهاتف تطبيق GameTranslator الذي يعرض الترجمة على تلفازك. يجب أن يكون الهاتف والتلفاز على شبكة Wi-Fi نفسها.';
+
+  @override
+  String get tvInstallSavedHeader => 'تلفاز محفوظ';
+
+  @override
+  String tvInstallSavedSubtitle(String host, String version, String phone) {
+    return '$host · على التلفاز $version · على الهاتف $phone';
+  }
+
+  @override
+  String get tvInstallUpdateAvailable => 'يوجد تحديث';
+
+  @override
+  String get tvInstallUpdate => 'حدّث';
+
+  @override
+  String get tvInstallReinstall => 'أعد التثبيت';
+
+  @override
+  String get tvInstallBrandHeader => 'الماركة';
+
+  @override
+  String get tvInstallBrandAndroidSubtitle =>
+      'TCL وSony وPhilips وXiaomi وVestel وArçelik وBeko وGrundig… تظهر على الشاشة الرئيسية كلمة Google Play أو \"Google TV\".';
+
+  @override
+  String get tvInstallBrandLgSubtitle =>
+      'webOS. تظهر على الشاشة الرئيسية \"LG Content Store\" وبطاقات تطبيقات ملوّنة في الشريط السفلي.';
+
+  @override
+  String get tvInstallBrandSamsungSubtitle =>
+      'Tizen، من 2019 وما بعدها. تظهر على الشاشة الرئيسية \"Samsung TV Plus\" و\"Smart Hub\".';
+
+  @override
+  String get tvInstallBrandFooter =>
+      'لست متأكدًا؟ تعرض شاشة الإعدادات › الدعم (أو حول) على التلفاز الطراز ونظام التشغيل. لا تُدعم طرازات Vestel/Arçelik/Beko/Grundig بنظام Linux ولا Philips Saphi ولا Titan OS.';
+
+  @override
+  String get tvInstallSamsungStep => 'Samsung: التثبيت من الحاسوب';
+
+  @override
+  String get tvInstallSamsungNoticeTitle =>
+      'التثبيت على تلفاز Samsung يحتاج حاسوبًا حاليًا';
+
+  @override
+  String get tvInstallSamsungNoticeText =>
+      'تطلب Samsung توقيع التطبيق لكل تلفاز بحساب Samsung منفصل. التثبيت من الهاتف غير جاهز بعد؛ ويقوم به GameTranslator على الحاسوب تلقائيًا. يُثبَّت مرة واحدة ثم لا تحتاج إلى الحاسوب.';
+
+  @override
+  String get tvInstallSamsungStepsTitle => 'الخطوات باختصار';
+
+  @override
+  String get tvInstallSamsungStep1 =>
+      'افتح شاشة التطبيقات على التلفاز واضغط 1 2 3 4 5 على الريموت.';
+
+  @override
+  String get tvInstallSamsungStep2 =>
+      'اجعل \"Developer mode\" على \"On\"، واكتب عنوان الحاسوب في \"Host PC IP\"، ثم اضغط OK.';
+
+  @override
+  String get tvInstallSamsungStep3 =>
+      'أطفئ التلفاز تمامًا ثم شغّله بالضغط المطوّل على زر الطاقة.';
+
+  @override
+  String get tvInstallSamsungStep4 =>
+      'على الحاسوب اختر تلفاز Samsung في خطوة التلفاز داخل GameTranslator، ثم سجّل الدخول بحساب Samsung في الصفحة التي تُفتح.';
+
+  @override
+  String get tvInstallShowDetailed => 'اعرض التفاصيل في الدليل';
+
+  @override
+  String get tvInstallOtherBrand => 'اختر ماركة أخرى';
+
+  @override
+  String get tvInstallFindStep => 'ابحث عن تلفازك';
+
+  @override
+  String get tvInstallFindBodyAndroid =>
+      'يجري البحث عن تلفازات Android المفعّل فيها تصحيح الأخطاء عبر الشبكة. إن لم تفعّله بعد فلن يظهر التلفاز هنا؛ لا مشكلة، تابع بـ \"اعرض الخطوات\".';
+
+  @override
+  String get tvInstallFindBodyLg =>
+      'يجري البحث عن تلفازات LG على الشبكة نفسها التي عليها الهاتف. يجب أن يكون التلفاز مشتغلًا.';
+
+  @override
+  String get tvInstallSearchingHeader => 'يجري البحث…';
+
+  @override
+  String get tvInstallFoundHeader => 'التلفازات الموجودة';
+
+  @override
+  String get tvInstallScanning => 'يجري فحص الشبكة، يستغرق بضع ثوانٍ…';
+
+  @override
+  String get tvInstallNotFound => 'لم يُعثر على تلفاز';
+
+  @override
+  String get tvInstallNotSearched => 'لم يُبحث بعد';
+
+  @override
+  String get tvInstallNotSearchedNote => 'اضغط تحديث أو اكتب العنوان يدويًا.';
+
+  @override
+  String get tvInstallReady => 'جاهز';
+
+  @override
+  String get tvInstallRefresh => 'تحديث';
+
+  @override
+  String get tvInstallManualHeader => 'اكتب العنوان يدويًا';
+
+  @override
+  String get tvInstallIpHint => 'مثال 192.168.1.40';
+
+  @override
+  String get tvInstallUseAddress => 'استخدم هذا العنوان';
+
+  @override
+  String get tvInstallAddressFooterAndroid =>
+      'عنوان التلفاز: الإعدادات › الشبكة والإنترنت › اسم شبكة Wi-Fi المتصلة (Google TV: الإعدادات › الشبكة والإنترنت).';
+
+  @override
+  String get tvInstallAddressFooterLg =>
+      'عنوان التلفاز: الإعدادات › عام › الشبكة › اتصال Wi-Fi › إعدادات Wi-Fi المتقدمة (وفي بعض الطرازات الإعدادات › الشبكة).';
+
+  @override
+  String tvInstallSameSubnet(String phone) {
+    return 'عنوان الهاتف $phone؛ ويجب أن يتفق عنوان التلفاز معه في الأجزاء الثلاثة الأولى.';
+  }
+
+  @override
+  String get tvInstallShowSteps => 'اعرض الخطوات';
+
+  @override
+  String get tvInstallIpError => 'هذا لا يشبه عنوان IP. مثال: 192.168.1.40';
+
+  @override
+  String get tvInstallDebugStep => 'فعّل تصحيح الأخطاء';
+
+  @override
+  String get tvInstallDevModeStep => 'فعّل وضع المطوّر';
+
+  @override
+  String tvInstallStepCounter(int index, int total) {
+    return 'الخطوة $index من $total';
+  }
+
+  @override
+  String get tvInstallCopy => 'نسخ';
+
+  @override
+  String get tvInstallCopied => 'نُسخ العنوان.';
+
+  @override
+  String get tvInstallKeyServerOn => 'خادم المفاتيح مفعّل. يمكنك المتابعة.';
+
+  @override
+  String get tvInstallDeviceReady => 'التلفاز جاهز. يمكنك المتابعة.';
+
+  @override
+  String get tvInstallSearchingTv => 'يجري البحث عن التلفاز في الشبكة…';
+
+  @override
+  String tvInstallWaitingTv(String host) {
+    return 'بانتظار التلفاز ($host)…';
+  }
+
+  @override
+  String get tvInstallDifferentMenu => 'إذا ظهرت القائمة بشكل مختلف';
+
+  @override
+  String get tvInstallDidIt => 'فعلت هذا';
+
+  @override
+  String get tvInstallGoInstall => 'انتقل إلى التثبيت';
+
+  @override
+  String get tvInstallWaitingFooter =>
+      'بانتظار ظهور التلفاز في الشبكة. إن لم يظهر فارجع واكتب عنوان التلفاز يدويًا.';
+
+  @override
+  String get tvInstallInstallStep => 'الثبيت';
+
+  @override
+  String get tvInstallVersionToInstall => 'الإصدار المطلوب تثبيته';
+
+  @override
+  String get tvInstallPassHeader => 'كلمة المرور على شاشة التلفاز';
+
+  @override
+  String get tvInstallPassHint => 'مثال 2FEEB2';
+
+  @override
+  String get tvInstallPassFooter =>
+      'هي الأحرف الستة الظاهرة باسم \"Passphrase\" أسفل يسار الشاشة عندما يكون خادم المفاتيح مفعّلًا في تطبيق Developer Mode. تُطلب في هذا التثبيت الأول فقط.';
+
+  @override
+  String get tvInstallApproveTitle => 'سيظهر سؤال على التلفاز';
+
+  @override
+  String get tvInstallApproveText =>
+      'عند سؤال \"هل تسمح بتصحيح أخطاء USB؟\" علّم \"السماح دائمًا من هذا الحاسوب\" واختر \"السماح\". يظهر السؤال في التثبيت الأول فقط.';
+
+  @override
+  String get tvInstallLookAtTvTitle => 'انظر الآن إلى التلفاز';
+
+  @override
+  String get tvInstallLookAtTvText =>
+      'يسأل التلفاز \"هل تسمح بتصحيح أخطاء USB؟\". علّم \"السماح دائمًا من هذا الحاسوب\" واختر \"السماح\". ثم يستمر التثبيت وحده.';
+
+  @override
+  String get tvInstallKeepScreenOn =>
+      'أبقِ شاشة الهاتف مفتوحة. يستغرق التثبيت عادة أقل من دقيقة.';
+
+  @override
+  String get tvInstallTvSaid => 'ما قاله التلفاز';
+
+  @override
+  String get tvInstallStop => 'إيقاف';
+
+  @override
+  String get tvInstallInstallButton => 'ثبّت على التلفاز';
+
+  @override
+  String get tvInstallRetry => 'أعد المحاولة';
+
+  @override
+  String get tvInstallBackToSteps => 'رجوع إلى الخطوات';
+
+  @override
+  String get tvInstallInstalled => 'تم تثبيت تطبيق التلفاز';
+
+  @override
+  String get tvInstallAlreadyCurrent => 'تطبيق التلفاز محدّث بالفعل';
+
+  @override
+  String tvInstallVersionLabel(String version) {
+    return 'الإصدار $version';
+  }
+
+  @override
+  String get tvInstallLaunchedTitle => 'فُتح GameTranslator على التلفاز';
+
+  @override
+  String get tvInstallOpenOnTvTitle => 'افتح GameTranslator على التلفاز';
+
+  @override
+  String get tvInstallLaunchedText =>
+      'عند بدء الترجمة على الهاتف يجد تطبيق التلفاز الهاتف في الشبكة بنفسه.';
+
+  @override
+  String get tvInstallOpenOnTvText =>
+      'ابحث عن GameTranslator في قائمة تطبيقات التلفاز وافتحه. يجد الهاتف بنفسه عند بدء الترجمة.';
+
+  @override
+  String get tvInstallLgHoursTitle => 'مدة وضع المطوّر في LG';
+
+  @override
+  String tvInstallHoursLeft(int hours) {
+    return 'المدة المتبقية: $hours ساعة.';
+  }
+
+  @override
+  String get tvInstallLgHoursText =>
+      'إن انتهت المدة يُحذف تطبيق التلفاز. إن كنت لن تستخدمه مدة طويلة فاضغط \"EXTEND\" في تطبيق Developer Mode على التلفاز؛ وإعادة التثبيت من هذه الصفحة تطيل المدة أيضًا.';
+
+  @override
+  String get tvInstallAndroidNote =>
+      'يمكنك الآن إن أردت إيقاف تصحيح أخطاء USB على التلفاز. وستحتاج إلى تفعيله مرة أخرى لتثبيت إصدار جديد.';
+
+  @override
+  String get tvInstallDone => 'تم';
+
+  @override
+  String get tvInstallBrandFallback => 'تلفاز';
+
+  @override
+  String get tvGuideA1Title => 'افتح الإعدادات على التلفاز';
+
+  @override
+  String get tvGuideA1Body =>
+      'اضغط زر الترس (الإعدادات) على ريموت التلفاز. وإن لم يكن في الريموت فاختر أيقونة الترس أعلى يمين الشاشة الرئيسية.';
+
+  @override
+  String get tvGuideA1Different =>
+      'في Google TV (طرازات Sony وTCL وPhilips وXiaomi الحديثة) اختر صورة الحساب أو الترس أعلى اليمين، ثم ادخل \"الإعدادات\".';
+
+  @override
+  String get tvGuideA2Title => 'ادخل شاشة \"حول\"';
+
+  @override
+  String get tvGuideA2Body =>
+      'Android TV: الإعدادات › تفضيلات الجهاز › حول.\nGoogle TV: الإعدادات › النظام › حول.';
+
+  @override
+  String get tvGuideA2Different =>
+      'Philips: الإعدادات › إعدادات Android › تفضيلات الجهاز › حول.\nSony: الإعدادات › النظام › حول (وفي الطرازات القديمة تفضيلات الجهاز › حول).\nTCL وXiaomi: الإعدادات › النظام › حول أو تفضيلات الجهاز › حول.\nوإن لم تجده فاكتب \"حول\" في بحث الإعدادات إن وُجد.';
+
+  @override
+  String get tvGuideA3Title => 'اضغط سطر الإصدار 7 مرات';
+
+  @override
+  String get tvGuideA3Body =>
+      'اختر سطر \"إصدار نظام Android TV OS\" أسفل القائمة واضغط زر OK في الريموت 7 مرات متتالية. ستظهر رسالة \"أنت الآن مطوّر\".';
+
+  @override
+  String get tvGuideA3Different =>
+      'قد يكون اسم السطر \"رقم الإصدار\" أو \"حزمة البناء\" أو \"Build\" حسب الطراز. وإن طلب التلفاز رمز PIN فأدخل رمز قفل التلفاز. وإن ظهر \"أنت مطوّر بالفعل\" فقد تمّت هذه الخطوة.';
+
+  @override
+  String get tvGuideA4Title => 'افتح خيارات المطوّر';
+
+  @override
+  String get tvGuideA4Body =>
+      'ارجع شاشة واحدة بزر الرجوع. سيظهر سطر جديد باسم \"خيارات المطوّر\" تحت تفضيلات الجهاز في Android TV وتحت النظام في Google TV؛ ادخله.';
+
+  @override
+  String get tvGuideA4Different =>
+      'إن لم ترَ السطر فاخرج من الإعدادات تمامًا ثم ادخل من جديد. وإن بقي غير موجود فأعد الضغط 7 مرات في الخطوة السابقة.';
+
+  @override
+  String get tvGuideA5Title => 'فعّل \"تصحيح أخطاء USB\"';
+
+  @override
+  String get tvGuideA5Body =>
+      'ابحث عن \"تصحيح أخطاء USB\" في قائمة خيارات المطوّر وفعّله؛ واختر \"موافق\" في التحذير. وإن وُجد في القائمة \"تصحيح الأخطاء عبر الشبكة\" أو \"ADB عبر الشبكة\" ففعّله أيضًا.\n\nعند تشغيل التلفاز يتحوّل هذا إلى الأخضر تلقائيًا.';
+
+  @override
+  String get tvGuideA5Different =>
+      'قد يكون اسم الخيار \"تصحيح الأخطاء (ADB)\" أو \"USB debugging\". الطرازات التي لا تتيح إلا \"التصحيح اللاسلكي\" وتطلب رمز اقتران (مثل Google TV Streamer) لا يمكن التثبيت عليها من الهاتف بعد؛ استخدم فيها طريق فلاش USB المذكور في الدليل.';
+
+  @override
+  String get tvGuideL1Title => 'أنشئ حساب مطوّر LG مجانيًا';
+
+  @override
+  String get tvGuideL1Body =>
+      'افتح العنوان أدناه في متصفح الهاتف، ثم اختر \"SIGN IN\" أعلى اليمين، وبعدها \"Create Account\" لإنشاء حساب مجاني. وستكتب بريدك وكلمة مرورك على التلفاز في الخطوة التالية.';
+
+  @override
+  String get tvGuideL1Different =>
+      'إن كان لديك حساب LG (مثل LG ThinQ) فيمكنك الدخول بالبريد وكلمة المرور نفسيهما؛ وتجاوز هذه الخطوة.';
+
+  @override
+  String get tvGuideL2Title => 'ثبّت تطبيق \"Developer Mode\" على التلفاز';
+
+  @override
+  String get tvGuideL2Body =>
+      'افتح LG Content Store (التطبيقات) على التلفاز، واكتب \"Developer Mode\" في مربع البحث، وثبّت التطبيق.';
+
+  @override
+  String get tvGuideL2Different =>
+      'إن لم يُفتح المتجر فتأكد من اتصال التلفاز بالإنترنت. وفي الطرازات القديمة يكون اسم المتجر \"LG Store\" أو \"التطبيقات\". يظهر التطبيق بالإنجليزية.';
+
+  @override
+  String get tvGuideL3Title => 'سجّل الدخول وفعّل \"Dev Mode Status\"';
+
+  @override
+  String get tvGuideL3Body =>
+      'افتح تطبيق Developer Mode وسجّل الدخول ببريد حساب LG وكلمة مروره. ثم فعّل مفتاح \"Dev Mode Status\". يعيد التلفاز التشغيل بنفسه؛ فانتظر حتى يعود.\n\nعند تفعيل وضع المطوّر يتحوّل هذا إلى الأخضر تلقائيًا.';
+
+  @override
+  String get tvGuideL3Different =>
+      'إن كان \"Dev Mode Status\" رماديًا وغير قابل للاختيار فلم تسجّل الدخول بعد. وإن قال الدخول \"Login failed\" فتأكد من توثيق بريد حسابك.';
+
+  @override
+  String get tvGuideL4Title => 'فعّل \"Key Server\"';
+
+  @override
+  String get tvGuideL4Body =>
+      'بعد عودة التلفاز للعمل افتح تطبيق Developer Mode مرة أخرى وفعّل مفتاح \"Key Server\". واترك التطبيق على الشاشة؛ فإن أغلقته يُغلق خادم المفاتيح أيضًا.\n\nعند تفعيل خادم المفاتيح يتحوّل هذا إلى الأخضر تلقائيًا.';
+
+  @override
+  String get tvGuideL4Different =>
+      'تظهر أسفل يسار الشاشة كلمة \"Passphrase\" من 6 أحرف؛ وستكتبها في الخطوة التالية.';
+
+  @override
+  String get tvErrUnreachableAndroidTitle => 'التلفاز لم يستجب';
+
+  @override
+  String get tvErrUnreachableAndroidFix =>
+      'هل التلفاز مشتغل وعلى شبكة Wi-Fi نفسها التي عليها الهاتف؟ يجب أن يكون \"تصحيح أخطاء USB\" مفعّلًا في خيارات المطوّر. وفي بعض التلفازات يُطفأ هذا الإعداد عند إعادة التشغيل؛ ففعّله وأعد المحاولة.';
+
+  @override
+  String get tvErrUnreachableLgTitle => 'التلفاز لم يستجب';
+
+  @override
+  String get tvErrUnreachableLgFix =>
+      'هل التلفاز مشتغل وعلى شبكة Wi-Fi نفسها التي عليها الهاتف؟ يجب أن يكون \"Dev Mode Status\" مفعّلًا في تطبيق Developer Mode؛ وبعد تفعيله يعيد التلفاز التشغيل، فانتظر حتى يعود.';
+
+  @override
+  String get tvErrKeyServerOffTitle => 'خادم المفاتيح مغلق';
+
+  @override
+  String get tvErrKeyServerOffFix =>
+      'افتح تطبيق Developer Mode على التلفاز، وفعّل \"Key Server\"، واترك التطبيق على الشاشة. ثم أعد المحاولة.';
+
+  @override
+  String get tvErrWrongPassphraseTitle => 'كلمة المرور غير صحيحة';
+
+  @override
+  String get tvErrWrongPassphraseFix =>
+      'اكتب مرة أخرى الأحرف الستة الظاهرة باسم \"Passphrase\" أسفل يسار تطبيق Developer Mode على شاشة التلفاز. قد يلتبس 0 (صفر) بحرف O، و1 بحرف I.';
+
+  @override
+  String get tvErrKeyRefusedTitle => 'التلفاز رفض المفتاح';
+
+  @override
+  String get tvErrKeyRefusedFix =>
+      'إن أُغلق وضع المطوّر ثم فُتح فسيُنشئ التلفاز مفتاحًا جديدًا. فعّل خادم المفاتيح واكتب كلمة المرور من جديد.';
+
+  @override
+  String get tvErrNotApprovedTitle => 'لم يُسمح على التلفاز';
+
+  @override
+  String get tvErrNotApprovedFix =>
+      'أعد المحاولة. وعند ظهور سؤال \"هل تسمح بتصحيح أخطاء USB؟\" على التلفاز علّم \"السماح دائمًا من هذا الحاسوب\" واختر \"السماح\". ينتظر السؤال على شاشة التلفاز نحو دقيقة ونصف.';
+
+  @override
+  String get tvErrNoSpaceTitle => 'لا توجد مساحة على التلفاز';
+
+  @override
+  String get tvErrNoSpaceFix =>
+      'احذف من التلفاز تطبيقًا لا تستخدمه وأعد المحاولة.';
+
+  @override
+  String get tvErrConnectionLostTitle => 'انقطع الاتصال';
+
+  @override
+  String get tvErrConnectionLostFix =>
+      'انقطع الاتصال بالتلفاز أثناء التثبيت. أبقِ شاشة الهاتف مفتوحة ومتصلة بـ Wi-Fi؛ وأعد المحاولة.';
+
+  @override
+  String get tvErrTooOldTitle => 'هذا التلفاز قديم جدًا';
+
+  @override
+  String get tvErrTooOldFix =>
+      'تطبيق GameTranslator للتلفاز لا يعمل على برنامج هذا التلفاز.';
+
+  @override
+  String get tvErrPackageMissingTitle => 'حزمة التلفاز غير موجودة';
+
+  @override
+  String get tvErrPackageMissingFix =>
+      'حزمة التلفاز غير مضمنة في تطبيق الهاتف هذا. ثبّت أحدث إصدار من التطبيق.';
+
+  @override
+  String get tvErrCancelledTitle => 'أُوقف التثبيت';
+
+  @override
+  String get tvErrCancelledFix => 'يمكنك بدؤه من جديد عندما تكون جاهزًا.';
+
+  @override
+  String get tvErrGenericTitle => 'لم يتم تثبيت تطبيق التلفاز';
+
+  @override
+  String get tvErrGenericFix =>
+      'أعد المحاولة. وإعادة تشغيل التلفاز تصلح معظم عمليات التثبيت الناقصة. وإن استمرت المشكلة فأبلغنا مع نص \"ما قاله التلفاز\" أدناه.';
+
+  @override
+  String tvStageUploading(String percent) {
+    return 'يجري إرسال التطبيق إلى التلفاز… %$percent';
+  }
+
+  @override
+  String get tvStageConnecting => 'يجري الاتصال بالتلفاز…';
+
+  @override
+  String get tvStageApprove => 'بانتظار السماح على التلفاز…';
+
+  @override
+  String get tvStageChecking => 'يجري التحقق من الإصدار على التلفاز…';
+
+  @override
+  String get tvStageKey => 'يجري الحصول على مفتاح من التلفاز…';
+
+  @override
+  String get tvStageInstalling => 'يجري التثبيت على التلفاز…';
+
+  @override
+  String get tvStageVerifying => 'يجري التحقق من التثبيت…';
+
+  @override
+  String get tvStageLaunching => 'يجري الفتح على التلفاز…';
+
+  @override
+  String get tvStagePreparing => 'يجري التحضير…';
 }

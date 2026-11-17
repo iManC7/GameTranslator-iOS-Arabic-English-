@@ -477,5 +477,214 @@
         "type": "int"
       }
     }
-  }
+  },
+  "tvInstallTitle": "TV Uygulamasını Kur",
+  "tvInstallStepLabel": "ADIM {number} / 4",
+  "@tvInstallStepLabel": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "tvInstallBrandQuestion": "TV'nin markası ne?",
+  "tvInstallIntroBody": "Altyazıyı TV'de gösteren GameTranslator uygulamasını telefondan TV'ne kuracağız. Telefon ve TV aynı Wi-Fi ağında olsun.",
+  "tvInstallSavedHeader": "KAYITLI TV",
+  "tvInstallSavedSubtitle": "{host} · TV'de {version} · telefonda {phone}",
+  "@tvInstallSavedSubtitle": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      },
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "tvInstallUpdateAvailable": "Güncelleme var",
+  "tvInstallUpdate": "Güncelle",
+  "tvInstallReinstall": "Yeniden kur",
+  "tvInstallBrandHeader": "MARKA",
+  "tvInstallBrandAndroidSubtitle": "TCL, Sony, Philips, Xiaomi, Vestel, Arçelik, Beko, Grundig… Ana ekranda Google Play ya da \"Google TV\" yazar.",
+  "tvInstallBrandLgSubtitle": "webOS. Ana ekranda \"LG Content Store\" ve alt şeritte renkli uygulama kartları bulunur.",
+  "tvInstallBrandSamsungSubtitle": "Tizen, 2019 ve sonrası. Ana ekranda \"Samsung TV Plus\" ve \"Smart Hub\" bulunur.",
+  "tvInstallBrandFooter": "Emin değil misin? TV'nin Ayarlar › Destek (ya da Hakkında) ekranında model ve işletim sistemi yazar. Vestel/Arçelik/Beko/Grundig'in Linux modelleri, Philips Saphi ve Titan OS desteklenmiyor.",
+  "tvInstallSamsungStep": "Samsung: bilgisayardan kur",
+  "tvInstallSamsungNoticeTitle": "Samsung TV'ye kurulum şimdilik bilgisayardan",
+  "tvInstallSamsungNoticeText": "Samsung, uygulamanın her TV için Samsung hesabıyla ayrıca imzalanmasını istiyor. Telefondan kurulum henüz hazır değil; bilgisayardaki GameTranslator bunu kendisi yapar. Kurulum bir kez yapılır, sonra bilgisayar gerekmez.",
+  "tvInstallSamsungStepsTitle": "Kısaca adımlar",
+  "tvInstallSamsungStep1": "TV'de Uygulamalar ekranını aç, kumandayla 1 2 3 4 5 tuşlarına bas.",
+  "tvInstallSamsungStep2": "\"Developer mode\"u \"On\" yap, \"Host PC IP\" alanına BİLGİSAYARIN adresini yaz, OK'e bas.",
+  "tvInstallSamsungStep3": "TV'yi güç tuşunu basılı tutarak tam kapatıp aç.",
+  "tvInstallSamsungStep4": "Bilgisayarda GameTranslator'ın TV adımında Samsung TV'ni seç ve açılan sayfada Samsung hesabınla giriş yap.",
+  "tvInstallShowDetailed": "Rehberde ayrıntılı göster",
+  "tvInstallOtherBrand": "Başka marka seç",
+  "tvInstallFindStep": "TV'ni bul",
+  "tvInstallFindBodyAndroid": "Ağda hata ayıklaması açık Android TV'ler aranıyor. Hata ayıklamayı henüz açmadıysan TV burada görünmez; sorun değil, \"Adımları göster\" ile devam et.",
+  "tvInstallFindBodyLg": "Telefonla aynı ağdaki LG TV'ler aranıyor. TV açık olsun.",
+  "tvInstallSearchingHeader": "ARANIYOR…",
+  "tvInstallFoundHeader": "BULUNAN TV'LER",
+  "tvInstallScanning": "Ağ taranıyor, birkaç saniye sürer…",
+  "tvInstallNotFound": "TV bulunamadı",
+  "tvInstallNotSearched": "Henüz aranmadı",
+  "tvInstallNotSearchedNote": "Yenile'ye dokun ya da adresi elle yaz.",
+  "tvInstallReady": "Hazır",
+  "tvInstallRefresh": "Yenile",
+  "tvInstallManualHeader": "ADRESİ ELLE YAZ",
+  "tvInstallIpHint": "ör. 192.168.1.40",
+  "tvInstallUseAddress": "Bu adresi kullan",
+  "tvInstallAddressFooterAndroid": "TV'nin adresi: Ayarlar › Ağ ve İnternet › bağlı olduğun Wi-Fi ağının adı (Google TV: Ayarlar › Ağ ve İnternet).",
+  "tvInstallAddressFooterLg": "TV'nin adresi: Ayarlar › Genel › Ağ › Wi-Fi Bağlantısı › Gelişmiş Wi-Fi Ayarları (modele göre Ayarlar › Ağ).",
+  "tvInstallSameSubnet": "Telefonun adresi {phone}; TV'ninki ilk üç bölümde aynı olmalı.",
+  "@tvInstallSameSubnet": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "tvInstallShowSteps": "Adımları göster",
+  "tvInstallIpError": "Bu bir IP adresine benzemiyor. Örnek: 192.168.1.40",
+  "tvInstallDebugStep": "Hata ayıklamayı aç",
+  "tvInstallDevModeStep": "Geliştirici modunu aç",
+  "tvInstallStepCounter": "{index}. adım, toplam {total}",
+  "@tvInstallStepCounter": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "tvInstallCopy": "Kopyala",
+  "tvInstallCopied": "Adres kopyalandı",
+  "tvInstallKeyServerOn": "Key Server açık. Devam edebilirsin.",
+  "tvInstallDeviceReady": "TV hazır. Devam edebilirsin.",
+  "tvInstallSearchingTv": "TV ağda aranıyor…",
+  "tvInstallWaitingTv": "TV bekleniyor ({host})…",
+  "@tvInstallWaitingTv": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      }
+    }
+  },
+  "tvInstallDifferentMenu": "Menü farklı görünüyorsa",
+  "tvInstallDidIt": "Bunu yaptım",
+  "tvInstallGoInstall": "Kuruluma geç",
+  "tvInstallWaitingFooter": "TV ağda görünene kadar bekleniyor. Görünmüyorsa geri dönüp TV'nin adresini elle yaz.",
+  "tvInstallInstallStep": "Kur",
+  "tvInstallVersionToInstall": "Kurulacak sürüm",
+  "tvInstallPassHeader": "TV EKRANINDAKİ PAROLA",
+  "tvInstallPassHint": "ör. 2FEEB2",
+  "tvInstallPassFooter": "Developer Mode uygulamasında Key Server açıkken ekranın sol altında \"Passphrase\" olarak görünen 6 karakter. Yalnız bu ilk kurulumda sorulur.",
+  "tvInstallApproveTitle": "TV'de bir soru çıkacak",
+  "tvInstallApproveText": "\"USB hata ayıklamaya izin verilsin mi?\" sorusunda \"Bu bilgisayardan her zaman izin ver\"i işaretle ve \"İzin ver\"i seç. Soru yalnız ilk kurulumda çıkar.",
+  "tvInstallLookAtTvTitle": "Şimdi TV'ye bak",
+  "tvInstallLookAtTvText": "TV \"USB hata ayıklamaya izin verilsin mi?\" diye soruyor. \"Bu bilgisayardan her zaman izin ver\"i işaretle ve \"İzin ver\"i seç. Kurulum sonra kendiliğinden sürer.",
+  "tvInstallKeepScreenOn": "Telefonun ekranını açık tut. Kurulum genellikle bir dakikadan kısa sürer.",
+  "tvInstallTvSaid": "TV'nin söylediği",
+  "tvInstallStop": "Durdur",
+  "tvInstallInstallButton": "TV'ye kur",
+  "tvInstallRetry": "Tekrar dene",
+  "tvInstallBackToSteps": "Adımlara dön",
+  "tvInstallInstalled": "TV uygulaması kuruldu",
+  "tvInstallAlreadyCurrent": "TV uygulaması zaten güncel",
+  "tvInstallVersionLabel": "Sürüm {version}",
+  "@tvInstallVersionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "tvInstallLaunchedTitle": "TV'de GameTranslator açıldı",
+  "tvInstallOpenOnTvTitle": "TV'de GameTranslator'ı aç",
+  "tvInstallLaunchedText": "Çeviriyi telefonda başlattığında TV uygulaması telefonu ağda kendisi bulur.",
+  "tvInstallOpenOnTvText": "TV'nin uygulamalar listesinde GameTranslator'ı bul ve aç. Çeviriyi başlattığında telefonu kendisi bulur.",
+  "tvInstallLgHoursTitle": "LG geliştirici modu süresi",
+  "tvInstallHoursLeft": "Kalan süre: {hours} saat.",
+  "@tvInstallHoursLeft": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "tvInstallLgHoursText": "Süre dolarsa TV uygulaması silinir. Uzun süre kullanmayacaksan TV'deki Developer Mode uygulamasında \"EXTEND\"e bas; bu sayfadan yeniden kurmak da süreyi uzatır.",
+  "tvInstallAndroidNote": "İstersen artık TV'de USB hata ayıklamayı kapatabilirsin. Yeni bir sürümü kurmak için yeniden açman gerekir.",
+  "tvInstallDone": "Bitti",
+  "tvInstallBrandFallback": "TV",
+  "tvGuideA1Title": "TV'de Ayarlar'ı aç",
+  "tvGuideA1Body": "TV kumandasındaki dişli (Ayarlar) tuşuna bas. Kumandada yoksa ana ekranın sağ üstündeki dişli simgesini seç.",
+  "tvGuideA1Different": "Google TV'de (yeni Sony, TCL, Philips, Xiaomi modelleri) sağ üstteki profil resmini ya da dişliyi seç, sonra \"Ayarlar\"a gir.",
+  "tvGuideA2Title": "\"Hakkında\" ekranına gir",
+  "tvGuideA2Body": "Android TV: Ayarlar › Cihaz Tercihleri › Hakkında.\nGoogle TV: Ayarlar › Sistem › Hakkında.",
+  "tvGuideA2Different": "Philips: Ayarlar › Android Ayarları › Cihaz Tercihleri › Hakkında.\nSony: Ayarlar › Sistem › Hakkında (eski modellerde Cihaz Tercihleri › Hakkında).\nTCL ve Xiaomi: Ayarlar › Sistem › Hakkında ya da Cihaz Tercihleri › Hakkında.\nBulamazsan ayarlarda arama varsa \"Hakkında\" yaz.",
+  "tvGuideA3Title": "Yapı satırına 7 kez bas",
+  "tvGuideA3Body": "Listenin altındaki \"Android TV OS yapısı\" satırını seç ve kumandanın Tamam tuşuna art arda 7 kez bas. \"Artık bir geliştiricisiniz\" yazısı çıkar.",
+  "tvGuideA3Different": "Satırın adı modele göre \"Yapı numarası\", \"Derleme\" ya da \"Build\" olabilir. TV PIN isterse TV'nin kilit PIN'ini gir. \"Zaten geliştiricisiniz\" yazıyorsa bu adım tamam.",
+  "tvGuideA4Title": "Geliştirici seçenekleri'ni aç",
+  "tvGuideA4Body": "Geri tuşuyla bir ekran geri dön. Android TV'de Cihaz Tercihleri, Google TV'de Sistem altında yeni bir \"Geliştirici seçenekleri\" satırı belirdi; ona gir.",
+  "tvGuideA4Different": "Satırı göremiyorsan Ayarlar'dan tamamen çıkıp yeniden gir. Hâlâ yoksa önceki adımda 7 kez basmayı yinele.",
+  "tvGuideA5Title": "\"USB hata ayıklama\"yı aç",
+  "tvGuideA5Body": "Geliştirici seçenekleri listesinde \"USB hata ayıklama\"yı bul ve aç; çıkan uyarıda \"Tamam\"ı seç. Listede \"Ağ üzerinden hata ayıklama\" ya da \"ADB ağ hata ayıklama\" varsa onu da aç.\n\nTV açıldığında burası kendiliğinden yeşile döner.",
+  "tvGuideA5Different": "Seçeneğin adı \"Hata ayıklama (ADB)\" ya da İngilizce \"USB debugging\" olabilir. Yalnız \"Kablosuz hata ayıklama\" olup eşleştirme kodu isteyen modeller (ör. Google TV Streamer) telefondan henüz kurulamıyor; bunlarda Rehber'deki USB bellek yolunu kullan.",
+  "tvGuideL1Title": "Ücretsiz LG geliştirici hesabı aç",
+  "tvGuideL1Body": "Telefonun tarayıcısında aşağıdaki adrese gir, sağ üstten \"SIGN IN\", sonra \"Create Account\" ile ücretsiz hesap aç. E-postanı ve şifreni bir sonraki adımda TV'de yazacaksın.",
+  "tvGuideL1Different": "LG hesabın zaten varsa (ör. LG ThinQ) aynı e-posta ve şifreyle giriş yapabilirsin; bu adımı geç.",
+  "tvGuideL2Title": "TV'ye \"Developer Mode\" uygulamasını kur",
+  "tvGuideL2Body": "TV'de LG Content Store'u (Uygulamalar) aç, arama kutusuna \"Developer Mode\" yaz ve uygulamayı yükle.",
+  "tvGuideL2Different": "Mağaza açılmıyorsa TV internete bağlı mı kontrol et. Eski modellerde mağazanın adı \"LG Store\" ya da \"Uygulamalar\"dır. Uygulama ekranda İngilizce görünür.",
+  "tvGuideL3Title": "Giriş yap ve \"Dev Mode Status\"u aç",
+  "tvGuideL3Body": "Developer Mode uygulamasını aç, LG hesabının e-postası ve şifresiyle giriş yap. \"Dev Mode Status\" anahtarını aç. TV kendiliğinden yeniden başlar; açılmasını bekle.\n\nGeliştirici modu açıldığında burası kendiliğinden yeşile döner.",
+  "tvGuideL3Different": "\"Dev Mode Status\" gri ve seçilemiyorsa önce giriş yapılmamıştır. Giriş \"Login failed\" diyorsa hesabının e-postasını doğruladığından emin ol.",
+  "tvGuideL4Title": "\"Key Server\"ı aç",
+  "tvGuideL4Body": "TV açıldıktan sonra Developer Mode uygulamasını yeniden aç ve \"Key Server\" anahtarını aç. Uygulamayı ekranda bırak; kapatırsan Key Server da kapanır.\n\nKey Server açıldığında burası kendiliğinden yeşile döner.",
+  "tvGuideL4Different": "Ekranın sol altında 6 karakterlik \"Passphrase\" görünür; bir sonraki adımda onu yazacaksın.",
+  "tvErrUnreachableAndroidTitle": "TV yanıt vermedi",
+  "tvErrUnreachableAndroidFix": "TV açık mı ve telefonla aynı Wi-Fi ağında mı? Geliştirici seçeneklerinde \"USB hata ayıklama\" açık olmalı. Bazı TV'lerde bu ayar TV yeniden başlayınca kapanır; açıp yeniden dene.",
+  "tvErrUnreachableLgTitle": "TV yanıt vermedi",
+  "tvErrUnreachableLgFix": "TV açık mı ve telefonla aynı Wi-Fi ağında mı? Developer Mode uygulamasında \"Dev Mode Status\" açık olmalı; açtıktan sonra TV yeniden başlar, açılmasını bekle.",
+  "tvErrKeyServerOffTitle": "Key Server kapalı",
+  "tvErrKeyServerOffFix": "TV'de Developer Mode uygulamasını aç, \"Key Server\"ı aç ve uygulamayı ekranda bırak. Sonra yeniden dene.",
+  "tvErrWrongPassphraseTitle": "Parola doğru değil",
+  "tvErrWrongPassphraseFix": "TV ekranında Developer Mode uygulamasının sol altındaki 6 karakterlik \"Passphrase\"i yeniden yaz. 0 (sıfır) ile O harfi, 1 ile I harfi karışabilir.",
+  "tvErrKeyRefusedTitle": "TV anahtarı kabul etmedi",
+  "tvErrKeyRefusedFix": "Geliştirici modu kapatılıp açıldıysa TV yeni bir anahtar üretir. Key Server'ı açıp parolayı yeniden yaz.",
+  "tvErrNotApprovedTitle": "TV'de izin verilmedi",
+  "tvErrNotApprovedFix": "Yeniden dene. TV'de \"USB hata ayıklamaya izin verilsin mi?\" sorusu çıkınca \"Bu bilgisayardan her zaman izin ver\"i işaretleyip \"İzin ver\"i seç. Soru TV ekranında yaklaşık bir buçuk dakika bekler.",
+  "tvErrNoSpaceTitle": "TV'de yer kalmamış",
+  "tvErrNoSpaceFix": "TV'den kullanmadığın bir uygulamayı kaldır ve yeniden dene.",
+  "tvErrConnectionLostTitle": "Bağlantı koptu",
+  "tvErrConnectionLostFix": "Kurulum sırasında TV ile bağlantı kesildi. Telefonun ekranı açık ve Wi-Fi'ye bağlı kalsın; yeniden dene.",
+  "tvErrTooOldTitle": "Bu TV çok eski",
+  "tvErrTooOldFix": "GameTranslator TV uygulaması bu TV'nin yazılımında çalışmıyor.",
+  "tvErrPackageMissingTitle": "TV paketi bulunamadı",
+  "tvErrPackageMissingFix": "Bu telefon uygulamasının içinde TV paketi yok. Uygulamanın son sürümünü kur.",
+  "tvErrCancelledTitle": "Kurulum durduruldu",
+  "tvErrCancelledFix": "Hazır olduğunda yeniden başlatabilirsin.",
+  "tvErrGenericTitle": "TV uygulaması kurulamadı",
+  "tvErrGenericFix": "Yeniden dene. TV'yi kapatıp açmak yarım kalan kurulumların çoğunu düzeltir. Yine olmazsa aşağıdaki \"TV'nin söylediği\" yazısıyla birlikte bize bildir.",
+  "tvStageUploading": "Uygulama TV'ye gönderiliyor… %{percent}",
+  "@tvStageUploading": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "tvStageConnecting": "TV'ye bağlanılıyor…",
+  "tvStageApprove": "TV'de izin bekleniyor…",
+  "tvStageChecking": "TV'deki sürüme bakılıyor…",
+  "tvStageKey": "TV'den anahtar alınıyor…",
+  "tvStageInstalling": "TV'ye kuruluyor…",
+  "tvStageVerifying": "Kurulum doğrulanıyor…",
+  "tvStageLaunching": "TV'de açılıyor…",
+  "tvStagePreparing": "Hazırlanıyor…"
 }

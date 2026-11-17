@@ -89,8 +89,8 @@ class Glass extends StatelessWidget {
         gradient: color == null
             ? Tokens.glassFill
             : LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+                begin: AlignmentDirectional.topStart,
+                end: AlignmentDirectional.bottomEnd,
                 colors: [color.withValues(alpha: 0.40), color.withValues(alpha: 0.18)],
               ),
         border: Border.all(color: color == null ? Tokens.border : color.withValues(alpha: 0.55), width: 0.8),

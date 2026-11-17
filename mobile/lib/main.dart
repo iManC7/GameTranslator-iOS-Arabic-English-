@@ -65,8 +65,8 @@ class Tokens {
 
   /// Cam kartların dolgusu: sol üstte ışık alan, sağ alta doğru saydamlaşan beyaz.
   static const glassFill = LinearGradient(
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
+    begin: AlignmentDirectional.topStart,
+    end: AlignmentDirectional.bottomEnd,
     colors: [Color(0x2BFFFFFF), Color(0x12FFFFFF)],
   );
 }

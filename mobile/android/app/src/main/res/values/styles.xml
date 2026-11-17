@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Uygulama her zaman koyu temadadır. Açılışta (Flutter ilk kareyi çizene kadar) logo gösterilir. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:statusBarColor">@color/gt_background</item>
+        <item name="android:navigationBarColor">@color/gt_background</item>
+    </style>
+    <!-- Flutter çizmeye başladıktan sonra pencerenin zemini: beyaz parlama olmasın. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/gt_background</item>
+        <item name="android:statusBarColor">@color/gt_background</item>
+        <item name="android:navigationBarColor">@color/gt_background</item>
+    </style>
+</resources>

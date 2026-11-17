@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// libchiaki (PS5 Remote Play) bağlantısı. Kütüphane ios-port dalındaki mobile/ios-native/build.sh ile derlenir;
+// mobile/ios/scripts/fetch-libchiaki.sh hazır derlemeyi GitHub Actions'tan work/libchiaki-ios altına indirir.
+// Yalnız gerçek cihaz (arm64, iphoneos) için derlidir; simülatör desteklenmez.
+// iPhone sürümünün numarası. pubspec.yaml'daki sürüm Android ile ortaktır (1.0.0); iOS sürümü TV uygulamasının sürümünü
+// izler (yayıncının v1.6.0 sürümündeki TV 1.0.6). Generated.xcconfig'ten sonra okunduğu için onu geçersiz kılar.
+FLUTTER_BUILD_NAME = 1.0.6
+FLUTTER_BUILD_NUMBER = 6
+
+GT_CHIAKI_DIR = $(SRCROOT)/../../work/libchiaki-ios
+HEADER_SEARCH_PATHS = $(inherited) "$(GT_CHIAKI_DIR)/include"
+LIBRARY_SEARCH_PATHS = $(inherited) "$(GT_CHIAKI_DIR)/lib"
+OTHER_LDFLAGS = $(inherited) -lgtchiaki_ios -framework SystemConfiguration -framework CoreServices -framework VideoToolbox -framework CoreMedia -framework CoreVideo
+
+// İmzalı derleme (Xcode'dan telefona yükleme) için kendi Apple ekip numaranızı depoya girmeyen Local.xcconfig'e yazın:
+//   DEVELOPMENT_TEAM = ABCDE12345
+// GitHub Actions ve Feather gibi araçlarla dağıtılan IPA imzasız derlenir; ekip numarası gerekmez.
+#include? "Local.xcconfig"

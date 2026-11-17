@@ -1,0 +1,36 @@
+{
+  "name": "GameTranslator iOS",
+  "identifier": "com.gametranslator.ios-source",
+  "subtitle": "GameTranslator iPhone sürümü (resmî değil)",
+  "description": "GameTranslator'ın yalnızca iPhone derlemeleri. Asıl proje: gitlab.com/sefflex/GameTranslator",
+  "iconURL": "https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/ios-app/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png",
+  "website": "https://github.com/SimonPetrus/GameTranslator-iOS",
+  "apps": [
+    {
+      "name": "GameTranslator",
+      "bundleIdentifier": "com.gametranslator.gametranslatorMobile",
+      "developerName": "Sefflex, CouchSubs, topluluk (resmî olmayan iPhone sürümü)",
+      "subtitle": "PS5 oyun altyazılarını Türkçeye çevirir",
+      "localizedDescription": "PS5 oyunlarının altyazısını iPhone'da okuyup çevirir ve TV'deki GameTranslator uygulamasına gönderir. Görüntü HDMI'da kalır. Resmî olmayan iPhone sürümüdür; AGPL-3.0.",
+      "iconURL": "https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/ios-app/mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png",
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/ios-app/docs/ios-screenshots/01-ana-ekran.png",
+        "https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/ios-app/docs/ios-screenshots/02-rehber.png",
+        "https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/ios-app/docs/ios-screenshots/03-ayarlar-ceviri.png",
+        "https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/ios-app/docs/ios-screenshots/04-ayarlar-motor.png",
+        "https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/ios-app/docs/ios-screenshots/05-ayarlar-altyazi.png",
+        "https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/ios-app/docs/ios-screenshots/06-ayarlar-tv.png",
+        "https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/ios-app/docs/ios-screenshots/07-ayarlar-ps5.png"
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "Aynı Wi-Fi ağındaki PS5 ve TV ile konuşmak için yerel ağı kullanır."
+        }
+      },
+      "versions": []
+    }
+  ],
+  "news": []
+}

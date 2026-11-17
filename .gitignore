@@ -1,0 +1,35 @@
+# Build & OS artifacts
+.DS_Store
+._*
+build/
+.build/
+/dist/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+mac/GameTranslator.xcodeproj/
+mac/GameTranslatorBinary
+/bin/
+/obj/
+scripts/bin/*.exe
+
+# Archives & Temporary files
+*.zip
+*.tar.gz
+*.log
+*.txt
+chiaki/
+dotnet-install.ps1
+
+# IDE & Agent local settings
+.gemini/
+.appdata/
+.dotnet_cli/
+Releases/
+test_*.cs
+couchsubs*
+*.tmp
+*.jpg
+
+# Mobil derleme için klonlanan chiaki-ng kaynakları
+third-party/chiaki-ng/
+!mobile/assets/*.jpg

@@ -1,0 +1,64 @@
+name: Windows Build & Release
+
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            10.0.x
+            9.0.x
+            8.0.x
+          dotnet-quality: 'preview'
+
+      - name: Build and Publish Self-Contained Windows App
+        shell: pwsh
+        run: |
+          dotnet publish windows/src/GameTranslator.App/GameTranslator.App.csproj -c Release -r win-x64 --self-contained -o release-win
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+          Write-Host "Downloading Chiaki-ng Windows Portable (PS5 Support)..."
+          curl.exe -s -L "https://github.com/chiaki-ng/chiaki-ng/releases/download/v1.10.1/chiaki-ng-win_x64-MSYS2-portable-1.10.1.zip" -o chiaki.zip
+          Expand-Archive -Path "chiaki.zip" -DestinationPath "release-win/chiaki_temp" -Force
+          New-Item -ItemType Directory -Force -Path "release-win/chiaki"
+          Copy-Item -Path "release-win/chiaki_temp/chiaki-ng-Win/*" -Destination "release-win/chiaki" -Recurse -Force
+          Remove-Item -Path "release-win/chiaki_temp" -Recurse -Force
+          Remove-Item "chiaki.zip"
+
+          Write-Host "Unblocking all files to prevent Windows 11 Smart App Control 0xc0e90002..."
+          Get-ChildItem -Path "release-win" -Recurse | Unblock-File -ErrorAction SilentlyContinue
+
+          $batContent = "@echo off`r`nchcp 65001 >nul`r`ntitle GameTranslator`r`ncd /d `"%~dp0`"`r`npowershell -NoProfile -ExecutionPolicy Bypass -Command `"Get-ChildItem -Path '%~dp0' -Recurse | Unblock-File`" >nul 2>&1`r`nstart `"`" `"%~dp0GameTranslator.exe`""
+          [System.IO.File]::WriteAllText("$PWD/release-win/GameTranslator-Baslat.bat", $batContent)
+
+          Compress-Archive -Path release-win/* -DestinationPath GameTranslator-Windows-x64.zip
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GameTranslator-Windows-x64
+          path: GameTranslator-Windows-x64.zip
+
+      - name: Upload Windows Asset to GitHub Release
+        if: github.event_name == 'release' || github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.0
+          files: GameTranslator-Windows-x64.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

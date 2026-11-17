@@ -1,0 +1,14 @@
+GameTranslator
+
+Based on CouchSubs by Sinan Yorulmaz
+Copyright (C) 2026 Sinan Yorulmaz
+https://github.com/yorulmazsinan/couchsubs
+
+GameTranslator is a modified version of CouchSubs. It has been modified since
+2026-11-10 (renamed, user interface redesign, reading and translation changes,
+Android phone app, iPhone (iOS) app). The list of changes is in this repository's git history.
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License version 3 (see LICENSE).
+This notice and the license notices must be kept intact in copies and modified
+versions (AGPL-3.0, section 4 and 5).

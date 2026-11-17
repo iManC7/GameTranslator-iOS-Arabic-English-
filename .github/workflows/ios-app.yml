@@ -1,0 +1,97 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# iPhone uygulaması: çekirdek testleri (mobile/ios/CoreTests) ve imzasız IPA. IPA "GameTranslator-iOS" adlı artifact
+# olarak yüklenir; Feather gibi araçlarla kendi sertifikanızla imzalayıp kurun (docs/ios-kurulum.md).
+# "ios-v" ile başlayan bir etiket gönderilince (ör. ios-v1.0.6) IPA ve kurulum notu GitHub Releases'e de eklenir.
+# libchiaki, ios-port dalındaki "iOS native (libchiaki)" iş akışının son başarılı çıktısından indirilir
+# (mobile/ios/scripts/fetch-libchiaki.sh). O çıktının süresi dolarsa iş akışı ios-port dalında yeniden çalıştırılmalı.
+name: iOS app (IPA)
+
+on:
+  push:
+    branches: [ios-app]
+    tags: ['ios-v*']
+    paths:
+      - 'mobile/**'
+      - '!mobile/android/**'
+      - 'windows/src/GameTranslator.Core/Resources/packs/**'
+      - 'patches/**'
+      - 'core/Sources/GameTranslatorCore/Resources/obs-overlay.html'
+      - '.github/workflows/ios-app.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read # başka iş akışının (libchiaki) çıktısını indirmek için
+
+concurrency:
+  group: ios-app-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ipa:
+    runs-on: macos-26
+    permissions:
+      contents: write # Releases'e yüklemek için (yalnız etiketle)
+      actions: read
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Araç sürümleri
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+
+      - name: Çekirdek testleri
+        run: sh mobile/ios/CoreTests/run.sh
+
+      - name: libchiaki (ios-port çıktısı)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ./mobile/ios/scripts/fetch-libchiaki.sh
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: '3.50.0'
+          cache: true
+
+      - name: Flutter testleri
+        working-directory: mobile
+        run: |
+          flutter pub get
+          flutter analyze
+          flutter test
+
+      - name: İmzasız derleme
+        working-directory: mobile
+        run: flutter build ios --release --no-codesign
+
+      - name: IPA
+        run: |
+          VERSION="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' mobile/build/ios/iphoneos/Runner.app/Info.plist)"
+          mkdir -p out/Payload
+          cp -R mobile/build/ios/iphoneos/Runner.app out/Payload/
+          rm -rf out/Payload/Runner.app/_CodeSignature out/Payload/Runner.app/embedded.mobileprovision
+          (cd out && zip -qry "GameTranslator-iOS-$VERSION.ipa" Payload)
+          cp docs/ios-kurulum.md out/KURULUM.md
+          ls -la out
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: GameTranslator-iOS
+          path: |
+            out/*.ipa
+            out/KURULUM.md
+          if-no-files-found: error
+
+      - name: Releases
+        if: startsWith(github.ref, 'refs/tags/ios-v')
+        uses: softprops/action-gh-release@v2
+        with:
+          name: GameTranslator iOS ${{ github.ref_name }}
+          body_path: docs/ios-kurulum.md
+          make_latest: false
+          files: |
+            out/*.ipa
+            out/KURULUM.md

@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Mac uygulamasıyla ortak tek kaynaklar: tasarım değerleri ve metinler. -->
+    <EmbeddedResource Include="..\..\..\design\tokens.json" LogicalName="tokens.json" Condition="Exists('..\..\..\design\tokens.json')" />
+    <EmbeddedResource Include="..\..\..\mac\GameTranslator\Resources\Localizable.xcstrings" LogicalName="Localizable.xcstrings" Condition="Exists('..\..\..\mac\GameTranslator\Resources\Localizable.xcstrings')" />
+    <EmbeddedResource Include="Resources\obs-overlay.html" LogicalName="obs-overlay.html" Condition="Exists('Resources\obs-overlay.html')" />
+    <EmbeddedResource Include="Resources\ai-models.json" LogicalName="ai-models.json" Condition="Exists('Resources\ai-models.json')" />
+    <EmbeddedResource Include="Resources\packs\*.json.gz" LogicalName="packs/%(Filename)%(Extension)" />
+    <!-- Ücretsiz çevirinin terim sözlüğü (adlar ve oyun terimleri korunur); CouchSubs'ta gömülüydü, taşınırken düşmüştü. -->
+    <EmbeddedResource Include="Resources\glossary-en-tr.json" LogicalName="glossary-en-tr.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SSH.NET" Version="2026.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="GameTranslator.Core.Tests" />
+    <InternalsVisibleTo Include="GameTranslator.Translation.Tests" />
+  </ItemGroup>
+
+</Project>

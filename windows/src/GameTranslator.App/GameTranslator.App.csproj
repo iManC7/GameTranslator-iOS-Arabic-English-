@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>GameTranslator</AssemblyName>
+    <RootNamespace>GameTranslator.App</RootNamespace>
+    <ApplicationIcon>Assets\GameTranslator.ico</ApplicationIcon>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <Version>1.5.3</Version>
+    <AssemblyVersion>1.5.3.0</AssemblyVersion>
+    <FileVersion>1.5.3.0</FileVersion>
+    <!-- Velopack kurulum ve güncelleme kancaları WPF başlamadan çalışmalı (Program.Main). -->
+    <StartupObject>GameTranslator.App.Program</StartupObject>
+  </PropertyGroup>
+
+  <!-- Paket sunucusu (CouchSubs'ın, izinle): yeni ve düzeltilmiş paketler buradan iner (PackUpdater). Boş verilirse kapalı. -->
+  <PropertyGroup>
+    <GameTranslatorPacksUrl Condition="'$(GameTranslatorPacksUrl)' == ''">https://couchsubs-packs.enmera.workers.dev</GameTranslatorPacksUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyMetadata Include="GameTranslatorPacksUrl" Value="$(GameTranslatorPacksUrl)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3537.50" />
+    <PackageReference Include="Velopack" Version="1.2.161" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\logo.png" />
+    <!-- Yaygın İngilizce sözcükler (SCOWL/ESDB, Kevin Atkinson; izin metni THIRD-PARTY-NOTICES.md'de). -->
+    <EmbeddedResource Include="Assets\english-words.txt.gz" LogicalName="GameTranslator.App.Assets.english-words.txt.gz" />
+    <!-- ShellWindow.xaml pencere simgesi olarak bunu okur; ApplicationIcon yalnız exe simgesidir. -->
+    <Resource Include="Assets\GameTranslator.ico" />
+    <!-- Inter (SIL Open Font License 1.1; Assets\Fonts\Inter-LICENSE): mobil uygulamayla aynı yazı tipi. -->
+    <Resource Include="Assets\Fonts\*.ttf" />
+  </ItemGroup>
+
+  <!-- TV uygulaması paketleri: dist/tv-app ve tv/packages altındaki paketleri tv-app/ klasörüne kopyalar -->
+  <ItemGroup>
+    <Content Include="..\..\..\dist\tv-app\*.ipk;..\..\..\dist\tv-app\*.wgt;..\..\..\dist\tv-app\*.apk;..\..\..\tv\packages\*.ipk;..\..\..\tv\packages\*.wgt;..\..\..\tv\packages\*.apk" Link="tv-app\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- PS5 Otomatik Eşleştirme Yardımcıları (Node.js & playactor betiği) -->
+  <ItemGroup>
+    <Content Include="..\..\..\scripts\bin\node.exe" Link="helpers\node.exe" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Condition="Exists('..\..\..\scripts\bin\node.exe')" />
+    <Content Include="..\..\..\scripts\ps5-register.js" Link="helpers\ps5-register.js" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Condition="Exists('..\..\..\scripts\ps5-register.js')" />
+    <Content Include="..\..\..\scripts\ps5-register\node_modules\**\*" Link="helpers\ps5-register\node_modules\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Condition="Exists('..\..\..\scripts\ps5-register\node_modules')" />
+  </ItemGroup>
+
+  <!-- Chiaki Taşınabilir Remote Play Motoru -->
+  <ItemGroup>
+    <Content Include="..\..\..\chiaki\**\*" Link="chiaki\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameTranslator.Core\GameTranslator.Core.csproj" />
+    <ProjectReference Include="..\GameTranslator.Translation\GameTranslator.Translation.csproj" />
+    <ProjectReference Include="..\GameTranslator.RemotePlay\GameTranslator.RemotePlay.csproj" />
+    <ProjectReference Include="..\GameTranslator.Shell\GameTranslator.Shell.csproj" />
+    <ProjectReference Include="..\GameTranslator.TvInstall\GameTranslator.TvInstall.csproj" />
+  </ItemGroup>
+
+</Project>

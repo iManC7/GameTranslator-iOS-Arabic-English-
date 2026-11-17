@@ -1,0 +1,104 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Feather kaynağını (feather-source dalındaki source.json) bir iOS yayınından günceller.
+# Kaynak URL'si: https://raw.githubusercontent.com/SimonPetrus/GameTranslator-iOS/feather-source/source.json
+# Not: GITHUB_TOKEN ile oluşan bir Release "release: published" olayını tetiklemez; bu yüzden etiketle çalışan
+# "iOS app (IPA)" iş akışı bitince de (workflow_run) çalışır. İkisi de aynı sürümü bir kez ekler.
+name: Feather source
+
+on:
+  release:
+    types: [published]
+  workflow_run:
+    workflows: ['iOS app (IPA)']
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Yayın etiketi (ör. ios-v1.0.6)'
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feather-source
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Etiketi belirle
+        id: tag
+        env:
+          EV: ${{ github.event_name }}
+          INPUT: ${{ github.event.inputs.tag }}
+          REL: ${{ github.event.release.tag_name }}
+          RUN_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          RUN_OK: ${{ github.event.workflow_run.conclusion }}
+        run: |
+          T=""
+          case "$EV" in
+            workflow_dispatch) T="$INPUT" ;;
+            release) T="$REL" ;;
+            workflow_run) if [ "$RUN_OK" = success ]; then T="$RUN_BRANCH"; fi ;;
+          esac
+          case "$T" in
+            ios-v*) echo "tag=$T" >> "$GITHUB_OUTPUT" ;;
+            *) echo "ios-v* etiketi degil, atlandi: '$T'" ;;
+          esac
+
+      - uses: actions/checkout@v7
+        if: steps.tag.outputs.tag != ''
+        with:
+          ref: ios-app
+
+      - name: Yayini indir
+        if: steps.tag.outputs.tag != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.tag.outputs.tag }}
+        run: |
+          mkdir -p work
+          gh release download "$TAG" --pattern "GameTranslator-iOS-${TAG#ios-v}.ipa" --dir work
+          gh release view "$TAG" --json publishedAt --jq .publishedAt > work/date.txt
+          [ "$(ls work/*.ipa | wc -l)" = 1 ] || { echo "Tek bir beklenen .ipa yok"; exit 1; }
+          ls -l work
+
+      - name: feather-source dalini hazirla
+        if: steps.tag.outputs.tag != ''
+        run: |
+          if git ls-remote --exit-code --heads origin feather-source >/dev/null 2>&1; then
+            git fetch origin feather-source
+            git worktree add work/fs origin/feather-source
+            git -C work/fs checkout -B feather-source
+          else
+            git worktree add --detach work/fs
+            git -C work/fs checkout --orphan feather-source
+            git -C work/fs rm -rf . >/dev/null 2>&1 || true
+          fi
+
+      - name: source.json uret
+        if: steps.tag.outputs.tag != ''
+        env:
+          TAG: ${{ steps.tag.outputs.tag }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 feather/build_source.py --template feather/source.template.json \
+            --ipa "$(ls work/*.ipa | head -1)" --tag "$TAG" --date "$(cat work/date.txt)" --repo "$REPO" \
+            --existing work/fs/source.json --out work/fs/source.json
+          python3 -m json.tool work/fs/source.json > /dev/null
+          cat work/fs/source.json
+
+      - name: Commit ve push
+        if: steps.tag.outputs.tag != ''
+        env:
+          TAG: ${{ steps.tag.outputs.tag }}
+        run: |
+          cd work/fs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source.json
+          if git diff --cached --quiet; then echo "Degisiklik yok"; exit 0; fi
+          git commit -m "feather: $TAG kaynagi"
+          git push origin feather-source

@@ -30,6 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
   material_ui: ^1.1.0
   cupertino_ui: ^1.1.6
 
@@ -55,6 +58,9 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+
+  # Yerelleştirme: l10n.yaml + lib/l10n/app_*.arb -> lib/l10n/app_localizations.dart
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

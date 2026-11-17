@@ -1,0 +1,11 @@
+{
+  "@@locale": "tr",
+  "appTitle": "GameTranslator",
+  "tabTranslate": "Çeviri",
+  "tabGuide": "Rehber",
+  "tabSettings": "Ayarlar",
+  "settingsTitle": "Ayarlar",
+  "settingsGroupApp": "UYGULAMA",
+  "settingsAppLanguage": "Uygulama dili",
+  "settingsAppLanguageNote": "Yalnızca arayüz dili; oyun ve çeviri dilini değiştirmez."
+}

@@ -7,9 +7,11 @@ import 'dart:io' show Platform;
 import 'package:flutter/services.dart';
 import 'package:material_ui/material_ui.dart';
 
+import 'app_language.dart';
 import 'bridge.dart';
 import 'home_page.dart';
 import 'intro_page.dart';
+import 'l10n/app_localizations.dart';
 import 'main.dart';
 import 'tv_install_page.dart';
 import 'ui.dart';
@@ -62,6 +64,9 @@ class _SettingsTabState extends State<SettingsTab> {
     'fixed': 'Ekranın altında sabit',
   };
 
+  /// Arayüz dillerinin kendi adlarıyla listesi (sistem dilinden bağımsız).
+  static const uiLanguages = {'tr': 'Türkçe', 'en': 'English', 'ar': 'العربية'};
+
   static const edges = {'top': 'Üst', 'bottom': 'Alt', 'left': 'Sol', 'right': 'Sağ'};
   static const defaultRegion = {'top': 0.62, 'bottom': 0.97, 'left': 0.14, 'right': 0.86};
 
@@ -73,6 +78,19 @@ class _SettingsTabState extends State<SettingsTab> {
   (bool, String)? patchesResult;
 
   /// Bilgisayar sürümündeki "Oyun" seçimi: en üstte Otomatik, altında Türkçe yaması olan oyunlar.
+  /// Arayüz dilini seçer: seçim hemen uygulanır, ayarlara yazılır.
+  Future<void> pickAppLanguage() async {
+    final picked = await showApplePicker(
+      context,
+      title: AppLocalizations.of(context).settingsAppLanguage,
+      options: uiLanguages,
+      selected: settings?.uiLanguage ?? AppLanguage.fallback,
+    );
+    if (picked == null || !mounted) return;
+    change((s) => s.json['uiLanguage'] = picked);
+    AppLanguage.current.value = picked;
+  }
+
   Future<void> pickGame() async {
     final games = await Bridge.packList();
     if (!mounted) return;
@@ -290,9 +308,25 @@ class _SettingsTabState extends State<SettingsTab> {
     final s = settings;
     if (s == null) return const Center(child: CupertinoActivityIndicator(radius: 14));
     final style = s.style;
+    final l = AppLocalizations.of(context);
     return LargeTitleList(
-      title: 'Ayarlar',
+      title: l.settingsTitle,
       children: [
+        GroupHeader(l.settingsGroupApp),
+        Group(
+          inset: 60,
+          children: [
+            Cell(
+              icon: CupertinoIcons.globe,
+              iconColor: Tokens.teal,
+              title: l.settingsAppLanguage,
+              subtitle: l.settingsAppLanguageNote,
+              value: uiLanguages[s.uiLanguage] ?? s.uiLanguage,
+              chevron: true,
+              onTap: pickAppLanguage,
+            ),
+          ],
+        ),
         // ---------------------------------------------------------------- Çeviri
         const GroupHeader('ÇEVİRİ'),
         Group(

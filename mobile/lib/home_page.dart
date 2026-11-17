@@ -6,6 +6,7 @@ import 'package:material_ui/material_ui.dart';
 
 import 'bridge.dart';
 import 'guide_page.dart';
+import 'l10n/app_localizations.dart';
 import 'main.dart';
 import 'settings_page.dart';
 import 'tv_install_page.dart';
@@ -24,11 +25,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
-  static const tabs = [
-    (CupertinoIcons.captions_bubble, CupertinoIcons.captions_bubble_fill, 'Çeviri'),
-    (CupertinoIcons.book, CupertinoIcons.book_fill, 'Rehber'),
-    (CupertinoIcons.gear_alt, CupertinoIcons.gear_alt_fill, 'Ayarlar'),
-  ];
+  /// Sekme adları arayüz diline göre kurulur.
+  List<(IconData, IconData, String)> tabsOf(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    return [
+      (CupertinoIcons.captions_bubble, CupertinoIcons.captions_bubble_fill, l.tabTranslate),
+      (CupertinoIcons.book, CupertinoIcons.book_fill, l.tabGuide),
+      (CupertinoIcons.gear_alt, CupertinoIcons.gear_alt_fill, l.tabSettings),
+    ];
+  }
 
   int tab = 0;
   EngineState state = const EngineState();
@@ -178,7 +183,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   left: 0,
                   right: 0,
                   bottom: bottom + 12,
-                  child: Center(child: GlassTabBar(items: tabs, index: tab, onTap: selectTab)),
+                  child: Center(child: GlassTabBar(items: tabsOf(context), index: tab, onTap: selectTab)),
                 ),
             ],
           ),

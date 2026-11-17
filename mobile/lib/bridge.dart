@@ -114,6 +114,8 @@ class AppSettings {
   bool get packsEnabled => json['packsEnabled'] as bool? ?? true;
   bool get hideButtonHints => json['hideButtonHints'] as bool? ?? true;
   String get packChoice => json['packChoice'] as String? ?? '';
+  /// Arayüz dili (tr/en/ar); oyun ve çeviri dilinden bağımsızdır.
+  String get uiLanguage => json['uiLanguage'] as String? ?? 'tr';
 
   AppSettings copy() => AppSettings(jsonDecode(jsonEncode(json)) as Map<String, dynamic>);
 }

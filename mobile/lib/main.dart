@@ -1,14 +1,18 @@
 // SPDX-License-Identifier: AGPL-3.0-only
+import 'package:cupertino_ui/cupertino_ui.dart' show GlobalCupertinoLocalizations;
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart' show GlobalWidgetsLocalizations;
 import 'package:material_ui/material_ui.dart';
 
+import 'app_language.dart';
 import 'bridge.dart';
 import 'home_page.dart';
 import 'intro_page.dart';
+import 'l10n/app_localizations.dart';
 import 'setup_page.dart';
 import 'ui.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -18,6 +22,7 @@ void main() {
     systemNavigationBarContrastEnforced: false,
     systemNavigationBarIconBrightness: Brightness.light,
   ));
+  await AppLanguage.load();
   runApp(const GameTranslatorApp());
 }
 
@@ -104,14 +109,26 @@ class GameTranslatorApp extends StatelessWidget {
     const capsule = StadiumBorder();
     OutlineInputBorder field(Color color, [double width = 1]) =>
         OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide(color: color, width: width));
-    return MaterialApp(
+    return ValueListenableBuilder<String>(
+      valueListenable: AppLanguage.current,
+      builder: (context, language, _) => MaterialApp(
       title: 'GameTranslator',
+      locale: Locale(language),
+      supportedLocales: [for (final code in AppLanguage.supported) Locale(code)],
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
       debugShowCheckedModeBanner: false,
       // iOS'taki gibi esneyen kaydırma. Sayfalar appleRoute ile (sağdan kayarak) açılır.
       scrollBehavior: const _AppleScroll(),
       theme: ThemeData(
         colorScheme: scheme,
         fontFamily: 'Inter',
+        // Inter'de Arapça harf yok; sistemin Arapça yazı tipine düşer.
+        fontFamilyFallback: const ['SF Arabic', 'Geeza Pro', 'Noto Naskh Arabic', 'Noto Sans Arabic', 'Arial'],
         scaffoldBackgroundColor: Tokens.background,
         splashFactory: NoSplash.splashFactory,
         highlightColor: const Color(0x1FFFFFFF),
@@ -180,6 +197,7 @@ class GameTranslatorApp extends StatelessWidget {
         progressIndicatorTheme: const ProgressIndicatorThemeData(color: Tokens.accent),
       ),
       home: const RootPage(),
+      ),
     );
   }
 }

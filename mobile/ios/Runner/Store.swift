@@ -46,6 +46,8 @@ struct Settings: Equatable {
   var hideButtonHints = true
   /// Elle seçilen oyunun paketi (bilgisayar sürümündeki "Oyun" seçimi); boş: otomatik.
   var packChoice = ""
+  /// Arayüz dili (tr/en/ar); oyun ve çeviri dilinden bağımsızdır.
+  var uiLanguage = "tr"
 
   /// Sözlük metni çözülmüş hâliyle; boş ya da bozuksa boş sözlük (Android'deki parsedGlossary).
   func parsedGlossary() -> Glossary {
@@ -74,6 +76,7 @@ struct Settings: Equatable {
       "packsEnabled": packsEnabled,
       "hideButtonHints": hideButtonHints,
       "packChoice": packChoice,
+      "uiLanguage": uiLanguage,
       "style": [
         "fontSize": style.fontSize, "bottomPercent": style.bottomPercent, "placement": style.placement,
         "background": style.background, "bold": style.bold, "textColor": style.textColor,
@@ -111,6 +114,7 @@ struct Settings: Equatable {
     out.packsEnabled = bool(json["packsEnabled"], true)
     out.hideButtonHints = bool(json["hideButtonHints"], true)
     out.packChoice = string(json["packChoice"], "")
+    out.uiLanguage = string(json["uiLanguage"], d.uiLanguage)
     let ds = d.style
     out.style = SubtitleStyle(
       fontSize: int(s?["fontSize"], ds.fontSize),

@@ -1,0 +1,11 @@
+{
+  "@@locale": "en",
+  "appTitle": "GameTranslator",
+  "tabTranslate": "Translate",
+  "tabGuide": "Guide",
+  "tabSettings": "Settings",
+  "settingsTitle": "Settings",
+  "settingsGroupApp": "APP",
+  "settingsAppLanguage": "App language",
+  "settingsAppLanguageNote": "Interface language only; does not change the game or translation language."
+}

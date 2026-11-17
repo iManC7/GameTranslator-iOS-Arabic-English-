@@ -1,0 +1,11 @@
+{
+  "@@locale": "ar",
+  "appTitle": "GameTranslator",
+  "tabTranslate": "الترجمة",
+  "tabGuide": "الدليل",
+  "tabSettings": "الإعدادات",
+  "settingsTitle": "الإعدادات",
+  "settingsGroupApp": "التطبيق",
+  "settingsAppLanguage": "لغة التطبيق",
+  "settingsAppLanguageNote": "لغة الواجهة فقط؛ لا تغيّر لغة اللعبة أو الترجمة."
+}

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import 'package:material_ui/material_ui.dart';
 
+import 'l10n/app_localizations.dart';
 import 'main.dart';
 import 'ui.dart';
 
@@ -40,19 +41,23 @@ class _IntroPageState extends State<IntroPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
     final last = page == pageCount - 1;
     return GlassScaffold(
       body: SafeArea(
         child: Column(
           children: [
             Align(
-              alignment: Alignment.centerRight,
+              alignment: AlignmentDirectional.centerEnd,
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(8, 4, 8, 0),
                 child: AnimatedOpacity(
                   opacity: last ? 0 : 1,
                   duration: const Duration(milliseconds: 200),
-                  child: TextButton(onPressed: last ? null : () => widget.onDone(), child: Text(widget.replay ? 'Kapat' : 'Geç', style: const TextStyle(color: Tokens.textSecondary, fontSize: 17, fontWeight: FontWeight.w500))),
+                  child: TextButton(
+                      onPressed: last ? null : () => widget.onDone(),
+                      child: Text(widget.replay ? l.introClose : l.introSkip,
+                          style: const TextStyle(color: Tokens.textSecondary, fontSize: 17, fontWeight: FontWeight.w500))),
                 ),
               ),
             ),
@@ -81,7 +86,8 @@ class _IntroPageState extends State<IntroPage> {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(24, 24, 24, 20),
-              child: GlowButton(onPressed: next, label: last ? (widget.replay ? 'Tamam' : 'Kuruluma başla') : 'Devam'),
+              child: GlowButton(
+                  onPressed: next, label: last ? (widget.replay ? l.introDone : l.introStartSetup) : l.introContinue),
             ),
           ],
         ),
@@ -137,6 +143,7 @@ class _WelcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
     return _IntroLayout(
       visual: Column(
         children: [
@@ -147,8 +154,8 @@ class _WelcomePage extends StatelessWidget {
           const _SceneCard(),
         ],
       ),
-      title: 'Oyunu kendi dilinde oyna',
-      body: 'PS5\'teki oyunların altyazılarını anında Türkçeye çevirip TV\'de gösterir.',
+      title: l.introWelcomeTitle,
+      body: l.introWelcomeBody,
     );
   }
 }
@@ -159,6 +166,7 @@ class _SceneCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
@@ -194,7 +202,8 @@ class _SceneCard extends StatelessWidget {
                       radius: 999,
                       tint: Colors.black,
                       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-                      child: const Text('We have to leave before sunrise.', style: TextStyle(color: Color(0xFFD5D9E0), fontSize: 13)),
+                      child: Text(l.introSampleOriginal,
+                          style: const TextStyle(color: Color(0xFFD5D9E0), fontSize: 13)),
                     ),
                     const SizedBox(height: 6),
                     Container(
@@ -206,9 +215,10 @@ class _SceneCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(999),
                         border: Border.all(color: const Color(0x59FFFFFF), width: 0.8),
                       ),
-                      child: const FittedBox(
+                      child: FittedBox(
                         fit: BoxFit.scaleDown,
-                        child: Text('Gün doğmadan ayrılmalıyız.', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+                        child: Text(l.introSampleTranslation,
+                            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
                       ),
                     ),
                   ],
@@ -227,20 +237,20 @@ class _HowPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const _IntroLayout(
+    final l = AppLocalizations.of(context);
+    return _IntroLayout(
       visual: Padding(
-        padding: EdgeInsets.symmetric(vertical: 8),
+        padding: const EdgeInsets.symmetric(vertical: 8),
         child: FlowRow(
           nodes: [
-            FlowNode(icon: CupertinoIcons.gamecontroller_fill, label: 'PS5', detail: 'Görüntü', color: Tokens.textSecondary),
-            FlowNode(icon: CupertinoIcons.device_phone_portrait, label: 'Telefon', detail: 'Çevirir', color: Tokens.accent),
-            FlowNode(icon: CupertinoIcons.tv_fill, label: 'TV', detail: 'Gösterir', color: Tokens.success),
+            FlowNode(icon: CupertinoIcons.gamecontroller_fill, label: 'PS5', detail: l.introFlowVideo, color: Tokens.textSecondary),
+            FlowNode(icon: CupertinoIcons.device_phone_portrait, label: l.introFlowPhone, detail: l.introFlowTranslates, color: Tokens.accent),
+            FlowNode(icon: CupertinoIcons.tv_fill, label: 'TV', detail: l.introFlowShows, color: Tokens.success),
           ],
         ),
       ),
-      title: 'Telefonun aradaki çevirmen',
-      body: 'Telefon oyun görüntüsünü PS5\'ten Remote Play ile alır, altyazıyı okuyup çevirir ve TV\'ye gönderir. '
-          'Kamera yok; ekranı kapatsan da çalışmaya devam eder.',
+      title: l.introHowTitle,
+      body: l.introHowBody,
     );
   }
 }
@@ -250,26 +260,27 @@ class _NeedsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const _IntroLayout(
-      visual: SizedBox.shrink(),
-      title: 'Başlamadan önce',
-      body: 'Kurulum birkaç dakika sürer. Şunlar hazır olsun:',
+    final l = AppLocalizations.of(context);
+    return _IntroLayout(
+      visual: const SizedBox.shrink(),
+      title: l.introNeedsTitle,
+      body: l.introNeedsBody,
       extra: Column(
         children: [
           _Need(
             icon: CupertinoIcons.person_2_fill,
-            title: 'PS5\'te ikinci bir kullanıcı',
-            text: 'Oyunu kendi hesabınla oynarsın; telefon ikinci hesapla bağlanır, böylece kumandan TV\'den kopmaz.',
+            title: l.introNeedSecondUserTitle,
+            text: l.introNeedSecondUserText,
           ),
           _Need(
             icon: CupertinoIcons.tv_fill,
-            title: 'TV\'de GameTranslator uygulaması',
-            text: 'Samsung, LG ve Android TV\'de çalışır. TV\'ye kurulum bilgisayardaki GameTranslator ile yapılır.',
+            title: l.introNeedTvAppTitle,
+            text: l.introNeedTvAppText,
           ),
           _Need(
             icon: CupertinoIcons.wifi,
-            title: 'Aynı Wi-Fi ağı',
-            text: 'Telefon, PS5 ve TV aynı ev ağına bağlı olmalı.',
+            title: l.introNeedWifiTitle,
+            text: l.introNeedWifiText,
           ),
         ],
       ),

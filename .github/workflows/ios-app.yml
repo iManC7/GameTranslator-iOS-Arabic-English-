@@ -90,6 +90,17 @@ jobs:
 
       - name: Derleme günlüğü (hata)
         if: failure()
+        run: |
+          echo "::error::CONTEXT podfile=$([ -f mobile/ios/Podfile ] && echo yes || echo no) swiftpm_refs=$(grep -c FlutterGeneratedPluginSwiftPackage mobile/ios/Runner.xcodeproj/project.pbxproj || true) log_lines=$(wc -l < /tmp/gt-build.log || echo 0)"
+          grep -inE "error|failed|fatal|undefined symbol|not found" /tmp/gt-build.log | tail -n 25 | while IFS= read -r line; do
+            printf '::error::LOG %s\n' "$(printf '%s' "$line" | tr -d '\r' | cut -c1-700)"
+          done
+          tail -n 15 /tmp/gt-build.log | while IFS= read -r line; do
+            printf '::error::TAIL %s\n' "$(printf '%s' "$line" | tr -d '\r' | cut -c1-700)"
+          done
+
+      - name: Derleme günlüğü (dosya)
+        if: failure()
         uses: actions/upload-artifact@v7
         with:
           name: build-log

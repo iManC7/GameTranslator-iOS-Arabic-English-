@@ -1,0 +1,63 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Codemagic ile imzasız IPA üretimi (GitHub Actions'a alternatif).
+# Kullanım: Codemagic > Add application > depoyu seç > "codemagic.yaml" yapılandırması > workflow: ios-unsigned > Start new build.
+# Çıktı: build sayfasındaki Artifacts bölümünden GameTranslator-iOS-*.ipa indirilir; Sideloadly/Feather ile imzalanıp kurulur.
+workflows:
+  ios-unsigned:
+    name: GameTranslator iOS (imzasız IPA)
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      flutter: 3.50.0
+      xcode: latest
+      cocoapods: default
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+        - $FLUTTER_ROOT/.pub-cache
+    scripts:
+      - name: Swift çekirdek testleri
+        script: |
+          set -e
+          sh mobile/ios/CoreTests/run.sh
+
+      - name: libchiaki (hazır paket)
+        script: |
+          set -e
+          chmod +x mobile/ios/scripts/fetch-libchiaki.sh
+          ./mobile/ios/scripts/fetch-libchiaki.sh
+
+      - name: Flutter bağımlılıkları, analiz, testler
+        script: |
+          set -e
+          flutter --version
+          # Eklenti paketleri Swift Package Manager ile çözülsün (projede FlutterGeneratedPluginSwiftPackage var).
+          flutter config --enable-swift-package-manager || true
+          cd mobile
+          flutter pub get
+          flutter analyze
+          flutter test
+
+      - name: İmzasız derleme
+        script: |
+          set -e
+          cd mobile
+          flutter build ios --release --no-codesign 2>&1 | tee /tmp/gt-build.log
+
+      - name: IPA paketle
+        script: |
+          set -e
+          APP=mobile/build/ios/iphoneos/Runner.app
+          VERSION=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APP/Info.plist")
+          BUILD=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$APP/Info.plist")
+          mkdir -p out/Payload
+          cp -R "$APP" out/Payload/
+          rm -rf out/Payload/Runner.app/_CodeSignature out/Payload/Runner.app/embedded.mobileprovision
+          (cd out && zip -qry "GameTranslator-iOS-$VERSION-$BUILD.ipa" Payload)
+          cp docs/ios-kurulum.md out/KURULUM.md
+          ls -la out
+          shasum -a 256 out/*.ipa || true
+    artifacts:
+      - out/*.ipa
+      - out/KURULUM.md
+      - /tmp/gt-build.log

@@ -165,7 +165,8 @@ final class AppleTranslator: TextTranslator {
     lock.lock(); defer { lock.unlock() }
     if checked { return usable }
     checked = true
-    #if canImport(Translation)
+    // TranslationSession'in kurucusu yalnız Xcode 26 (Swift 6.2) SDK'sında var; eski Xcode'da derlenmez.
+    #if canImport(Translation) && compiler(>=6.2)
     if #available(iOS 26.0, *) {
       let from = Locale.Language(identifier: source)
       let to = Locale.Language(identifier: target)
@@ -195,7 +196,7 @@ final class AppleTranslator: TextTranslator {
 
   func translate(_ text: String) -> String? {
     guard prepare() else { return nil }
-    #if canImport(Translation)
+    #if canImport(Translation) && compiler(>=6.2)
     if #available(iOS 26.0, *), let session = session as? TranslationSession {
       let semaphore = DispatchSemaphore(value: 0)
       var result: String?
